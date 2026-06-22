@@ -86,3 +86,86 @@ python convert_results_to_csv.py
 - TabPFN **不需要**特征缩放或标准化，直接使用原始数值即可
 - 预测大数据集时建议设置 `BATCH_SIZE` 分批预测
 - 模型首次加载会验证 license，需要网络连接（国内建议设置 `HF_ENDPOINT` 镜像）
+
+---
+
+## tabpfn-extensions 可解释性分析
+
+`tabpfn-extensions` 提供 SHAP、PDP、特征选择等分析工具，已安装在 `tabpfn` 环境中。
+
+### 安装
+
+```bash
+pip install tabpfn-extensions -i https://pypi.tuna.tsinghua.edu.cn/simple
+# SHAP 绑图需要额外安装
+pip install shap -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### 1. SHAP 特征重要性分析
+
+```python
+from tabpfn_extensions import TabPFNRegressor
+from tabpfn_extensions.interpretability import shapiq as tabpfn_shapiq, shapiq_to_shap_explanation
+import shap
+
+# 训练模型（启用 KV 缓存加速 SHAP 计算）
+reg = TabPFNRegressor(device='cpu', model_path=MODEL_PATH, fit_mode='fit_with_cache')
+reg.fit(X_train, y_train)
+
+# 创建 SHAP 解释器
+explainer = tabpfn_shapiq.get_tabpfn_imputation_explainer(
+    model=reg, data=X_train, index='SV', max_order=1
+)
+
+# 计算 SHAP 值（budget=2^d，d 为特征数）
+explanation = shapiq_to_shap_explanation(
+    explainer, X_test[:30], budget=256, feature_names=feature_names
+)
+
+# 可视化
+shap.summary_plot(explanation)        # 蜂群图
+shap.plots.bar(explanation)           # 特征重要性条形图
+shap.plots.waterfall(explanation[0])  # 单样本瀑布图
+```
+
+### 2. PDP 部分依赖图
+
+```python
+from tabpfn_extensions.interpretability.pdp import partial_dependence_plots
+
+disp = partial_dependence_plots(
+    estimator=reg, X=X_test,
+    features=[0, 1, 2, (0, 3)],  # 单特征 + 交互特征对
+    grid_resolution=30, kind='average'
+)
+disp.figure_.suptitle('Partial Dependence')
+plt.savefig('pdp_plot.png')
+```
+
+### 3. 特征选择
+
+```python
+from tabpfn_extensions import interpretability
+
+result = interpretability.feature_selection.feature_selection(
+    estimator=reg, X=X, y=y,
+    n_features_to_select=5,
+    feature_names=feature_names
+)
+print(f'选择的特征: {result.selected_names}')
+print(f'CV得分: {result.baseline_score_mean:.4f} -> {result.selected_score_mean:.4f}')
+```
+
+### 4. SHAPIQ 高阶交互分析
+
+```python
+from tabpfn_extensions.interpretability import shapiq as tabpfn_shapiq
+
+explainer = tabpfn_shapiq.get_tabpfn_imputation_explainer(
+    model=reg, data=X_train, index='SV', max_order=2  # 2阶交互
+)
+sv = explainer.explain(X_test[0], budget=256)
+sv.plot_graph()  # 特征交互图
+```
+
+详细示例参见 `tabpfn-extensions-main/examples/interpretability/`
