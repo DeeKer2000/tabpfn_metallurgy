@@ -14,8 +14,9 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 # --- 路径 ---
 DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'           # 数据文件
-MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'  # 模型文件
+MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'  # 预训练权重
 OUTPUT_PATH = r'data\3000固定温度\evaluation_results.csv'    # 评估结果输出
+SAVE_DIR    = r'data\3000固定温度\saved_models'              # 训练好的模型保存目录
 
 # --- 设备 ---
 DEVICE = 'cpu'  # 'cpu' 或 'cuda'（需要 PyTorch CUDA 版本）
@@ -55,9 +56,11 @@ OUTPUT_COLS = [
 
 import numpy as np
 import pandas as pd
+from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from tabpfn import TabPFNRegressor
+from tabpfn.utils import save_fitted_tabpfn_model, load_fitted_tabpfn_model
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -76,6 +79,7 @@ def main():
     # 1. 加载数据
     print("=" * 60)
     print("加载数据...")
+    Path(SAVE_DIR).mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(DATA_PATH, encoding='utf-8-sig')
     print(f"  样本数: {len(df)}, 列数: {len(df.columns)}")
 
@@ -117,6 +121,10 @@ def main():
         reg.fit(X_train, y_train)
         y_pred = predict_batched(reg, X_test, BATCH_SIZE)
 
+        # 保存训练好的模型
+        save_path = Path(SAVE_DIR) / f'{target}.tabpfn_fit'
+        save_fitted_tabpfn_model(reg, save_path)
+
         r2 = r2_score(y_test, y_pred)
         mae = mean_absolute_error(y_test, y_pred)
         rmse = np.sqrt(mean_squared_error(y_test, y_pred))
@@ -145,6 +153,7 @@ def main():
 
     df_res.to_csv(OUTPUT_PATH, index=False, encoding='utf-8-sig')
     print(f"\n评估结果已保存至: {OUTPUT_PATH}")
+    print(f"训练好的模型已保存至: {SAVE_DIR}/")
 
 
 if __name__ == '__main__':
