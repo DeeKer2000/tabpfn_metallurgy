@@ -1,0 +1,2951 @@
+                                                                               FactSage 8.3         
+ (gram) 19.262 Cu  +  13.459 S  +  29.548 Fe  +  14.851 SiO2  +
+  
+ (gram) 0.619 Pb  +  0.747 Zn  +  1.12 MgO  +  1.588 Al2O3  +
+  
+ (gram) 0.279 Ni  +  0.077 Sb  +  0.011 Bi  +  1.253 CaO  +
+  
+ (gram) 0.021 As  +  21 O2  =
+  
+    0.26588    mol   gas_real
+    (17.127 gram, 0.26588 mol, 32.147 litre, 5.3277E-04 gram.cm-3)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 0.99789         SO2                                     V
+            + 1.1826E-03      Sb2S3
+            + 5.4824E-04      SO
+            + 1.2548E-04      BiS                                     T
+            + 7.1486E-05      Bi
+            + 6.9608E-05      Zn
+            + 3.3508E-05      S2
+            + 2.3037E-05      AsO
+            + 2.2565E-05      SSO
+            + 1.7643E-05      SO3                                     V
+            + 7.3333E-06      SbO
+            + 2.5331E-06      Sb
+            + 2.0402E-06      Cu
+            + 9.8668E-07      AsS                                     T
+            + 5.6999E-07      Sb4O6                                   T
+            + 4.0325E-07      BiO
+            + 3.1536E-07      Sb2
+            + 2.8606E-07      AsSb
+            + 2.7834E-07      Bi2
+            + 2.6645E-07      CuS
+            + 2.0776E-07      PbS
+            + 1.7339E-07      S
+            + 1.6650E-07      O2                                      V
+            + 1.3787E-07      SbS
+            + 1.2246E-07      Pb
+            + 7.5979E-08      PbO
+            + 2.8488E-08      As2                                     T
+            + 2.2920E-08      As                                      T
+            + 8.9398E-09      AsSb3O6                                 T
+            + 6.9638E-09      ZnS
+            + 5.7500E-09      Sb3S2
+            + 4.8782E-09      Sb2S4
+            + 2.2022E-09      S3
+            + 1.2325E-09      As2Sb2O6                                T
+            + 1.1341E-09      O
+            + 8.9577E-10      NiS
+            + 5.7220E-10      Ni
+            + 2.6665E-10      Cu2
+            + 1.6899E-10      CuO
+            + 7.7087E-11      As3SbO6                                 T
+            + 4.2489E-11      FeO
+            + 4.2459E-11      Fe
+            + 1.9985E-11      NiO
+            + 5.8652E-12      As3                                     T
+            + 5.7877E-12      FeS
+            + 5.0268E-12      PbSb                                    T
+            + 4.0295E-12      AsSb3                                   T
+            + 3.2916E-12      Sb4
+            + 2.7871E-12      As2Sb2                                  T
+            + 2.0441E-12      SiO
+            + 1.8837E-12      As4O6                                   T
+            + 1.1462E-12      As3Sb                                   T
+            + 8.4303E-13      SiO2
+            + 4.5194E-13      S4
+            + 2.6450E-13      As4                                     T
+            + 1.4364E-13      Bi2O3
+            + 9.7332E-14      Sb4S3
+            + 7.2191E-14      Mg
+            + 1.9567E-15      MgS
+            + 7.0430E-16      MgO
+            + 3.4534E-16      SiS
+            + 2.8365E-16      Pb2
+            + 1.5636E-17      S5
+            + 2.2814E-19      Ca
+            + 2.2435E-19      CaS
+            + 1.5486E-19      O3                                      V
+            + 1.3228E-19      AlO
+            + 1.2946E-19      CaO
+            + 1.0268E-19      SiS2                                    T
+            + 1.4896E-20      S6
+            + 1.1806E-21      AlO2
+            + 3.3086E-22      AlS
+            + 7.1584E-23      Al
+            + 7.7031E-24      S7
+            + 3.0448E-24      As4S4                                   T
+            + 3.1920E-25      Si
+            + 7.6532E-27      Al2O2
+            + 7.5966E-28      S8
+            + 9.7423E-29      Al2O3
+            + 2.8306E-29      Al2O
+            + 1.7074E-30      Mg2
+            + 1.6150E-37      Al2S                                    T
+            + 1.6498E-38      Al2S2                                   T
+            + 8.7818E-41      Ca2
+            + 7.4090E-44      Si2
+            + 4.9764E-44      Al2
+            + 1.2437E-60      Si3)
+  
+  + 37.194     gram  Sphalerite#1
+    (37.194 gram, 0.69627 mol)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 6.0323E-14 wt.% CuVa[+]
+            + 1.0966E-06 wt.% CuS[-]
+            + 0.26098    wt.% CuO[-]
+            + 3.0368E-17 wt.% MgVa[2+]
+            + 8.5101E-10 wt.% MgS
+            + 1.7405E-04 wt.% MgO_periclase
+            + 7.3001E-20 wt.% CaVa[2+]
+            + 1.5877E-12 wt.% CaS
+            + 3.5303E-07 wt.% CaO_lime
+            + 6.5108E-15 wt.% FeVa[2+]
+            + 1.2383E-07 wt.% FeS
+            + 2.8949E-02 wt.% FeO
+            + 2.1686E-15 wt.% NiVa[2+]
+            + 4.0516E-08 wt.% NiS
+            + 9.5380E-03 wt.% NiO
+            + 5.2144E-17 wt.% CuVa[2+]
+            + 9.4793E-10 wt.% CuS
+            + 2.2559E-04 wt.% CuO
+            + 1.3182E-13 wt.% ZnVa[2+]
+            + 2.3737E-06 wt.% ZnS_zincblende
+            + 0.56706    wt.% ZnO
+            + 2.0067E-11 wt.% FeVa[3+]
+            + 3.8167E-04 wt.% FeS[+]
+            + 89.223     wt.% FeO[+]
+            + 6.9425E-05 wt.% VaS[2-]
+            + 9.9093     wt.% VaO[2-])
+  
+            Site fraction of sublattice constituents:
+            Ca[2+]_4a                3.3629E-09  Stoichiometry = 1
+            Ni[2+]_4a                6.8214E-05
+            Mg[2+]_4a                2.3069E-06
+            Cu[+]__4a                1.7526E-03
+            Fe[2+]_4a                2.1525E-04
+            Cu[2+]_4a                1.5150E-06
+            Zn[2+]_4a                3.7223E-03
+            Fe[3+]_4a                0.66341
+            Va[0]__4a                0.33083
+            ---------------------------------------------------------------
+            Va[0]__4c                2.8934E-13  Stoichiometry = 1
+            S[2-]__4c                3.4959E-06
+            O[2-]__4c                1.0000
+  
+            System component         Amount/mol    Amount/gram   Mole fraction  Mass fraction
+            Zn                       2.5917E-03     0.16945        2.2300E-03     4.5558E-03
+            Cu                       1.2213E-03     7.7610E-02     1.0509E-03     2.0866E-03
+            Ni                       4.7495E-05     2.7877E-03     4.0867E-05     7.4950E-05
+            Fe                       0.46206        25.804         0.39758        0.69377
+            Ca                       2.3415E-09     9.3842E-08     2.0147E-09     2.5231E-09
+            S                        2.4341E-06     7.8049E-05     2.0944E-06     2.0984E-06
+            Mg                       1.6062E-06     3.9038E-05     1.3820E-06     1.0496E-06
+            O                        0.69627        11.140         0.59910        0.29951
+  
+  + 0          gram  Sphalerite#2
+            (1200 C, 1 atm,     a=1.1025E-03)
+            ( 85.278     wt.% CuVa[+]
+            + 1.8698E-03 wt.% CuS[-]
+            + 0.80189    wt.% CuO[-]
+            + 5.8841E-14 wt.% MgVa[2+]
+            + 1.9888E-18 wt.% MgS
+            + 7.3300E-16 wt.% MgO_periclase
+            + 1.8338E-18 wt.% CaVa[2+]
+            + 4.8105E-23 wt.% CaS
+            + 1.9275E-20 wt.% CaO_lime
+            + 3.2400E-03 wt.% FeVa[2+]
+            + 7.4328E-08 wt.% FeS
+            + 3.1312E-05 wt.% FeO
+            + 0.13685    wt.% NiVa[2+]
+            + 3.0838E-06 wt.% NiS
+            + 1.3082E-03 wt.% NiO
+            + 2.4274     wt.% CuVa[2+]
+            + 5.3223E-05 wt.% CuS
+            + 2.2825E-02 wt.% CuO
+            + 8.5826E-06 wt.% ZnVa[2+]
+            + 1.8641E-10 wt.% ZnS_zincblende
+            + 8.0250E-08 wt.% ZnO
+            + 1.0331E-04 wt.% FeVa[3+]
+            + 2.3700E-09 wt.% FeS[+]
+            + 9.9842E-07 wt.% FeO[+]
+            + 4.3866E-02 wt.% VaS[2-]
+            + 11.283     wt.% VaO[2-])
+  
+  + 0          gram  Sphalerite#3
+            (1200 C, 1 atm,     a=8.6305E-04)
+            ( 1.4956E-13 wt.% CuVa[+]
+            + 9.9643E-03 wt.% CuS[-]
+            + 4.6171E-05 wt.% CuO[-]
+            + 4.0268E-16 wt.% MgVa[2+]
+            + 4.1356E-05 wt.% MgS
+            + 1.6469E-07 wt.% MgO_periclase
+            + 9.6396E-16 wt.% CaVa[2+]
+            + 7.6835E-05 wt.% CaS
+            + 3.3264E-07 wt.% CaO_lime
+            + 1.1723E-12 wt.% FeVa[2+]
+            + 8.1717E-02 wt.% FeS
+            + 3.7195E-04 wt.% FeO
+            + 2.8061E-12 wt.% NiVa[2+]
+            + 0.19214    wt.% NiS
+            + 8.8069E-04 wt.% NiO
+            + 4.5392E-12 wt.% CuVa[2+]
+            + 0.30242    wt.% CuS
+            + 1.4013E-03 wt.% CuO
+            + 1.4946E-09 wt.% ZnVa[2+]
+            + 98.639     wt.% ZnS_zincblende
+            + 0.45879    wt.% ZnO
+            + 3.8086E-12 wt.% FeVa[3+]
+            + 0.26548    wt.% FeS[+]
+            + 1.2084E-03 wt.% FeO[+]
+            + 4.6747E-02 wt.% VaS[2-]
+            + 1.2992E-04 wt.% VaO[2-])
+  
+  + 23.448     gram  Matte
+    (23.448 gram, 0.44248 mol)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 20.244     wt.% S
+            + 0.11225    wt.% Fe
+            + 79.262     wt.% Cu
+            + 0.33263    wt.% Ni
+            + 2.4732E-02 wt.% Zn
+            + 3.9689E-04 wt.% Pb
+            + 2.4741E-02 wt.% As)
+  
+            System component         Amount/mol    Amount/gram   Mole fraction  Mass fraction
+            Pb                       4.4915E-07     9.3064E-05     1.0151E-06     3.9689E-06
+            As                       7.7432E-05     5.8013E-03     1.7500E-04     2.4741E-04
+            Zn                       8.8703E-05     5.7994E-03     2.0047E-04     2.4732E-04
+            Cu                       0.29248        18.586         0.66099        0.79262
+            Ni                       1.3289E-03     7.7996E-02     3.0033E-03     3.3263E-03
+            Fe                       4.7132E-04     2.6321E-02     1.0652E-03     1.1225E-03
+            S                        0.14804        4.7468         0.33456        0.20244
+  
+  + 19.257     gram  Slag-liq#1
+    (19.257 gram, 0.29661 mol)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 8.1354     wt.% Al2O3
+            + 50.138     wt.% SiO2
+            + 6.4891     wt.% CaO
+            + 22.303     wt.% FeO
+            + 1.6664     wt.% Fe2O3
+            + 5.0471     wt.% MgO
+            + 2.1625E-02 wt.% PbO
+            + 3.6875     wt.% ZnO
+            + 0.21989    wt.% NiO
+            + 2.1796     wt.% Cu2O
+            + 0.10087    wt.% As2O3                                   T
+            + 9.9222E-04 wt.% Al2S3
+            + 6.3728E-03 wt.% SiS2
+            + 6.9137E-04 wt.% CaS
+            + 2.2601E-03 wt.% FeS
+            + 1.7966E-04 wt.% Fe2S3
+            + 5.8460E-04 wt.% MgS
+            + 1.9198E-06 wt.% PbS
+            + 3.6568E-04 wt.% ZnS
+            + 2.2128E-05 wt.% NiS
+            + 2.0078E-04 wt.% Cu2S
+            + 1.0388E-05 wt.% As2S3                                   T)
+  
+            Site fraction of sublattice constituents:
+            Al                       9.6942E-02
+            Si                       0.50693
+            Ca                       7.0297E-02
+            Fe2+                     0.18858
+            Fe3+                     1.2679E-02
+            Mg                       7.6072E-02
+            Pb                       5.8857E-05
+            Zn                       2.7527E-02
+            Ni                       1.7884E-03
+            Cu1+                     1.8507E-02
+            As3+                     6.1943E-04
+            -----------------------------------
+            O                        0.99992
+            S                        8.2810E-05
+  
+            System component         Amount/mol    Amount/gram   Mole fraction  Mass fraction
+            Pb                       1.8659E-05     3.8662E-03     2.3056E-05     2.0076E-04
+            As                       1.9637E-04     1.4713E-02     2.4265E-04     7.6401E-04
+            Zn                       8.7266E-03     0.57055        1.0783E-02     2.9628E-02
+            Cu                       5.8671E-03     0.37283        7.2497E-03     1.9361E-02
+            Ni                       5.6698E-04     3.3278E-02     7.0058E-04     1.7281E-03
+            Fe                       6.3805E-02     3.5632         7.8840E-02     0.18503
+            Ca                       2.2286E-02     0.89317        2.7537E-02     4.6381E-02
+            S                        4.0765E-05     1.3071E-03     5.0371E-05     6.7877E-05
+            Si                       0.16071        4.5135         0.19858        0.23438
+            Al                       3.0733E-02     0.82921        3.7975E-02     4.3060E-02
+            Mg                       2.4117E-02     0.58615        2.9800E-02     3.0438E-02
+            O                        0.49223        7.8754         0.60822        0.40896
+  
+  + 0          gram  Slag-liq#2
+            (1200 C, 1 atm,     a=0.82299)
+            ( 0.76360    wt.% Al2O3
+            + 98.099     wt.% SiO2
+            + 0.10391    wt.% CaO
+            + 2.1780E-02 wt.% FeO
+            + 2.4863E-03 wt.% Fe2O3
+            + 2.0130E-03 wt.% MgO
+            + 0.44078    wt.% PbO
+            + 9.9083E-03 wt.% ZnO
+            + 1.8897E-02 wt.% NiO
+            + 0.53498    wt.% Cu2O
+            + 2.4384E-03 wt.% As2O3                                   T
+            + 4.3614E-06 wt.% Al2S3
+            + 5.8392E-04 wt.% SiS2
+            + 5.1845E-07 wt.% CaS
+            + 1.0336E-07 wt.% FeS
+            + 1.2553E-08 wt.% Fe2S3
+            + 1.0919E-08 wt.% MgS
+            + 1.8326E-06 wt.% PbS
+            + 4.6015E-08 wt.% ZnS
+            + 8.9052E-08 wt.% NiS
+            + 2.3078E-06 wt.% Cu2S
+            + 1.1761E-08 wt.% As2S3                                   T)
+  
+  + 1.2415     gram  Fe-liq
+    (1.2415 gram, 1.8798E-02 mol)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 0.10209    wt.% Fe
+            + 7.7060E-15 wt.% Al
+            + 1.4280E-20 wt.% Ca
+            + 18.196     wt.% Cu                                      C
+            + 13.286     wt.% Ni
+            + 5.4863     wt.% O                                       C
+            + 49.539     wt.% Pb                                      C
+            + 13.390     wt.% S                                       C
+            + 7.8525E-14 wt.% Si
+            + 7.6112E-16 wt.% Mg
+            + 2.7205E-08 wt.% MgO
+            + 7.1129E-11 wt.% CaO
+            + 2.7077E-10 wt.% AlO
+            + 8.7446E-12 wt.% SiO
+            + 6.7347E-23 wt.% Al2O
+            + 2.0042E-04 wt.% Bi)
+  
+            System component         Amount/mol    Amount/gram   Mole fraction  Mass fraction
+            Bi                       1.1906E-08     2.4881E-06     6.3338E-07     2.0042E-06
+            Pb                       2.9682E-03     0.61502        0.15791        0.49539
+            Cu                       3.5549E-03     0.22590        0.18912        0.18196
+            Ni                       2.8102E-03     0.16494        0.14950        0.13286
+            Fe                       2.2695E-05     1.2674E-03     1.2073E-03     1.0209E-03
+            Ca                       1.5747E-14     6.3110E-13     8.3771E-13     5.0835E-13
+            S                        5.1844E-03     0.16624        0.27580        0.13390
+            Si                       2.4973E-15     7.0138E-14     1.3285E-13     5.6495E-14
+            Al                       7.8213E-14     2.1103E-12     4.1608E-12     1.6998E-12
+            Mg                       8.3799E-12     2.0367E-10     4.4580E-10     1.6406E-10
+            O                        4.2571E-03     6.8111E-02     0.22647        5.4863E-02
+  
+  + 0.74288    gram  Orthopyroxene
+    (0.74288 gram, 3.2652E-03 mol)
+            (1200 C, 1 atm,     a=1.0000)
+            ( 0.94430    wt.% CaMgSi2O6
+            + 0.46076    wt.% CaFeSi2O6
+            + 13.192     wt.% FeFeSi2O6
+            + 24.490     wt.% MgMgSi2O6
+            + 6.5610E-03 wt.% CaAl2SiO6
+            + 9.6425E-03 wt.% CaFe3+AlSiO6
+            + 12.069     wt.% MgFeSi2O6
+            + 27.272     wt.% FeMgSi2O6
+            + 2.9455E-03 wt.% CaAlFe3+SiO6
+            + 4.2698E-03 wt.% CaFe3+Fe3+SiO6
+            + 0.18939    wt.% FeAlAlSiO6
+            + 0.17026    wt.% MgAlAlSiO6
+            + 0.12152    wt.% FeFe3+Fe3+SiO6
+            + 0.27615    wt.% FeFe3+AlSiO6
+            + 8.4357E-02 wt.% FeAlFe3+SiO6
+            + 0.11261    wt.% MgFe3+Fe3+SiO6
+            + 0.25250    wt.% MgFe3+AlSiO6
+            + 7.7133E-02 wt.% MgAlFe3+SiO6
+            + 3.1081     wt.% FeFe3+Si2O6[+]
+            + 0.10856    wt.% CaFe3+Si2O6[+]
+            + 2.8436     wt.% MgFe3+Si2O6[+]
+            + 1.8123E-02 wt.% CaFeFe3+SiO6[-]
+            + 0.47795    wt.% MgFeFe3+SiO6[-]
+            + 0.51575    wt.% FeFeFe3+SiO6[-]
+            + 4.0926E-02 wt.% CaFeAlSiO6[-]
+            + 1.0717     wt.% MgFeAlSiO6[-]
+            + 1.1721     wt.% FeFeAlSiO6[-]
+            + 3.7686E-02 wt.% CaMgFe3+SiO6[-]
+            + 0.98611    wt.% MgMgFe3+SiO6[-]
+            + 1.0800     wt.% FeMgFe3+SiO6[-]
+            + 7.3909E-02 wt.% CaAlSi2O6[+]
+            + 1.9187     wt.% MgAlSi2O6[+]
+            + 2.1328     wt.% FeAlSi2O6[+]
+            + 8.3822E-02 wt.% CaMgAlSiO6[-]
+            + 2.1730     wt.% MgMgAlSiO6[-]
+            + 2.4216     wt.% FeMgAlSiO6[-])
+  
+            Site fraction of sublattice constituents:
+            Ca                       1.7891E-02  Stoichiometry = 1
+            Mg                       0.50047
+            Fe                       0.48164
+            ---------------------------------------------------------------
+            Mg                       0.62361     Stoichiometry = 1
+            Fe                       0.26560
+            Al                       4.8214E-02
+            Fe3+                     6.2577E-02
+            ---------------------------------------------------------------
+            Al                       7.9336E-02  Stoichiometry = 1
+            Fe3+                     3.1455E-02
+            Si                       0.88921
+  
+            System component         Amount/mol    Amount/gram   Mole fraction  Mass fraction
+            Fe                       2.7469E-03     0.15340        8.4127E-02     0.20649
+            Ca                       5.8418E-05     2.3413E-03     1.7891E-03     3.1516E-03
+            Si                       6.1686E-03     0.17325        0.18892        0.23321
+            Al                       4.1647E-04     1.1237E-02     1.2755E-02     1.5126E-02
+            Mg                       3.6703E-03     8.9207E-02     0.11241        0.12008
+            O                        1.9591E-02     0.31344        0.60000        0.42193
+  
+  + 0          gram  Olivine#1
+            (1200 C, 1 atm,     a=0.99103)
+            ( 20.700     wt.% Mg1Mg1Si1O4
+            + 15.673     wt.% Fe1Fe1Si1O4
+            + 13.796     wt.% Mg1Fe1Si1O4
+            + 24.332     wt.% Fe1Mg1Si1O4
+            + 2.5138E-06 wt.% Ca1Ca1Si1O4
+            + 0.12217    wt.% Ca1Fe1Si1O4
+            + 3.2478E-04 wt.% Fe1Ca1Si1O4
+            + 0.18675    wt.% Ca1Mg1Si1O4
+            + 2.8150E-04 wt.% Mg1Ca1Si1O4
+            + 3.7828E-02 wt.% Zn1Zn1Si1O4
+            + 8.6943E-06 wt.% Zn1Ca1Si1O4
+            + 1.1120E-02 wt.% Ca1Zn1Si1O4
+            + 0.65425    wt.% Zn1Mg1Si1O4
+            + 1.2613     wt.% Mg1Zn1Si1O4
+            + 0.41799    wt.% Zn1Fe1Si1O4
+            + 1.4212     wt.% Fe1Zn1Si1O4
+            + 7.3973E-02 wt.% Ca1Ni1Si1O4
+            + 2.0507E-05 wt.% Ni1Ca1Si1O4
+            + 8.3651     wt.% Mg1Ni1Si1O4
+            + 1.5385     wt.% Ni1Mg1Si1O4
+            + 9.4790     wt.% Fe1Ni1Si1O4
+            + 0.98848    wt.% Ni1Fe1Si1O4
+            + 0.25265    wt.% Zn1Ni1Si1O4
+            + 8.9580E-02 wt.% Ni1Zn1Si1O4
+            + 0.59772    wt.% Ni1Ni1Si1O4)
+  + 0          gram  Olivine#2
+  
+  + 0          gram  Clinopyroxene#1
+            (1200 C, 1 atm,     a=0.97666)
+            ( 1.9012     wt.% CaMgSi2O6
+            + 0.67474    wt.% CaFeSi2O6
+            + 12.624     wt.% FeFeSi2O6
+            + 25.271     wt.% MgMgSi2O6
+            + 8.6045E-03 wt.% CaAl2SiO6
+            + 3.3772E-03 wt.% CaFe3+AlSiO6
+            + 9.0585     wt.% MgFeSi2O6
+            + 35.880     wt.% FeMgSi2O6
+            + 3.8630E-03 wt.% CaAlFe3+SiO6
+            + 1.4955E-03 wt.% CaFe3+Fe3+SiO6
+            + 0.16231    wt.% FeAlAlSiO6
+            + 0.11444    wt.% MgAlAlSiO6
+            + 2.7812E-02 wt.% FeFe3+Fe3+SiO6
+            + 6.3204E-02 wt.% FeFe3+AlSiO6
+            + 7.2294E-02 wt.% FeAlFe3+SiO6
+            + 2.0214E-02 wt.% MgFe3+Fe3+SiO6
+            + 4.5326E-02 wt.% MgFe3+AlSiO6
+            + 5.1845E-02 wt.% MgAlFe3+SiO6
+            + 1.1035     wt.% FeFe3+Si2O6[+]
+            + 5.8981E-02 wt.% CaFe3+Si2O6[+]
+            + 0.79182    wt.% MgFe3+Si2O6[+]
+            + 1.7108E-02 wt.% CaFeFe3+SiO6[-]
+            + 0.23125    wt.% MgFeFe3+SiO6[-]
+            + 0.31817    wt.% FeFeFe3+SiO6[-]
+            + 3.8636E-02 wt.% CaFeAlSiO6[-]
+            + 0.51853    wt.% MgFeAlSiO6[-]
+            + 0.72306    wt.% FeFeAlSiO6[-]
+            + 4.8911E-02 wt.% CaMgFe3+SiO6[-]
+            + 0.65595    wt.% MgMgFe3+SiO6[-]
+            + 0.91596    wt.% FeMgFe3+SiO6[-]
+            + 0.15036    wt.% CaAlSi2O6[+]
+            + 2.0005     wt.% MgAlSi2O6[+]
+            + 2.8353     wt.% FeAlSi2O6[+]
+            + 0.10879    wt.% CaMgAlSiO6[-]
+            + 1.4455     wt.% MgMgAlSiO6[-]
+            + 2.0539     wt.% FeMgAlSiO6[-])
+  + 0          gram  Clinopyroxene#2
+  
+  + 0          gram  Cu2S-s.s.,
+            (1200 C, 1 atm,     a=0.96907)
+            ( 4.8487E-05 wt.% PbS
+            + 99.960     wt.% Cu2S
+            + 4.0363E-02 wt.% ZnS)
+  
+  + 0          gram  Antifluorite#1
+            (1200 C, 1 atm,     a=0.93855)
+            ( 8.8999E-04 wt.% Cu2O
+            + 99.998     wt.% Cu2S_digenite
+            + 9.8645E-09 wt.% Ca2O[2+]
+            + 1.1630E-03 wt.% Ca2S[2+]
+            + 1.6415E-09 wt.% Va2O[2-]
+            + 3.3231E-04 wt.% Va2S[2-])
+  + 0          gram  Antifluorite#2
+  
+  + 0          gram  Cu-liq_or_speiss
+            (1200 C, 1 atm,     a=0.81902)
+            ( 1.1265E-03 wt.% Pb
+            + 85.552     wt.% Cu
+            + 0.91562    wt.% As
+            + 3.7574E-02 wt.% Fe
+            + 13.239     wt.% S                                       C
+            + 1.6231E-04 wt.% Zn
+            + 0.21112    wt.% O
+            + 4.4135E-02 wt.% Ni)
+  
+  + 0          gram  Protopyroxene
+            (1200 C, 1 atm,     a=0.76653)
+            ( 0.73783    wt.% CaMgSi2O6
+            + 0.20441    wt.% CaFeSi2O6
+            + 7.5380     wt.% FeFeSi2O6
+            + 37.489     wt.% MgMgSi2O6
+            + 2.2182E-03 wt.% CaAl2SiO6
+            + 3.2482E-03 wt.% CaFe3+AlSiO6
+            + 10.490     wt.% MgFeSi2O6
+            + 27.445     wt.% FeMgSi2O6
+            + 9.9584E-04 wt.% CaAlFe3+SiO6
+            + 1.4384E-03 wt.% CaFe3+Fe3+SiO6
+            + 8.2471E-02 wt.% FeAlAlSiO6
+            + 0.11277    wt.% MgAlAlSiO6
+            + 5.2723E-02 wt.% FeFe3+Fe3+SiO6
+            + 0.11982    wt.% FeFe3+AlSiO6
+            + 3.6733E-02 wt.% FeAlFe3+SiO6
+            + 7.4317E-02 wt.% MgFe3+Fe3+SiO6
+            + 0.16664    wt.% MgFe3+AlSiO6
+            + 5.1088E-02 wt.% MgAlFe3+SiO6
+            + 1.9152     wt.% FeFe3+Si2O6[+]
+            + 5.1935E-02 wt.% CaFe3+Si2O6[+]
+            + 2.6651     wt.% MgFe3+Si2O6[+]
+            + 5.6613E-03 wt.% CaFeFe3+SiO6[-]
+            + 0.29251    wt.% MgFeFe3+SiO6[-]
+            + 0.20751    wt.% FeFeFe3+SiO6[-]
+            + 1.2785E-02 wt.% CaFeAlSiO6[-]
+            + 0.65589    wt.% MgFeAlSiO6[-]
+            + 0.47159    wt.% FeFeAlSiO6[-]
+            + 2.0734E-02 wt.% CaMgFe3+SiO6[-]
+            + 1.0629     wt.% MgMgFe3+SiO6[-]
+            + 0.76531    wt.% FeMgFe3+SiO6[-]
+            + 3.5487E-02 wt.% CaAlSi2O6[+]
+            + 1.8048     wt.% MgAlSi2O6[+]
+            + 1.3189     wt.% FeAlSi2O6[+]
+            + 4.6118E-02 wt.% CaMgAlSiO6[-]
+            + 2.3423     wt.% MgMgAlSiO6[-]
+            + 1.7160     wt.% FeMgAlSiO6[-])
+  
+  + 0          gram  Rocksalt#1
+            (1200 C, 1 atm,     a=0.62138)
+            ( 0.69136    wt.% CuO[-]
+            + 0.46048    wt.% MgO_periclase
+            + 4.6100E-04 wt.% CaO_lime
+            + 43.115     wt.% FeO_wustite
+            + 10.563     wt.% NiO
+            + 2.1049     wt.% CuO
+            + 1.2168     wt.% ZnO
+            + 37.435     wt.% FeO[+]
+            + 0.26508    wt.% AlO[+]
+            + 4.1484     wt.% VaO[2-])
+  + 0          gram  Rocksalt#2
+  + 0          gram  Rocksalt#3
+  
+  + 0          gram  Monoxide#1
+            (1200 C, 1 atm,     a=0.54020)
+            ( 44.719     wt.% FeO
+            + 44.292     wt.% Fe2O3
+            + 1.2242E-03 wt.% CaO
+            + 1.9701     wt.% MgO
+            + 1.9522     wt.% ZnO
+            + 0.20703    wt.% Al2O3
+            + 4.6988     wt.% NiO
+            + 2.1605     wt.% CuO)
+  + 0          gram  Monoxide#2
+  
+  + 0          gram  Spinel#1
+            (1200 C, 1 atm,     a=0.49705)
+            ( 13.628     wt.% Fe3O4
+            + 12.312     wt.% Fe3O4[1-]
+            + 38.629     wt.% Fe3O4[1+]
+            + 4.3437     wt.% Fe3O4[2-]
+            + 1.1165E-03 wt.% Fe1O4[5-]
+            + 3.9390E-04 wt.% Fe1O4[6-]
+            + 1.3186     wt.% Fe1Al2O4
+            + 0.20223    wt.% Al3O4[1+]
+            + 0.69928    wt.% Al1Fe2O4[1-]
+            + 5.4996E-05 wt.% Al1O4[5-]
+            + 3.7375     wt.% Fe1Al2O4[1+]
+            + 2.1939     wt.% Al1Fe2O4[1+]
+            + 8.8777E-02 wt.% Mg1Al2O4
+            + 0.10586    wt.% Al1Mg2O4[1-]
+            + 4.6436E-02 wt.% Mg3O4[2-]
+            + 2.3874E-05 wt.% Mg1O4[6-]
+            + 0.96827    wt.% Mg1Fe2O4
+            + 1.9688     wt.% Fe1Mg2O4[1-]
+            + 0.69458    wt.% Fe1Mg2O4[2-]
+            + 0.30862    wt.% Mg1Fe2O4[2-]
+            + 1.1393E-03 wt.% Ni1Al2O4
+            + 0.41749    wt.% Al1Ni2O4[1-]
+            + 2.2235E-03 wt.% Ni3O4[2-]
+            + 3.4282E-07 wt.% Ni1O4[6-]
+            + 1.1728E-02 wt.% Ni1Fe2O4
+            + 7.3258     wt.% Fe1Ni2O4[1-]
+            + 2.5845     wt.% Fe1Ni2O4[2-]
+            + 3.7381E-03 wt.% Ni1Fe2O4[2-]
+            + 0.18432    wt.% Mg1Ni2O4[2-]
+            + 6.0047E-04 wt.% Ni1Mg2O4[2-]
+            + 4.1617     wt.% Zn1Fe2O4
+            + 0.40795    wt.% Zn1Al2O4
+            + 0.42918    wt.% Fe1Zn2O4[1-]
+            + 4.6099E-02 wt.% Zn1Zn2O4[2-]
+            + 2.4639E-02 wt.% Al1Zn2O4[1-]
+            + 1.3265     wt.% Zn1Fe2O4[2-]
+            + 0.15141    wt.% Fe1Zn2O4[2-]
+            + 1.2472E-04 wt.% Zn1Va2O4[6-]
+            + 0.21525    wt.% Zn1Mg2O4[2-]
+            + 1.0887E-02 wt.% Mg1Zn2O4[2-]
+            + 0.78850    wt.% Zn1Ni2O4[2-]
+            + 1.3018E-04 wt.% Ni1Zn2O4[2-]
+            + 0.36393    wt.% Cu1Fe2O4
+            + 3.1247E-02 wt.% Fe1Cu2O4[1-]
+            + 2.9379E-04 wt.% Cu1Cu2O4[2-]
+            + 0.11600    wt.% Cu1Fe2O4[2-]
+            + 1.1023E-02 wt.% Fe1Cu2O4[2-]
+            + 1.0835E-05 wt.% Cu1Va2O4[6-]
+            + 3.5589E-02 wt.% Cu1Al2O4                                T
+            + 1.7904E-03 wt.% Al1Cu2O4[1-]
+            + 1.9128E-03 wt.% Fe1Ca2O4[1-]
+            + 6.7482E-04 wt.% Fe1Ca2O4[2-]
+            + 1.0620E-04 wt.% Al1Ca2O4[1-]
+            + 1.8113E-05 wt.% Cu1Ca2O4[2-]
+            + 7.9093E-04 wt.% Mg1Cu2O4[2-]
+            + 1.8772E-02 wt.% Cu1Mg2O4[2-]
+            + 4.6754E-05 wt.% Mg1Ca2O4[2-]
+            + 9.4795E-06 wt.% Ni1Cu2O4[2-]
+            + 6.8965E-02 wt.% Cu1Ni2O4[2-]
+            + 5.8186E-07 wt.% Ni1Ca2O4[2-]
+            + 3.3581E-03 wt.% Zn1Cu2O4[2-]
+            + 4.0335E-03 wt.% Cu1Zn2O4[2-]
+            + 2.0736E-04 wt.% Zn1Ca2O4[2-])
+  + 0          gram  Spinel#2
+  
+  + 0          gram  Wollastonite,
+            (1200 C, 1 atm,     a=0.47507)
+            ( 22.737     wt.% MgSiO3
+            + 59.723     wt.% FeSiO3
+            + 17.540     wt.% CaSiO3)
+  
+  + 0          gram  fcc_Fe-Cu
+            (1200 C, 1 atm,     a=0.36355)
+            ( 8.2254E-03 wt.% Fe
+            + 99.992     wt.% Cu                                      C)
+  
+  + 0          gram  M2O3(Corundum)#1
+            (1200 C, 1 atm,     a=0.32803)
+            ( 3.8103     wt.% Al2O3
+            + 95.603     wt.% Fe2O3
+            + 0.58698    wt.% NiO)
+  + 0          gram  M2O3(Corundum)#2
+  
+  + 0          gram  LowClinopyroxene
+            (1200 C, 1 atm,     a=0.28117)
+            ( 0.40374    wt.% Ca1Mg1Si2O6
+            + 99.596     wt.% Mg1Mg1Si2O6)
+  
+  + 0          gram  Ca(Al,Fe)12O19
+            (1200 C, 1 atm,     a=0.23709)
+            ( 39.905     wt.% Ca1Al12O19
+            + 60.095     wt.% Ca1Fe12O19)
+  
+  + 0          gram  Willemite
+            (1200 C, 1 atm,     a=0.22446)
+            ( 7.0251     wt.% Zn1Zn1SiO4
+            + 20.681     wt.% Fe1Fe1SiO4
+            + 12.119     wt.% Zn1Fe1SiO4
+            + 12.013     wt.% Fe1Zn1SiO4
+            + 6.7384     wt.% Mg1Mg1SiO4
+            + 7.0530     wt.% Mg1Zn1SiO4
+            + 7.0729     wt.% Zn1Mg1SiO4
+            + 12.044     wt.% Mg1Fe1SiO4
+            + 11.972     wt.% Fe1Mg1SiO4
+            + 2.7159E-02 wt.% Ni1Ni1SiO4
+            + 0.40595    wt.% Zn1Ni1SiO4
+            + 0.47046    wt.% Ni1Zn1SiO4
+            + 0.69320    wt.% Fe1Ni1SiO4
+            + 0.81043    wt.% Ni1Fe1SiO4
+            + 0.40471    wt.% Mg1Ni1SiO4
+            + 0.47034    wt.% Ni1Mg1SiO4)
+  
+  + 0          gram  Zincite
+            (1200 C, 1 atm,     a=0.21998)
+            ( 0.28950    wt.% MgO
+            + 9.4570     wt.% FeO
+            + 38.912     wt.% ZnO                                     C
+            + 0.72038    wt.% NiO
+            + 50.621     wt.% Fe2O3)
+  
+  + 0          gram  Salt-liquid#1
+            (1200 C, 1 atm,     a=0.21598)
+            ( 0.34194    wt.% MgO
+            + 6.9211E-04 wt.% CaO
+            + 42.418     wt.% FeO
+            + 4.2347     wt.% NiO
+            + 53.005     wt.% Fe2O3)
+  + 0          gram  Salt-liquid#2
+  
+  + 0          gram  Cordierite
+            (1200 C, 1 atm,     a=0.20559)
+            ( 19.038     wt.% Al4Fe2Si5O18
+            + 80.962     wt.% Al4Mg2Si5O18)
+  
+  + 0          gram  a'(Ca,Sr,Ba)2SiO4
+            (1200 C, 1 atm,     a=0.18399)
+            ( 6.3518     wt.% Mg2SiO4
+            + 79.486     wt.% Fe2SiO4
+            + 10.347     wt.% Ca2SiO4
+            + 5.6988E-03 wt.% Pb2SiO4                                 T
+            + 3.8089     wt.% Zn2SiO4)
+  
+  + 0          gram  a-(Ca,Sr)2SiO4
+            (1200 C, 1 atm,     a=0.17359)
+            ( 7.0546     wt.% Mg2SiO4
+            + 9.8996     wt.% Ca2SiO4
+            + 83.046     wt.% Fe2SiO4)
+  
+  + 0          gram  Ca(Al,Fe)6O10
+            (1200 C, 1 atm,     a=0.16466)
+            ( 36.332     wt.% Ca1Al6O10
+            + 63.668     wt.% Ca1Fe6O10)
+  
+  + 0          gram  Pb-liq
+            (1200 C, 1 atm,     a=0.16330)
+            ( 1.9194E-02 wt.% Pb
+            + 2.5891E-03 wt.% Zn
+            + 25.391     wt.% Cu                                      C
+            + 22.406     wt.% Bi
+            + 13.968     wt.% Sb
+            + 1.0482E-02 wt.% Fe
+            + 7.2135     wt.% S                                       C
+            + 0.93879    wt.% As
+            + 27.426     wt.% CuS                                     C
+            + 2.6238     wt.% O                                       C)
+  
+  + 0          gram  Ca(Al,Fe)4O7
+            (1200 C, 1 atm,     a=8.7133E-02)
+            ( 54.105     wt.% Ca1Al4O7
+            + 45.895     wt.% Ca1Fe4O7)
+  
+  + 0          gram  FeS-liq
+            (1200 C, 1 atm,     a=5.7078E-02)
+            ( 6.2079E-03 wt.% Fe
+            + 32.419     wt.% FeS                                     C
+            + 67.575     wt.% FeO
+            + 5.6249E-05 wt.% MgS)
+  
+  + 0          gram  Mullite#1
+            (1200 C, 1 atm,     a=4.3899E-02)
+            ( 14.204     wt.% Al2Al1O5[-1]
+            + 0.12395    wt.% Al2Al1Va5[+9]
+            + 69.549     wt.% Al2Si1O5[0]
+            + 0.61100    wt.% Al2Si1Va5[+10]
+            + 4.2468E-05 wt.% Fe2Fe1O5[-1]
+            + 2.6058     wt.% Fe2Al1O5[-1]
+            + 12.737     wt.% Fe2Si1O5[0]
+            + 4.9873E-07 wt.% Fe2Fe1Va5[+9]
+            + 2.8673E-02 wt.% Fe2Al1Va5[+9]
+            + 0.14055    wt.% Fe2Si1Va5[+10]
+            + 2.4117E-04 wt.% Al2Fe1O5[-1]
+            + 2.4208E-06 wt.% Al2Fe1Va5[+9])
+  + 0          gram  Mullite#2
+  
+  + 0          gram  Wurtzite#1
+            (1200 C, 1 atm,     a=2.9888E-02)
+            ( 96.077     wt.% ZnO_zincite
+            + 3.9227     wt.% ZnS_wurtzite)
+  + 0          gram  Wurtzite#2
+  
+  + 0          gram  Ca(Al,Fe)2O4#1
+            (1200 C, 1 atm,     a=1.2852E-02)
+            ( 63.920     wt.% Ca1Al2O4
+            + 36.080     wt.% Ca1Fe2O4)
+  + 0          gram  Ca(Al,Fe)2O4#2
+  
+  + 0          gram  Melilite
+            (1200 C, 1 atm,     a=7.4986E-03)
+            ( 0.17742    wt.% Ca2Zn1Fe2O7[2-]
+            + 0.21979    wt.% Ca2Fe3O7[2-]
+            + 2.8661E-02 wt.% Ca2Fe3O7[1-]
+            + 1.1950E-05 wt.% Pb2Zn1Fe2O7[2-]
+            + 1.4991E-05 wt.% Pb2Fe3O7[2-]
+            + 1.9548E-06 wt.% Pb2Fe3O7[1-]
+            + 18.156     wt.% Ca2Zn1Si2O7
+            + 22.387     wt.% Ca2Fe1Si2O7
+            + 2.9192     wt.% Ca2Fe1Si2O7[1+]
+            + 1.3258E-03 wt.% Pb2Zn1Si2O7
+            + 1.6611E-03 wt.% Pb2Fe1Si2O7
+            + 2.1661E-04 wt.% Pb2Fe1Si2O7[1+]
+            + 0.77973    wt.% Ca2Zn1Al2O7[2-]
+            + 0.96120    wt.% Ca2Fe1Al2O7[2-]
+            + 0.12534    wt.% Ca2Fe1Al2O7[1-]
+            + 0.26859    wt.% Ca2Al3O7[1-]
+            + 5.7144E-05 wt.% Pb2Zn1Al2O7[2-]
+            + 7.1596E-05 wt.% Pb2Fe1Al2O7[2-]
+            + 9.3360E-06 wt.% Pb2Fe1Al2O7[1-]
+            + 2.1117E-05 wt.% Pb2Al3O7[1-]
+            + 6.2459E-02 wt.% Ca2Al1Fe2O7[1-]
+            + 6.2603     wt.% Ca2Al1Si2O7[1+]
+            + 4.4390E-06 wt.% Pb2Al1Fe2O7[1-]
+            + 4.9002E-04 wt.% Pb2Al1Si2O7[1+]
+            + 45.253     wt.% Ca2Mg1Si2O7
+            + 3.5612E-03 wt.% Pb2Mg1Si2O7
+            + 1.9413     wt.% Ca2Mg1Al2O7[2-]
+            + 1.5346E-04 wt.% Pb2Mg1Al2O7[2-]
+            + 0.45223    wt.% Ca2Mg1Fe2O7[2-]
+            + 3.2272E-05 wt.% Pb2Mg1Fe2O7[2-])
+  
+  + 0          gram  Sb-liq
+            (1200 C, 1 atm,     a=6.6309E-03)
+            ( 92.714     wt.% Sb
+            + 3.9520     wt.% As                                      T
+            + 2.9284     wt.% O                                       C
+            + 0.40542    wt.% Pb)
+  
+  + 0          gram  PbO-ZnO
+            (1200 C, 1 atm,     a=1.9564E-03)
+            ( 0.36248    wt.% PbO
+            + 99.638     wt.% ZnO)
+  
+  + 0          gram  Wurtzite2
+            (1200 C, 1 atm,     a=1.5242E-03)
+            ( 65.537     wt.% ZnS
+            + 34.463     wt.% FeS)
+  
+  + 0          gram  Sphalerite3
+            (1200 C, 1 atm,     a=1.3487E-03)
+            ( 59.500     wt.% ZnS
+            + 40.500     wt.% FeS)
+  
+  + 0          gram  Pb-solid
+            (1200 C, 1 atm,     a=1.0978E-03)
+            ( 1.8214     wt.% Pb                                      T
+            + 98.179     wt.% Sb                                      T)
+  
+  + 0          gram  Sb-solid
+            (1200 C, 1 atm,     a=1.0635E-03)
+            ( 99.258     wt.% Sb                                      T
+            + 0.74175    wt.% Pb                                      T)
+  
+  + 0          gram  Ca2(Al,Fe)2O5
+            (1200 C, 1 atm,     a=3.9853E-04)
+            ( 15.430     wt.% Ca2Al2O5
+            + 84.570     wt.% Ca2Fe2O5)
+  
+  + 0          gram  Zn-liq
+            (1200 C, 1 atm,     a=2.7621E-04)
+            ( 91.690     wt.% Zn
+            + 8.3097     wt.% O                                       C)
+  
+  + 0          gram  Se-liq
+            (1200 C, 1 atm,     a=2.3921E-04)
+            ( 0.15186    wt.% O
+            + 99.848     wt.% As                                      T)
+  
+  + 0          gram  Anhydrite#1
+            (1200 C, 1 atm,     a=1.3018E-04)
+            ( 1.2141     wt.% MgSO4
+            + 98.786     wt.% CaSO4_anhydrite)
+  + 0          gram  Anhydrite#2
+  
+  + 0          gram  Ca3(Al,Fe)2O6
+            (1200 C, 1 atm,     a=2.3187E-06)
+            ( 41.591     wt.% Ca3Al2O6
+            + 58.409     wt.% Ca3Fe2O6)
+  
+  + 0          gram  Pyrite
+            (1200 C, 1 atm,     a=1.2652E-06)
+            ( 5.5546     wt.% FeS2_pyrite
+            + 92.533     wt.% NiS2_vaesite
+            + 1.9123     wt.% CuS2)
+  
+  + 0          gram  Ca2(Al,Fe)8SiO16
+            (1200 C, 1 atm,     a=4.4708E-07)
+            ( 38.006     wt.% Ca2Fe8Si1O16
+            + 61.994     wt.% Ca2Al8Si1O16)
+  
+  + 0          gram  Bredigite
+            (1200 C, 1 atm,     a=1.0102E-08)
+            ( 16.996     wt.% Ca7Mg(SiO4)4
+            + 83.004     wt.% Ca3Mg5(SiO4)4)
+  
+  + 0          gram  Pb3M2Si3O11
+            (1200 C, 1 atm,     a=1.5016E-09)
+            ( 99.998     wt.% Pb3Ca2Si3O11
+            + 1.6370E-03 wt.% Pb5Si3O11)
+  
+  + 4.8244     gram  SiO2_Tridymite(h)
+    (4.8244 gram, 8.0294E-02 mol)
+            (1200 C, 1 atm, S4, a=1.0000)
+  
+  + 0          gram  SiO2_Cristobalite(h)
+            (1200 C, 1 atm, S6, a=0.99861)
+  
+  + 0          gram  Cu2S_liquid
+            (1200 C, 1 atm, L1, a=0.98109)
+  
+  + 0          gram  SiO2_Quartz(h)
+            (1200 C, 1 atm, S2, a=0.94874)
+  
+  + 0          gram  Cu2S_Solid-C
+            (1200 C, 1 atm, S3, a=0.93847)
+  
+  + 0          gram  Cu2S_Digenite_cF44_(225)_Fm-3m
+            (1200 C, 1 atm, S3, a=0.93847)
+  
+  + 0          gram  Cu2S_Solid-B
+            (1200 C, 1 atm, S2, a=0.85493)
+  
+  + 0          gram  Cu2S_Chalcocite_(high)_hP16_(194)__P63/m
+            (1200 C, 1 atm, S2, a=0.85493)
+  
+  + 0          gram  SiO2_liquid
+            (1200 C, 1 atm, L1, a=0.81359)
+  
+  + 0          gram  AlAsO4_solid                                     T
+            (1200 C, 1 atm, S1, a=0.65953)
+  
+  + 0          gram  MgSiO3_proto-enstatite
+            (1200 C, 1 atm, S3, a=0.59264)
+  
+  + 0          gram  MgSiO3_ortho-enstatite
+            (1200 C, 1 atm, S2, a=0.57745)
+  
+  + 0          gram  MgSiO3_low-clinoenstatite
+            (1200 C, 1 atm, S1, a=0.52927)
+  
+  + 0          gram  SiO2_coesite
+            (1200 C, 1 atm, S7, a=0.44585)
+  
+  + 0          gram  MgSiO3_high-P-clinoenstatite
+            (1200 C, 1 atm, S4, a=0.41097)
+  
+  + 0          gram  Cu_liquid
+            (1200 C, 1 atm, L1, a=0.39806)
+  
+  + 0          gram  Cu_solid
+            (1200 C, 1 atm, S1, a=0.36364)
+  
+  + 0          gram  Cu2S_Chalcocite
+            (1200 C, 1 atm, S1, a=0.34173)
+  
+  + 0          gram  Cu2S_Chalcocite_(low)_mP144_(14)__P21/c
+            (1200 C, 1 atm, S1, a=0.34173)
+  
+  + 0          gram  SiO2_Quartz(l)                                   T
+            (1200 C, 1 atm, S1, a=0.31620)
+  
+  + 0          gram  FeSiO3_Clino-ferrosilite(metastable)
+            (1200 C, 1 atm, S1, a=0.29655)
+  
+  + 0          gram  FeSiO3_Ortho-ferrosilite(metastable)
+            (1200 C, 1 atm, S3, a=0.29033)
+  
+  + 0          gram  Mg2SiO4_forsterite
+            (1200 C, 1 atm, S1, a=0.27789)
+  
+  + 0          gram  Fe2SiO4_fayalite
+            (1200 C, 1 atm, S1, a=0.14291)
+  
+  + 0          gram  FeO_liquid
+            (1200 C, 1 atm, L1, a=0.14211)
+  
+  + 0          gram  CaMgSi2O6_diopside(cl-pyroxene)
+            (1200 C, 1 atm, S1, a=0.13059)
+  
+  + 0          gram  CaAl2Si2O8_Anorthite
+            (1200 C, 1 atm, S2, a=0.11941)
+  
+  + 0          gram  Fe2O3_hematite
+            (1200 C, 1 atm, S1, a=9.5724E-02)
+  
+  + 0          gram  CaSiO3_Ps-wollastonite
+            (1200 C, 1 atm, S2, a=8.6234E-02)
+  
+  + 0          gram  CaSiO3_Wollastonite
+            (1200 C, 1 atm, S1, a=8.3262E-02)
+  
+  + 0          gram  NiO_solid
+            (1200 C, 1 atm, S1, a=6.6383E-02)
+  
+  + 0          gram  MgO_periclase
+            (1200 C, 1 atm, S1, a=4.7120E-02)
+  
+  + 0          gram  MgO_Periclase
+            (1200 C, 1 atm, S1, a=4.7120E-02)
+  
+  + 0          gram  CuFeO2_solid
+            (1200 C, 1 atm, S1, a=4.4950E-02)
+  
+  + 0          gram  SiO2_Cristobalite(l)                             T
+            (1200 C, 1 atm, S5, a=4.3298E-02)
+  
+  + 0          gram  CaFeSi2O6_Hedenbergite(cl-pyroxene)
+            (1200 C, 1 atm, S1, a=3.3454E-02)
+  
+  + 0          gram  ZnO_Zincite
+            (1200 C, 1 atm, S1, a=2.8902E-02)
+  
+  + 0          gram  Mg2Al4Si5O18_Cordierite
+            (1200 C, 1 atm, S1, a=2.8762E-02)
+  
+  + 0          gram  Al2O3_corundum(alpha)
+            (1200 C, 1 atm, S4, a=2.6986E-02)
+  
+  + 0          gram  Ni_Solid_FCC
+            (1200 C, 1 atm, S1, a=2.0411E-02)
+  
+  + 0          gram  CuAlO2_delafossite
+            (1200 C, 1 atm, S1, a=1.8680E-02)
+  
+  + 0          gram  NiSb_solid                                       T
+            (1200 C, 1 atm, S1, a=1.8440E-02)
+  
+  + 0          gram  Al2O3_delta
+            (1200 C, 1 atm, S2, a=1.6897E-02)
+  
+  + 0          gram  Ni_liquid
+            (1200 C, 1 atm, L1, a=1.6620E-02)
+  
+  + 0          gram  Fe2SiO4_beta-fayalite(fictive)
+            (1200 C, 1 atm, S2, a=1.5859E-02)
+  
+  + 0          gram  Al2O3_kappa
+            (1200 C, 1 atm, S3, a=1.5721E-02)
+  
+  + 0          gram  Fe2SiO4_gamma-fayalite(spinel)
+            (1200 C, 1 atm, S3, a=1.4538E-02)
+  
+  + 0          gram  NiO_liquid
+            (1200 C, 1 atm, L1, a=1.3950E-02)
+  
+  + 0          gram  MgSiO3_Mg-garnet
+            (1200 C, 1 atm, S6, a=1.2241E-02)
+  
+  + 0          gram  NiCaSi2O6_Ni-clino-pyroxene
+            (1200 C, 1 atm, S1, a=1.0968E-02)
+  
+  + 0          gram  Al2O3_gamma
+            (1200 C, 1 atm, S1, a=1.0341E-02)
+  
+  + 0          gram  SiO2_Tridymite(l)                                T
+            (1200 C, 1 atm, S3, a=9.9334E-03)
+  
+  + 0          gram  Mg2SiO4_beta-forsterite
+            (1200 C, 1 atm, S2, a=8.9252E-03)
+  
+  + 0          gram  Cu2O_solid
+            (1200 C, 1 atm, S1, a=8.7324E-03)
+  
+  + 0          gram  Cu2O_Cuprite_C3_cP6_(224)_Pn-3m
+            (1200 C, 1 atm, S1, a=8.6056E-03)
+  
+  + 0          gram  Cu2O_liquid
+            (1200 C, 1 atm, L1, a=7.3948E-03)
+  
+  + 0          gram  Zn2SiO4_Willemite
+            (1200 C, 1 atm, S1, a=6.7561E-03)
+  
+  + 0          gram  ZnO_liquid
+            (1200 C, 1 atm, L1, a=6.2545E-03)
+  
+  + 0          gram  Ni2SiO4_Olivine
+            (1200 C, 1 atm, S1, a=5.8421E-03)
+  
+  + 0          gram  Cu2Sb_solid                                      T
+            (1200 C, 1 atm, S2, a=5.1269E-03)
+  
+  + 0          gram  SiO2_stishovite
+            (1200 C, 1 atm, S8, a=4.4193E-03)
+  
+  + 0          gram  CaAl2SiO6_Ca-Tschermak
+            (1200 C, 1 atm, S1, a=4.1971E-03)
+  
+  + 0          gram  Ca2MgSi2O7_Akermanite(melilite)
+            (1200 C, 1 atm, S1, a=3.5336E-03)
+  
+  + 0          gram  Al2Fe2O6_solid
+            (1200 C, 1 atm, S1, a=3.3486E-03)
+  
+  + 0          gram  Bi_liquid
+            (1200 C, 1 atm, L1, a=3.1721E-03)
+  
+  + 0          gram  Sb_liquid
+            (1200 C, 1 atm, L1, a=2.9554E-03)
+  
+  + 0          gram  Mg3Al2Si3O12_Pyrope
+            (1200 C, 1 atm, S1, a=2.5112E-03)
+  
+  + 0          gram  CuS_Covellite                                    T
+            (1200 C, 1 atm, S1, a=2.4894E-03)
+  
+  + 0          gram  Mg2SiO4_gamma-forsterite
+            (1200 C, 1 atm, S3, a=2.0968E-03)
+  
+  + 0          gram  MgO_liquid
+            (1200 C, 1 atm, L1, a=2.0420E-03)
+  
+  + 0          gram  MgO_liquid
+            (1200 C, 1 atm, L1, a=2.0420E-03)
+  
+  + 0          gram  NiS_Solid_beta
+            (1200 C, 1 atm, S2, a=1.8792E-03)
+  
+  + 0          gram  Cu2Sb_solid                                      T
+            (1200 C, 1 atm, S1, a=1.8608E-03)
+  
+  + 0          gram  MgSiO3_Mg-ilmenite
+            (1200 C, 1 atm, S5, a=1.7193E-03)
+  
+  + 0          gram  Ca2FeSi2O7_Fe-akermanite(melilite)
+            (1200 C, 1 atm, S1, a=1.4401E-03)
+  
+  + 0          gram  CuO_Tenorite
+            (1200 C, 1 atm, S1, a=1.3926E-03)
+  
+  + 0          gram  CuO_Tenorite
+            (1200 C, 1 atm, S1, a=1.3926E-03)
+  
+  + 0          gram  Fe2Al4Si5O18_Ferrocordierite
+            (1200 C, 1 atm, S1, a=1.2958E-03)
+  
+  + 0          gram  Fe3Al2Si3O12_Almandine
+            (1200 C, 1 atm, S1, a=1.2928E-03)
+  
+  + 0          gram  Ca2ZnSi2O7_Hardystonite(melilite)
+            (1200 C, 1 atm, S1, a=1.1793E-03)
+  
+  + 0          gram  Sb_solid                                         T
+            (1200 C, 1 atm, S1, a=1.0588E-03)
+  
+  + 0          gram  FeS_solid
+            (1200 C, 1 atm, S3, a=1.0540E-03)
+  
+  + 0          gram  FeS_solid                                        T
+            (1200 C, 1 atm, S2, a=1.0052E-03)
+  
+  + 0          gram  ZnS_Wurtzite
+            (1200 C, 1 atm, S2, a=9.8547E-04)
+  
+  + 0          gram  NiS_Solid_alpha                                  T
+            (1200 C, 1 atm, S1, a=8.6981E-04)
+  
+  + 0          gram  Al2O3_liquid
+            (1200 C, 1 atm, L1, a=8.6166E-04)
+  
+  + 0          gram  ZnS_Sphalerite                                   T
+            (1200 C, 1 atm, S1, a=8.4981E-04)
+  
+  + 0          gram  SbO2_Cervantite                                  T
+            (1200 C, 1 atm, S1, a=8.2248E-04)
+  
+  + 0          gram  ZnS_liquid
+            (1200 C, 1 atm, L1, a=7.9290E-04)
+  
+  + 0          gram  CuO_liquid
+            (1200 C, 1 atm, L1, a=7.4023E-04)
+  
+  + 0          gram  FeS_solid                                        T
+            (1200 C, 1 atm, S1, a=7.0741E-04)
+  
+  + 0          gram  Bi_solid                                         T
+            (1200 C, 1 atm, S1, a=6.9746E-04)
+  
+  + 0          gram  Sb2O3_liquid
+            (1200 C, 1 atm, L1, a=6.3024E-04)
+  
+  + 0          gram  Cu2Al2O4_solid
+            (1200 C, 1 atm, S1, a=4.6018E-04)
+  
+  + 0          gram  Fe_fcc
+            (1200 C, 1 atm, S2, a=4.5135E-04)
+  
+  + 0          gram  Fe_bcc
+            (1200 C, 1 atm, S1, a=4.4885E-04)
+  
+  + 0          gram  S_liquid                                         T
+            (1200 C, 1 atm, L1, a=3.7827E-04)
+  
+  + 0          gram  Fe_liquid
+            (1200 C, 1 atm, L1, a=3.6637E-04)
+  
+  + 0          gram  Ca2SiO4_Alpha-prime
+            (1200 C, 1 atm, S2, a=3.4576E-04)
+  
+  + 0          gram  Ca2SiO4_Alpha
+            (1200 C, 1 atm, S3, a=3.0708E-04)
+  
+  + 0          gram  Fe2O3_High-Pressure-Hematite
+            (1200 C, 1 atm, S3, a=1.7872E-04)
+  
+  + 0          gram  Fe2O3_High-Pressure-Hematite
+            (1200 C, 1 atm, S2, a=1.6884E-04)
+  
+  + 0          gram  CuFe2O4_tetragonal_spinel
+            (1200 C, 1 atm, S1, a=1.6630E-04)
+  
+  + 0          gram  S_beta_monoclinic_Ak_mP64_(14)_P21/c             T
+            (1200 C, 1 atm, S2, a=1.6248E-04)
+  
+  + 0          gram  S_alpha_orthorhombic_A16_oF128_(70)_Fdd          T
+            (1200 C, 1 atm, S1, a=1.4201E-04)
+  
+  + 0          gram  Ca2SiO4_Gamma(olivine)
+            (1200 C, 1 atm, S1, a=1.3413E-04)
+  
+  + 0          gram  FeSiO3_Fe-perovskite(metastable)
+            (1200 C, 1 atm, S2, a=1.3235E-04)
+  
+  + 0          gram  Ca2Al2SiO7_Gehlenite
+            (1200 C, 1 atm, S1, a=1.2892E-04)
+  
+  + 0          gram  CaSO4_gamma_prototype_CePO4_hP18_(180)
+            (1200 C, 1 atm, S2, a=1.2841E-04)
+  
+  + 0          gram  CaSO4_Anhydrite_prototype_CaSO4_oS24_(63
+            (1200 C, 1 atm, S1, a=1.2841E-04)
+  
+  + 0          gram  MgSiO3_Mg-perovskite
+            (1200 C, 1 atm, S7, a=1.1917E-04)
+  
+  + 0          gram  As_Rhombohedral                                  T
+            (1200 C, 1 atm, S1, a=1.1575E-04)
+  
+  + 0          gram  CaFe2O4_solid
+            (1200 C, 1 atm, S1, a=1.0719E-04)
+  
+  + 0          gram  CaAl2O4_solid
+            (1200 C, 1 atm, S1, a=8.7267E-05)
+  
+  + 0          gram  Ca3Fe2Si3O12_Andradite(garnet)
+            (1200 C, 1 atm, S1, a=8.0276E-05)
+  
+  + 0          gram  CaSO4_liquid
+            (1200 C, 1 atm, L1, a=7.4377E-05)
+  
+  + 0          gram  CaO_Lime
+            (1200 C, 1 atm, S1, a=6.8726E-05)
+  
+  + 0          gram  CaO_Lime
+            (1200 C, 1 atm, S1, a=6.8726E-05)
+  
+  + 0          gram  Ca3Si2O7_Rankinite
+            (1200 C, 1 atm, S1, a=5.1276E-05)
+  
+  + 0          gram  Sb2O3_Solid_(orthorhombic)                       T
+            (1200 C, 1 atm, S2, a=2.9927E-05)
+  
+  + 0          gram  NiBi_solid                                       T
+            (1200 C, 1 atm, S1, a=2.8482E-05)
+  
+  + 0          gram  Ca3MgSi2O8_Merwinite
+            (1200 C, 1 atm, S1, a=2.7975E-05)
+  
+  + 0          gram  Ni3S2_Solid_II
+            (1200 C, 1 atm, S2, a=2.1411E-05)
+  
+  + 0          gram  Sb2O3_Solid_(cubic)                              T
+            (1200 C, 1 atm, S1, a=2.0561E-05)
+  
+  + 0          gram  Ca3Al2Si3O12_Grossularite
+            (1200 C, 1 atm, S1, a=1.3274E-05)
+  
+  + 0          gram  CaFe4O7_solid
+            (1200 C, 1 atm, S1, a=1.0824E-05)
+  
+  + 0          gram  CaAl4O7_solid
+            (1200 C, 1 atm, S1, a=9.0775E-06)
+  
+  + 0          gram  CaAl2Si2O8_Hexagonal                             T
+            (1200 C, 1 atm, S1, a=8.0162E-06)
+  
+  + 0          gram  Zn_liquid
+            (1200 C, 1 atm, L1, a=7.0154E-06)
+  
+  + 0          gram  Pb_liquid
+            (1200 C, 1 atm, L1, a=6.4899E-06)
+  
+  + 0          gram  PbSiO3_Solid-2                                   T
+            (1200 C, 1 atm, S2, a=5.6348E-06)
+  
+  + 0          gram  PbSiO3_solid                                     T
+            (1200 C, 1 atm, S1, a=5.6210E-06)
+  
+  + 0          gram  CaSO3_solid                                      T
+            (1200 C, 1 atm, S1, a=4.2114E-06)
+  
+  + 0          gram  Pb_solid                                         T
+            (1200 C, 1 atm, S1, a=3.8413E-06)
+  
+  + 0          gram  Zn_solid                                         T
+            (1200 C, 1 atm, S1, a=3.5948E-06)
+  
+  + 0          gram  MgSO4_L2
+            (1200 C, 1 atm, L1, a=3.0218E-06)
+  
+  + 0          gram  CaO_liquid
+            (1200 C, 1 atm, L1, a=3.0053E-06)
+  
+  + 0          gram  CaO_liquid
+            (1200 C, 1 atm, L1, a=3.0053E-06)
+  
+  + 0          gram  MgSO4_beta_prototype_CuSO4_oP24_(62)
+            (1200 C, 1 atm, S2, a=2.7720E-06)
+  
+  + 0          gram  MgSO4_prototype_CrVO4_oS24_(63)
+            (1200 C, 1 atm, S1, a=2.6731E-06)
+  
+  + 0          gram  PbO_liquid
+            (1200 C, 1 atm, L1, a=1.9898E-06)
+  
+  + 0          gram  PbO_liquid
+            (1200 C, 1 atm, L1, a=1.9898E-06)
+  
+  + 0          gram  FeSO4_solid
+            (1200 C, 1 atm, S1, a=1.9880E-06)
+  
+  + 0          gram  FeAsO4_solid                                     T
+            (1200 C, 1 atm, S1, a=1.7191E-06)
+  
+  + 0          gram  NiS2_Vaesite_C2_cP12_(205)_Pa-3
+            (1200 C, 1 atm, S1, a=1.1550E-06)
+  
+  + 0          gram  PbO_Massicot_(yellow)
+            (1200 C, 1 atm, S2, a=1.1311E-06)
+  
+  + 0          gram  PbO_Massicot_(yellow)
+            (1200 C, 1 atm, S2, a=1.1311E-06)
+  
+  + 0          gram  PbO_Litharge_(red)
+            (1200 C, 1 atm, S1, a=1.1177E-06)
+  
+  + 0          gram  PbO_Litharge_(red)
+            (1200 C, 1 atm, S1, a=1.1177E-06)
+  
+  + 0          gram  CuSbS2_solid                                     T
+            (1200 C, 1 atm, S1, a=9.5081E-07)
+  
+  + 0          gram  PbZnSiO4_solid                                   T
+            (1200 C, 1 atm, S1, a=9.0540E-07)
+  
+  + 0          gram  CaS_solid
+            (1200 C, 1 atm, S1, a=8.3257E-07)
+  
+  + 0          gram  AsFe_Westerveldite                               T
+            (1200 C, 1 atm, S1, a=7.5677E-07)
+  
+  + 0          gram  As2O3_liquid                                     T
+            (1200 C, 1 atm, L1, a=6.8530E-07)
+  
+  + 0          gram  PbS_solid
+            (1200 C, 1 atm, S1, a=6.0032E-07)
+  
+  + 0          gram  MgS_solid
+            (1200 C, 1 atm, S1, a=5.4772E-07)
+  
+  + 0          gram  Mg4Al10Si2O23_Sapphirine
+            (1200 C, 1 atm, S1, a=4.5316E-07)
+  
+  + 0          gram  Mg3(AsO4)2_solid                                 T
+            (1200 C, 1 atm, S1, a=4.5071E-07)
+  
+  + 0          gram  Ni3S2_Solid_I                                    T
+            (1200 C, 1 atm, S1, a=3.3078E-07)
+  
+  + 0          gram  ZnSO4_Solid_Beta
+            (1200 C, 1 atm, S3, a=2.4820E-07)
+  
+  + 0          gram  NiSO4_solid                                      T
+            (1200 C, 1 atm, S1, a=1.7183E-07)
+  
+  + 0          gram  ZnSO4_Solid_Alpha_prime                          T
+            (1200 C, 1 atm, S2, a=1.1414E-07)
+  
+  + 0          gram  Ca2Fe2O5_solid
+            (1200 C, 1 atm, S1, a=1.0470E-07)
+  
+  + 0          gram  (PbO)(Al2O3)_solid
+            (1200 C, 1 atm, S1, a=1.0250E-07)
+  
+  + 0          gram  ZnSb_liquid                                      T
+            (1200 C, 1 atm, L1, a=7.1092E-08)
+  
+  + 0          gram  CuS2_prototype_FeS2_C2_cP12_(205)_Pa-3           T
+            (1200 C, 1 atm, S1, a=5.8757E-08)
+  
+  + 0          gram  PbCa2Si3O9_Margarosinite                         T
+            (1200 C, 1 atm, S1, a=5.2269E-08)
+  
+  + 0          gram  ZnSO4_Solid_Alpha                                T
+            (1200 C, 1 atm, S1, a=5.0202E-08)
+  
+  + 0          gram  As2O3_claudetite                                 T
+            (1200 C, 1 atm, S1, a=4.1653E-08)
+  
+  + 0          gram  PbFe4O7_Plumboferrite
+            (1200 C, 1 atm, S1, a=3.1718E-08)
+  
+  + 0          gram  Fe3(AsO4)2_solid                                 T
+            (1200 C, 1 atm, S1, a=2.9879E-08)
+  
+  + 0          gram  FeS2_Pyrite_C2_cP12_(205)_Pa-3
+            (1200 C, 1 atm, S1, a=2.6945E-08)
+  
+  + 0          gram  Ca3SiO5_Hatrurite
+            (1200 C, 1 atm, S1, a=2.2493E-08)
+  
+  + 0          gram  Cu3AsO4_solid                                    T
+            (1200 C, 1 atm, S1, a=1.9428E-08)
+  
+  + 0          gram  As2O3_arsenolite                                 T
+            (1200 C, 1 atm, S2, a=1.8014E-08)
+  
+  + 0          gram  ZnSb_solid                                       T
+            (1200 C, 1 atm, S1, a=9.1145E-09)
+  
+  + 0          gram  PbSO4_liquid
+            (1200 C, 1 atm, L1, a=6.2709E-09)
+  
+  + 0          gram  PbSO4_solid-B
+            (1200 C, 1 atm, S2, a=5.8557E-09)
+  
+  + 0          gram  PbSO4_Anglesite
+            (1200 C, 1 atm, S1, a=3.8983E-09)
+  
+  + 0          gram  Bi2O3_L1
+            (1200 C, 1 atm, L1, a=3.1889E-09)
+  
+  + 0          gram  Bi2O3_S2                                         T
+            (1200 C, 1 atm, S2, a=1.6532E-09)
+  
+  + 0          gram  Cu2SO4_prototype_Na2SO4_oF56_(70)_Fddd           T
+            (1200 C, 1 atm, S1, a=1.4885E-09)
+  
+  + 0          gram  BiAsO4_solid                                     T
+            (1200 C, 1 atm, S1, a=1.2987E-09)
+  
+  + 0          gram  CaO2_solid                                       T
+            (1200 C, 1 atm, S1, a=7.4353E-10)
+  
+  + 0          gram  CuSO4_solid
+            (1200 C, 1 atm, S1, a=6.8597E-10)
+  
+  + 0          gram  Sb2S3_liquid                                     T
+            (1200 C, 1 atm, L1, a=5.6152E-10)
+  
+  + 0          gram  Bi2O3_S1                                         X
+            (1200 C, 1 atm, S1, a=5.0339E-10)
+  
+  + 0          gram  O3PbS_solid
+            (1200 C, 1 atm, S1, a=4.7832E-10)
+  
+  + 0          gram  SO3_liquid                                       T
+            (1200 C, 1 atm, L1, a=8.4289E-11)
+  
+  + 0          gram  PbFe10O16_Magnetoplumbite
+            (1200 C, 1 atm, S1, a=7.0914E-11)
+  
+  + 0          gram  Ni3S4_polydymite                                 T
+            (1200 C, 1 atm, S1, a=2.7347E-11)
+  
+  + 0          gram  Sb2S3_Stibnite                                   T
+            (1200 C, 1 atm, S1, a=2.3196E-11)
+  
+  + 0          gram  Pb2SiO4_Solid-2                                  T
+            (1200 C, 1 atm, S2, a=1.7173E-11)
+  
+  + 0          gram  Pb2SiO4_solid                                    T
+            (1200 C, 1 atm, S1, a=1.7135E-11)
+  
+  + 0          gram  Pb2Fe2Si2O9_Melanotekite                         T
+            (1200 C, 1 atm, S1, a=1.4111E-11)
+  
+  + 0          gram  Al2Si2O7_solid
+            (1200 C, 1 atm, S1, a=1.2835E-11)
+  
+  + 0          gram  Pb2FeSi2O7_Pb-Fe_melilite
+            (1200 C, 1 atm, S1, a=9.3148E-12)
+  
+  + 0          gram  CaAl12O19_solid
+            (1200 C, 1 atm, S1, a=8.1006E-12)
+  
+  + 0          gram  Pb2ZnSi2O7_Pb-Zn_melilite                        T
+            (1200 C, 1 atm, S1, a=6.5797E-12)
+  
+  + 0          gram  (CuO)(CuSO4)_solid
+            (1200 C, 1 atm, S1, a=2.3562E-12)
+  
+  + 0          gram  Bi2S3_liquid                                     T
+            (1200 C, 1 atm, L1, a=1.7108E-12)
+  
+  + 0          gram  Ca3Al2O6_solid
+            (1200 C, 1 atm, S1, a=1.1554E-12)
+  
+  + 0          gram  Ca3(AsO4)2_solid
+            (1200 C, 1 atm, S1, a=1.1414E-12)
+  
+  + 0          gram  SO3_solid                                        T
+            (1200 C, 1 atm, S1, a=1.1234E-12)
+  
+  + 0          gram  PbO2_solid                                       T
+            (1200 C, 1 atm, S1, a=4.4698E-13)
+  
+  + 0          gram  Pb2Fe2O5_solid                                   T
+            (1200 C, 1 atm, S1, a=3.8013E-13)
+  
+  + 0          gram  CaMg2Al16O27_solid
+            (1200 C, 1 atm, S1, a=3.5216E-13)
+  
+  + 0          gram  Zn3(AsO4)2_solid                                 T
+            (1200 C, 1 atm, S1, a=3.3977E-13)
+  
+  + 0          gram  (PbO)2(Al2O3)_solid
+            (1200 C, 1 atm, S1, a=1.3151E-13)
+  
+  + 0          gram  Ca3MgAl4O10_solid
+            (1200 C, 1 atm, S1, a=1.1311E-13)
+  
+  + 0          gram  Bi2S3_Bi..inite                                  T
+            (1200 C, 1 atm, S1, a=1.0477E-13)
+  
+  + 0          gram  PbOPbSO4_Lanarkite                               T
+            (1200 C, 1 atm, S1, a=3.4898E-14)
+  
+  + 0          gram  Mg_liquid
+            (1200 C, 1 atm, L1, a=3.2430E-14)
+  
+  + 0          gram  Sb2O5_solid                                      T
+            (1200 C, 1 atm, S1, a=2.5989E-14)
+  
+  + 0          gram  (PbO)(Al2O3)6_solid
+            (1200 C, 1 atm, S1, a=2.5810E-14)
+  
+  + 0          gram  Mg_solid                                         T
+            (1200 C, 1 atm, S1, a=2.1447E-14)
+  
+  + 0          gram  Cu2Mg_laves_C14
+            (1200 C, 1 atm, S1, a=6.2915E-15)
+  
+  + 0          gram  SiS_solid                                        T
+            (1200 C, 1 atm, S1, a=2.8411E-15)
+  
+  + 0          gram  Ni2Si_<DELTA_>
+            (1200 C, 1 atm, S1, a=1.6737E-15)
+  
+  + 0          gram  NiSi_liquid
+            (1200 C, 1 atm, L1, a=1.3096E-15)
+  
+  + 0          gram  Ni7S6
+            (1200 C, 1 atm, S1, a=1.1044E-15)
+  
+  + 0          gram  NiSi_solid                                       T
+            (1200 C, 1 atm, S1, a=7.1252E-16)
+  
+  + 0          gram  NiAl_solid
+            (1200 C, 1 atm, S1, a=4.7567E-16)
+  
+  + 0          gram  MgNi2_solid                                      T
+            (1200 C, 1 atm, S1, a=3.3172E-16)
+  
+  + 0          gram  NiAl_liquid
+            (1200 C, 1 atm, L1, a=1.4775E-16)
+  
+  + 0          gram  FeSb2S4_solid                                    T
+            (1200 C, 1 atm, S1, a=1.1028E-16)
+  
+  + 0          gram  As2O5_solid                                      T
+            (1200 C, 1 atm, S1, a=6.8482E-17)
+  
+  + 0          gram  Si_solid
+            (1200 C, 1 atm, S1, a=5.7871E-17)
+  
+  + 0          gram  SiS2_liquid
+            (1200 C, 1 atm, L1, a=5.0038E-17)
+  
+  + 0          gram  SiS2_solid
+            (1200 C, 1 atm, S1, a=4.3570E-17)
+  
+  + 0          gram  ZnO(ZnSO4)2_solid                                T
+            (1200 C, 1 atm, S1, a=3.7121E-17)
+  
+  + 0          gram  Si_liquid
+            (1200 C, 1 atm, L1, a=3.4568E-17)
+  
+  + 0          gram  Cu3(AsO4)2_solid                                 T
+            (1200 C, 1 atm, S1, a=2.3412E-17)
+  
+  + 0          gram  Al_liquid
+            (1200 C, 1 atm, L1, a=8.4844E-18)
+  
+  + 0          gram  FeSi
+            (1200 C, 1 atm, S1, a=5.7062E-18)
+  
+  + 0          gram  Al_solid                                         T
+            (1200 C, 1 atm, S1, a=5.2826E-18)
+  
+  + 0          gram  AlAs_solid
+            (1200 C, 1 atm, S1, a=4.5413E-18)
+  
+  + 0          gram  Ni3Al_solid
+            (1200 C, 1 atm, S1, a=2.5519E-18)
+  
+  + 0          gram  Pb3Ca2Si3O11_solid
+            (1200 C, 1 atm, S1, a=2.2549E-18)
+  
+  + 0          gram  Ca_liquid
+            (1200 C, 1 atm, L1, a=1.8729E-18)
+  
+  + 0          gram  Ca_Solid_Beta
+            (1200 C, 1 atm, S2, a=1.5739E-18)
+  
+  + 0          gram  Ca_Solid_Alpha
+            (1200 C, 1 atm, S1, a=1.4593E-18)
+  
+  + 0          gram  (CaO)2(PbO2)_solid
+            (1200 C, 1 atm, S1, a=1.3177E-18)
+  
+  + 0          gram  (PbO)2(PbSO4)_solid                              T
+            (1200 C, 1 atm, S1, a=1.7716E-19)
+  
+  + 0          gram  AlSb_liquid
+            (1200 C, 1 atm, L1, a=1.3241E-19)
+  
+  + 0          gram  AlSb_solid                                       T
+            (1200 C, 1 atm, S1, a=6.5396E-20)
+  
+  + 0          gram  CaPb_solid                                       T
+            (1200 C, 1 atm, S1, a=3.3510E-21)
+  
+  + 0          gram  Ni9S8
+            (1200 C, 1 atm, S1, a=1.8221E-21)
+  
+  + 0          gram  CaZn_Ca.5Zn.5_<CAZN>
+            (1200 C, 1 atm, S1, a=7.5234E-23)
+  
+  + 0          gram  Pb4SiO6_solid                                    T
+            (1200 C, 1 atm, S1, a=2.8055E-23)
+  
+  + 0          gram  Ca2Mg2Al28O46_solid
+            (1200 C, 1 atm, S1, a=1.3487E-23)
+  
+  + 0          gram  Fe2(SO4)3_solid
+            (1200 C, 1 atm, S1, a=8.1404E-24)
+  
+  + 0          gram  Pb3O4_solid
+            (1200 C, 1 atm, S1, a=3.9026E-24)
+  
+  + 0          gram  Al2(SO4)3_solid                                  T
+            (1200 C, 1 atm, S1, a=3.7334E-24)
+  
+  + 0          gram  Fe3Si_solid                                      T
+            (1200 C, 1 atm, S1, a=1.8198E-24)
+  
+  + 0          gram  'Fe7S8'_pyrrhotite-4C
+            (1200 C, 1 atm, S1, a=4.7500E-25)
+  
+  + 0          gram  (PbO)3(PbSO4)_solid                              T
+            (1200 C, 1 atm, S1, a=4.9237E-26)
+  
+  + 0          gram  Al2S3_liquid
+            (1200 C, 1 atm, L1, a=4.0655E-26)
+  
+  + 0          gram  Al2S3_solid                                      T
+            (1200 C, 1 atm, S1, a=2.8572E-26)
+  
+  + 0          gram  'CaZn2'_Ca.33333Zn.66667_<CAZN2>
+            (1200 C, 1 atm, S1, a=3.5490E-27)
+  
+  + 0          gram  Pb3(AsO4)2_solid                                 T
+            (1200 C, 1 atm, S1, a=2.4467E-27)
+  
+  + 0          gram  Bi2(SO4)3_solid                                  T
+            (1200 C, 1 atm, S1, a=5.1352E-28)
+  
+  + 0          gram  (PbO)4(PbSO4)_solid                              T
+            (1200 C, 1 atm, S1, a=2.3755E-31)
+  
+  + 0          gram  CaSi_oC8-Cmcm
+            (1200 C, 1 atm, S1, a=1.6263E-31)
+  
+  + 0          gram  Mg2Pb_Fm3m
+            (1200 C, 1 atm, S1, a=2.3504E-32)
+  
+  + 0          gram  Sb2(SO4)3_solid                                  T
+            (1200 C, 1 atm, S1, a=1.6986E-32)
+  
+  + 0          gram  Fe9S10_pyrrhotite-5C
+            (1200 C, 1 atm, S1, a=5.5661E-33)
+  
+  + 0          gram  FeSi2_<FeSi2_L>
+            (1200 C, 1 atm, S1, a=3.4505E-34)
+  
+  + 0          gram  Fe10S11_pyrrhotite-11C
+            (1200 C, 1 atm, S1, a=2.7074E-36)
+  
+  + 0          gram  Ca2Pb_solid                                      T
+            (1200 C, 1 atm, S1, a=4.9941E-37)
+  
+  + 0          gram  Ca3Sb2_solid                                     T
+            (1200 C, 1 atm, S1, a=1.8383E-38)
+  
+  + 0          gram  Fe11S12_pyrrhotite-6C
+            (1200 C, 1 atm, S1, a=1.3692E-39)
+  
+  + 0          gram  Mg3Sb2_Solid-B
+            (1200 C, 1 atm, S2, a=1.2548E-39)
+  
+  + 0          gram  Mg3Sb2_Solid-A                                   X
+            (1200 C, 1 atm, S1, a=3.1799E-40)
+  
+  + 0          gram  Mg2Si_cF12-Fm(3)m
+            (1200 C, 1 atm, S1, a=1.1882E-42)
+  
+  + 0          gram  Pb8ZnSi6O21_solid                                T
+            (1200 C, 1 atm, S1, a=1.3584E-43)
+  
+  + 0          gram  Pb8CaSi6O21_solid                                T
+            (1200 C, 1 atm, S1, a=1.1600E-43)
+  
+  + 0          gram  Mg2Ca_Laves_C-14
+            (1200 C, 1 atm, S1, a=4.0907E-45)
+  
+  + 0          gram  Ca3Bi2_solid                                     T
+            (1200 C, 1 atm, S1, a=2.0581E-45)
+  
+  + 0          gram  Ni2Al3_solid                                     T
+            (1200 C, 1 atm, S1, a=4.1770E-47)
+  
+  + 0          gram  CaSi2_hR18-R3m
+            (1200 C, 1 atm, S1, a=1.7037E-47)
+  
+  + 0          gram  Ca2Si_oP12-Pnma
+            (1200 C, 1 atm, S1, a=6.1300E-48)
+  
+  + 0          gram  Al3Ni
+            (1200 C, 1 atm, S1, a=5.9383E-50)
+  
+  + 0          gram  Al2Ca_cF24-Laves_C15                             T
+            (1200 C, 1 atm, S1, a=1.2610E-50)
+  
+  + 0          gram  FeAl3_solid                                      T
+            (1200 C, 1 atm, S1, a=5.1916E-53)
+  
+  + 0          gram  Pb10Fe2Si2O17_solid                              T
+            (1200 C, 1 atm, S1, a=1.6487E-57)
+  
+  Cut-off limit for gaseous fractions/phase activities = 1.00E-75
+  
+  Data on 2 product species identified with "X" have not been extrapolated outside their valid temperature ranges
+  
+  Data on 127 product species identified with "T" have been extrapolated outside their valid temperature ranges
+  
+  4 product species identified with "V" are modeled with an equation of state
+  
+  Data on 14 solutes identified with "C" have been extrapolated outside their suggested composition ranges
+  
+  ********************************************************************
+        H             G             V             S            Cp
+       (J)           (J)         (litre)        (J/K)         (J/K)
+  ********************************************************************
+  -4.48280E+05  -8.78472E+05   3.21473E+01   2.92022E+02   1.82272E+02
+  
+                                           H            G            S           Cp
+                                          (J)          (J)         (J/K)        (J/K)
+  gas_real                           -6.25835E+04 -1.90922E+05  8.71186E+01  1.54260E+01
+  Fe-liq                             -6.37237E+02 -3.62953E+03  2.03122E+00  6.54732E-01
+  Matte                               3.51240E+03 -5.50547E+04  3.97564E+01  1.66713E+01
+  Slag-liq#1                         -1.92658E+05 -2.68860E+05  5.17275E+01  9.39598E+01
+  Orthopyroxene                      -8.22894E+03 -1.08216E+04  1.75995E+00  2.97241E+00
+  Sphalerite#1                       -1.21101E+05 -2.65361E+05  9.79261E+01  4.67325E+01
+  SiO2_Tridymite(h)                  -6.65839E+04 -8.38237E+04  1.17027E+01  5.85559E+00
+  
+  Total mass/gram = 103.83
+  Total mass/gram excluding gas_real = 86.708
+  
+  Databases: FTmisc 8.3, FToxid 8.3, FTsalt 8.3, FactPS 8.3                                          
+  Data Search options: exclude gas ions; organic CxHy.. X(max) = 2; min soln cpts = 2                
+  Final conditions: T(C) = 1200, P(atm) = 1                                                          
+
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                                                               FactSage 8.3         
+  T = 1200 C
+  P = 1 atm
+  V = 32.147 dm3
+  
+  STREAM CONSTITUENTS             AMOUNT/gram
+  Cu                               1.9262E+01
+  S                                1.3459E+01
+  Fe                               2.9548E+01
+  SiO2                             1.4851E+01
+  Pb                               6.1900E-01
+  Zn                               7.4700E-01
+  MgO                              1.1200E+00
+  Al2O3                            1.5880E+00
+  Ni                               2.7900E-01
+  Sb                               7.7000E-02
+  Bi                               1.1000E-02
+  CaO                              1.2530E+00
+  As                               2.1000E-02
+  O2                               2.1000E+01
+  
+                                  EQUIL AMOUNT  MOLE FRACTION     FUGACITY
+  PHASE: gas_real                     mol                           atm
+  SO2                          V   2.6532E-01     9.9789E-01     9.9810E-01
+  Sb2S3                            3.1443E-04     1.1826E-03     1.1829E-03
+  SO                               1.4577E-04     5.4824E-04     5.4836E-04
+  BiS                         T    3.3363E-05     1.2548E-04     1.2551E-04
+  Bi                               1.9007E-05     7.1486E-05     7.1501E-05
+  Zn                               1.8507E-05     6.9608E-05     6.9623E-05
+  S2                               8.9090E-06     3.3508E-05     3.3515E-05
+  AsO                              6.1250E-06     2.3037E-05     2.3042E-05
+  SSO                              5.9994E-06     2.2565E-05     2.2569E-05
+  SO3                          V   4.6910E-06     1.7643E-05     1.7648E-05
+  SbO                              1.9498E-06     7.3333E-06     7.3348E-06
+  Sb                               6.7350E-07     2.5331E-06     2.5336E-06
+  Cu                               5.4245E-07     2.0402E-06     2.0407E-06
+  AsS                         T    2.6234E-07     9.8668E-07     9.8689E-07
+  Sb4O6                       T    1.5155E-07     5.6999E-07     5.7011E-07
+  BiO                              1.0722E-07     4.0325E-07     4.0334E-07
+  Sb2                              8.3847E-08     3.1536E-07     3.1542E-07
+  AsSb                             7.6057E-08     2.8606E-07     2.8612E-07
+  Bi2                              7.4004E-08     2.7834E-07     2.7839E-07
+  CuS                              7.0842E-08     2.6645E-07     2.6650E-07
+  PbS                              5.5238E-08     2.0776E-07     2.0780E-07
+  S                                4.6100E-08     1.7339E-07     1.7342E-07
+  O2                           V   4.4269E-08     1.6650E-07     1.6655E-07
+  SbS                              3.6658E-08     1.3787E-07     1.3790E-07
+  Pb                               3.2559E-08     1.2246E-07     1.2249E-07
+  PbO                              2.0201E-08     7.5979E-08     7.5995E-08
+  As2                         T    7.5744E-09     2.8488E-08     2.8494E-08
+  As                          T    6.0938E-09     2.2920E-08     2.2924E-08
+  AsSb3O6                     T    2.3769E-09     8.9398E-09     8.9417E-09
+  ZnS                              1.8515E-09     6.9638E-09     6.9652E-09
+  Sb3S2                            1.5288E-09     5.7500E-09     5.7513E-09
+  Sb2S4                            1.2970E-09     4.8782E-09     4.8792E-09
+  S3                               5.8551E-10     2.2022E-09     2.2026E-09
+  As2Sb2O6                    T    3.2769E-10     1.2325E-09     1.2327E-09
+  O                                3.0153E-10     1.1341E-09     1.1343E-09
+  NiS                              2.3817E-10     8.9577E-10     8.9596E-10
+  Ni                               1.5214E-10     5.7220E-10     5.7232E-10
+  Cu2                              7.0896E-11     2.6665E-10     2.6670E-10
+  CuO                              4.4930E-11     1.6899E-10     1.6902E-10
+  As3SbO6                     T    2.0496E-11     7.7087E-11     7.7104E-11
+  FeO                              1.1297E-11     4.2489E-11     4.2498E-11
+  Fe                               1.1289E-11     4.2459E-11     4.2468E-11
+  NiO                              5.3137E-12     1.9985E-11     1.9990E-11
+  As3                         T    1.5594E-12     5.8652E-12     5.8664E-12
+  FeS                              1.5388E-12     5.7877E-12     5.7889E-12
+  PbSb                        T    1.3365E-12     5.0268E-12     5.0278E-12
+  AsSb3                       T    1.0714E-12     4.0295E-12     4.0304E-12
+  Sb4                              8.7518E-13     3.2916E-12     3.2923E-12
+  As2Sb2                      T    7.4104E-13     2.7871E-12     2.7877E-12
+  SiO                              5.4349E-13     2.0441E-12     2.0445E-12
+  As4O6                       T    5.0084E-13     1.8837E-12     1.8841E-12
+  As3Sb                       T    3.0474E-13     1.1462E-12     1.1464E-12
+  SiO2                             2.2414E-13     8.4303E-13     8.4321E-13
+  S4                               1.2016E-13     4.5194E-13     4.5203E-13
+  As4                         T    7.0326E-14     2.6450E-13     2.6456E-13
+  Bi2O3                            3.8190E-14     1.4364E-13     1.4367E-13
+  Sb4S3                            2.5879E-14     9.7332E-14     9.7353E-14
+  Mg                               1.9194E-14     7.2191E-14     7.2206E-14
+  MgS                              5.2024E-16     1.9567E-15     1.9571E-15
+  MgO                              1.8726E-16     7.0430E-16     7.0445E-16
+  SiS                              9.1819E-17     3.4534E-16     3.4542E-16
+  Pb2                              7.5416E-17     2.8365E-16     2.8371E-16
+  S5                               4.1572E-18     1.5636E-17     1.5639E-17
+  Ca                               6.0657E-20     2.2814E-19     2.2819E-19
+  CaS                              5.9651E-20     2.2435E-19     2.2440E-19
+  O3                           V   4.1173E-20     1.5486E-19     1.5493E-19
+  AlO                              3.5171E-20     1.3228E-19     1.3231E-19
+  CaO                              3.4419E-20     1.2946E-19     1.2948E-19
+  SiS2                        T    2.7301E-20     1.0268E-19     1.0270E-19
+  S6                               3.9605E-21     1.4896E-20     1.4899E-20
+  AlO2                             3.1390E-22     1.1806E-21     1.1808E-21
+  AlS                              8.7969E-23     3.3086E-22     3.3093E-22
+  Al                               1.9033E-23     7.1584E-23     7.1599E-23
+  S7                               2.0481E-24     7.7031E-24     7.7048E-24
+  As4S4                       T    8.0954E-25     3.0448E-24     3.0454E-24
+  Si                               8.4869E-26     3.1920E-25     3.1927E-25
+  Al2O2                            2.0348E-27     7.6532E-27     7.6548E-27
+  S8                               2.0198E-28     7.5966E-28     7.5982E-28
+  Al2O3                            2.5903E-29     9.7423E-29     9.7444E-29
+  Al2O                             7.5259E-30     2.8306E-29     2.8312E-29
+  Mg2                              4.5396E-31     1.7074E-30     1.7077E-30
+  Al2S                        T    4.2939E-38     1.6150E-37     1.6153E-37
+  Al2S2                       T    4.3864E-39     1.6498E-38     1.6501E-38
+  Ca2                              2.3349E-41     8.7818E-41     8.7836E-41
+  Si2                              1.9699E-44     7.4090E-44     7.4106E-44
+  Al2                              1.3231E-44     4.9764E-44     4.9774E-44
+  Si3                              3.3068E-61     1.2437E-60     1.2440E-60
+  TOTAL:                           2.6588E-01     1.0000E+00     1.0000E+00
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Bi                            5.2625E-05     1.0998E-02     6.5946E-05     6.4212E-04
+     Pb                            1.0800E-07     2.2378E-05     1.3534E-07     1.3066E-06
+     Sb                            6.3239E-04     7.7000E-02     7.9247E-04     4.4958E-03
+     As                            6.4878E-06     4.8608E-04     8.1301E-06     2.8381E-05
+     Zn                            1.8509E-05     1.2101E-03     2.3195E-05     7.0657E-05
+     Cu                            6.1348E-07     3.8984E-05     7.6878E-07     2.2762E-06
+     Ni                            3.9562E-10     2.3220E-08     4.9576E-10     1.3558E-09
+     Fe                            2.4125E-11     1.3472E-09     3.0232E-11     7.8662E-11
+     Ca                            1.5473E-19     6.2012E-18     1.9390E-19     3.6207E-19
+     S                             0.26648        8.5446         0.33393        0.49889
+     Si                            7.6772E-13     2.1562E-11     9.6206E-13     1.2589E-12
+     Al                            3.5592E-20     9.6033E-19     4.4602E-20     5.6071E-20
+     Mg                            1.9902E-14     4.8371E-13     2.4939E-14     2.8243E-14
+     O                             0.53081        8.4927         0.66518        0.49587
+  PHASE: Sphalerite#1                 gram      MASS FRACTION     ACTIVITY
+  CuVa[+]                          2.2436E-14     6.0323E-16     7.1532E-08
+  CuS[-]                           4.0787E-07     1.0966E-08     1.9396E-06
+  CuO[-]                           9.7066E-02     2.6098E-03     1.7526E-03
+  MgVa[2+]                         1.1295E-17     3.0368E-19     5.0649E-25
+  MgS                              3.1652E-10     8.5101E-12     5.9092E-10
+  MgO_periclase                    6.4736E-05     1.7405E-06     5.0837E-05
+  CaVa[2+]                         2.7152E-20     7.3001E-22     9.2635E-30
+  CaS                              5.9053E-13     1.5877E-14     8.9824E-10
+  CaO_lime                         1.3130E-07     3.5303E-09     7.4147E-08
+  FeVa[2+]                         2.4216E-15     6.5108E-17     1.3423E-14
+  FeS                              4.6058E-08     1.2383E-09     7.6320E-07
+  FeO                              1.0767E-02     2.8949E-04     1.8661E-04
+  NiVa[2+]                         8.0657E-16     2.1686E-17     5.5894E-13
+  NiS                              1.5069E-08     4.0516E-10     1.7231E-06
+  NiO                              3.5475E-03     9.5380E-05     6.8222E-05
+  CuVa[2+]                         1.9394E-17     5.2144E-19     9.6217E-12
+  CuS                              3.5257E-10     9.4793E-12     2.6857E-06
+  CuO                              8.3906E-05     2.2559E-06     1.5150E-06
+  ZnVa[2+]                         4.9027E-14     1.3182E-15     2.8363E-17
+  ZnS_zincblende                   8.8288E-07     2.3737E-08     8.4982E-04
+  ZnO                              2.1091E-01     5.6706E-03     3.7224E-03
+  FeVa[3+]                         7.4635E-12     2.0067E-13     1.8056E-18
+  FeS[+]                           1.4196E-04     3.8167E-06     9.5154E-08
+  FeO[+]                           3.3185E+01     8.9223E-01     6.6339E-01
+  Va                               NOT CALCD.     NOT CALCD.     1.0789E-03
+  VaS[2-]                          2.5822E-05     6.9425E-07     6.4533E-04
+  VaO[2-]                          3.6856E+00     9.9093E-02     3.3084E-01
+  TOTAL:                           3.7194E+01     1.0000E+00     1.0000E+00
+     Site fraction of sublattice constituents:
+     Ca[2+]_4a                     3.3629E-09    Stoichiometry = 1
+     Ni[2+]_4a                     6.8214E-05
+     Mg[2+]_4a                     2.3069E-06
+     Cu[+]__4a                     1.7526E-03
+     Fe[2+]_4a                     2.1525E-04
+     Cu[2+]_4a                     1.5150E-06
+     Zn[2+]_4a                     3.7223E-03
+     Fe[3+]_4a                     0.66341
+     Va[0]__4a                     0.33083
+     ----------------------------------------------------------------------
+     Va[0]__4c                     2.8934E-13    Stoichiometry = 1
+     S[2-]__4c                     3.4959E-06
+     O[2-]__4c                     1.0000
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Zn                            2.5917E-03     0.16945        2.2300E-03     4.5558E-03
+     Cu                            1.2213E-03     7.7610E-02     1.0509E-03     2.0866E-03
+     Ni                            4.7495E-05     2.7877E-03     4.0867E-05     7.4950E-05
+     Fe                            0.46206        25.804         0.39758        0.69377
+     Ca                            2.3415E-09     9.3842E-08     2.0147E-09     2.5231E-09
+     S                             2.4341E-06     7.8049E-05     2.0944E-06     2.0984E-06
+     Mg                            1.6062E-06     3.9038E-05     1.3820E-06     1.0496E-06
+     O                             0.69627        11.140         0.59910        0.29951
+  PHASE: Sphalerite#2                 gram      MASS FRACTION     ACTIVITY
+  CuVa[+]                          0.0000E+00     8.5278E-01     1.4927E-05
+  CuS[-]                           0.0000E+00     1.8698E-05     9.2951E-09
+  CuO[-]                           0.0000E+00     8.0189E-03     8.3988E-06
+  MgVa[2+]                         0.0000E+00     5.8841E-16     2.2055E-20
+  MgS                              0.0000E+00     1.9888E-20     5.9092E-10
+  MgO_periclase                    0.0000E+00     7.3300E-18     5.0837E-05
+  CaVa[2+]                         0.0000E+00     1.8338E-20     4.0338E-25
+  CaS                              0.0000E+00     4.8105E-25     8.9823E-10
+  CaO_lime                         0.0000E+00     1.9275E-22     7.4147E-08
+  FeVa[2+]                         0.0000E+00     3.2400E-05     5.8452E-10
+  FeS                              0.0000E+00     7.4328E-10     7.6320E-07
+  FeO                              0.0000E+00     3.1312E-07     1.8661E-04
+  NiVa[2+]                         0.0000E+00     1.3685E-03     2.4339E-08
+  NiS                              0.0000E+00     3.0838E-08     1.7231E-06
+  NiO                              0.0000E+00     1.3082E-05     6.8222E-05
+  CuVa[2+]                         0.0000E+00     2.4274E-02     4.1897E-07
+  CuS                              0.0000E+00     5.3223E-07     2.6857E-06
+  CuO                              0.0000E+00     2.2825E-04     1.5150E-06
+  ZnVa[2+]                         0.0000E+00     8.5826E-08     1.2351E-12
+  ZnS_zincblende                   0.0000E+00     1.8641E-12     8.4981E-04
+  ZnO                              0.0000E+00     8.0250E-10     3.7224E-03
+  FeVa[3+]                         0.0000E+00     1.0331E-06     1.6407E-11
+  FeS[+]                           0.0000E+00     2.3700E-11     1.9856E-05
+  FeO[+]                           0.0000E+00     9.9842E-09     1.3843E+02
+  Va                               0.0000E+00     NOT CALCD.     1.0789E-03
+  VaS[2-]                          0.0000E+00     4.3866E-04     1.4820E-08
+  VaO[2-]                          0.0000E+00     1.1283E-01     7.5978E-06
+  TOTAL:                           0.0000E+00     1.0000E+00     1.1025E-03
+  PHASE: Sphalerite#3                 gram      MASS FRACTION     ACTIVITY
+  CuVa[+]                          0.0000E+00     1.4956E-15     1.6959E-06
+  CuS[-]                           0.0000E+00     9.9643E-05     8.1811E-08
+  CuO[-]                           0.0000E+00     4.6171E-07     7.3922E-05
+  MgVa[2+]                         0.0000E+00     4.0268E-18     2.8471E-22
+  MgS                              0.0000E+00     4.1356E-07     5.9092E-10
+  MgO_periclase                    0.0000E+00     1.6469E-09     5.0837E-05
+  CaVa[2+]                         0.0000E+00     9.6396E-18     5.2072E-27
+  CaS                              0.0000E+00     7.6835E-07     8.9823E-10
+  CaO_lime                         0.0000E+00     3.3264E-09     7.4147E-08
+  FeVa[2+]                         0.0000E+00     1.1723E-14     7.5456E-12
+  FeS                              0.0000E+00     8.1717E-04     7.6320E-07
+  FeO                              0.0000E+00     3.7195E-06     1.8661E-04
+  NiVa[2+]                         0.0000E+00     2.8061E-14     3.1419E-10
+  NiS                              0.0000E+00     1.9214E-03     1.7231E-06
+  NiO                              0.0000E+00     8.8069E-06     6.8222E-05
+  CuVa[2+]                         0.0000E+00     4.5392E-14     5.4085E-09
+  CuS                              0.0000E+00     3.0242E-03     2.6857E-06
+  CuO                              0.0000E+00     1.4013E-05     1.5150E-06
+  ZnVa[2+]                         0.0000E+00     1.4946E-11     1.5943E-14
+  ZnS_zincblende                   0.0000E+00     9.8639E-01     8.4981E-04
+  ZnO                              0.0000E+00     4.5879E-03     3.7224E-03
+  FeVa[3+]                         0.0000E+00     3.8086E-14     2.4063E-14
+  FeS[+]                           0.0000E+00     2.6548E-03     2.2560E-06
+  FeO[+]                           0.0000E+00     1.2084E-05     1.5728E+01
+  Va                               0.0000E+00     NOT CALCD.     1.0789E-03
+  VaS[2-]                          0.0000E+00     4.6747E-04     1.1480E-06
+  VaO[2-]                          0.0000E+00     1.2992E-06     5.8857E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     8.6305E-04
+  PHASE: Matte                        gram      MASS FRACTION     ACTIVITY
+  S                                4.7468E+00     2.0244E-01     3.8898E-04
+  Fe                               2.6321E-02     1.1225E-03     3.6637E-04
+  Cu                               1.8586E+01     7.9262E-01     2.4133E-01
+  Ni                               7.7996E-02     3.3263E-03     1.6620E-02
+  Zn                               5.7994E-03     2.4732E-04     6.9865E-06
+  Pb                               9.3064E-05     3.9689E-06     6.5054E-06
+  As                               5.8013E-03     2.4741E-04     2.0903E-04
+  TOTAL:                           2.3448E+01     1.0000E+00     1.0000E+00
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Pb                            4.4915E-07     9.3064E-05     1.0151E-06     3.9689E-06
+     As                            7.7432E-05     5.8013E-03     1.7500E-04     2.4741E-04
+     Zn                            8.8703E-05     5.7994E-03     2.0047E-04     2.4732E-04
+     Cu                            0.29248        18.586         0.66099        0.79262
+     Ni                            1.3289E-03     7.7996E-02     3.0033E-03     3.3263E-03
+     Fe                            4.7132E-04     2.6321E-02     1.0652E-03     1.1225E-03
+     S                             0.14804        4.7468         0.33456        0.20244
+  PHASE: Slag-liq#1                   gram      MASS FRACTION     ACTIVITY
+  Al2O3                            1.5666E+00     8.1354E-02     8.6167E-04
+  SiO2                             9.6552E+00     5.0138E-01     8.1359E-01
+  CaO                              1.2496E+00     6.4891E-02     3.0053E-06
+  FeO                              4.2949E+00     2.2303E-01     1.3635E-01
+  Fe2O3                            3.2090E-01     1.6664E-02     2.1244E-02
+  MgO                              9.7193E-01     5.0471E-02     2.0420E-03
+  PbO                              4.1643E-03     2.1625E-04     1.9898E-06
+  ZnO                              7.1011E-01     3.6875E-02     6.2545E-03
+  NiO                              4.2345E-02     2.1989E-03     1.3950E-02
+  Cu2O                             4.1973E-01     2.1796E-02     7.7803E-03
+  As2O3                       T    1.9424E-02     1.0087E-03     6.8530E-07
+  Al2S3                            1.9107E-04     9.9222E-06     4.0655E-26
+  SiS2                             1.2272E-03     6.3728E-05     1.5463E-16
+  CaS                              1.3314E-04     6.9137E-06     2.7314E-07
+  FeS                              4.3523E-04     2.2601E-05     8.9364E-04
+  Fe2S3                            3.4597E-05     1.7966E-06     3.7791E-13
+  MgS                              1.1258E-04     5.8460E-06     1.9964E-07
+  PbS                              3.6970E-07     1.9198E-08     7.1337E-07
+  ZnS                              7.0419E-05     3.6568E-06     3.5563E-04
+  NiS                              4.2612E-06     2.2128E-07     5.7864E-03
+  Cu2S                             3.8664E-05     2.0078E-06     3.8578E-01
+  As2S3                       T    2.0005E-06     1.0388E-07     4.5224E-15
+  TOTAL:                           1.9257E+01     1.0000E+00     1.0000E+00
+     Site fraction of sublattice constituents:
+     Al                            9.6942E-02      Stoichiometry calculated
+     Si                            0.50693
+     Ca                            7.0297E-02
+     Fe2+                          0.18858
+     Fe3+                          1.2679E-02
+     Mg                            7.6072E-02
+     Pb                            5.8857E-05
+     Zn                            2.7527E-02
+     Ni                            1.7884E-03
+     Cu1+                          1.8507E-02
+     As3+                          6.1943E-04
+     ----------------------------------------------------------------------
+     O                             0.99992         Stoichiometry calculated
+     S                             8.2810E-05
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Pb                            1.8659E-05     3.8662E-03     2.3056E-05     2.0076E-04
+     As                            1.9637E-04     1.4713E-02     2.4265E-04     7.6401E-04
+     Zn                            8.7266E-03     0.57055        1.0783E-02     2.9628E-02
+     Cu                            5.8671E-03     0.37283        7.2497E-03     1.9361E-02
+     Ni                            5.6698E-04     3.3278E-02     7.0058E-04     1.7281E-03
+     Fe                            6.3805E-02     3.5632         7.8840E-02     0.18503
+     Ca                            2.2286E-02     0.89317        2.7537E-02     4.6381E-02
+     S                             4.0765E-05     1.3071E-03     5.0371E-05     6.7877E-05
+     Si                            0.16071        4.5135         0.19858        0.23438
+     Al                            3.0733E-02     0.82921        3.7975E-02     4.3060E-02
+     Mg                            2.4117E-02     0.58615        2.9800E-02     3.0438E-02
+     O                             0.49223        7.8754         0.60822        0.40896
+  PHASE: Slag-liq#2                   gram      MASS FRACTION     ACTIVITY
+  Al2O3                            0.0000E+00     7.6360E-03     8.6167E-04
+  SiO2                             0.0000E+00     9.8099E-01     8.1359E-01
+  CaO                              0.0000E+00     1.0391E-03     3.0053E-06
+  FeO                              0.0000E+00     2.1780E-04     1.3635E-01
+  Fe2O3                            0.0000E+00     2.4863E-05     2.1244E-02
+  MgO                              0.0000E+00     2.0130E-05     2.0420E-03
+  PbO                              0.0000E+00     4.4078E-03     1.9898E-06
+  ZnO                              0.0000E+00     9.9083E-05     6.2545E-03
+  NiO                              0.0000E+00     1.8897E-04     1.3950E-02
+  Cu2O                             0.0000E+00     5.3498E-03     7.7803E-03
+  As2O3                       T    0.0000E+00     2.4384E-05     6.8530E-07
+  Al2S3                            0.0000E+00     4.3614E-08     4.0655E-26
+  SiS2                             0.0000E+00     5.8392E-06     1.5463E-16
+  CaS                              0.0000E+00     5.1845E-09     2.7314E-07
+  FeS                              0.0000E+00     1.0336E-09     8.9364E-04
+  Fe2S3                            0.0000E+00     1.2553E-10     3.7791E-13
+  MgS                              0.0000E+00     1.0919E-10     1.9964E-07
+  PbS                              0.0000E+00     1.8326E-08     7.1337E-07
+  ZnS                              0.0000E+00     4.6015E-10     3.5563E-04
+  NiS                              0.0000E+00     8.9052E-10     5.7864E-03
+  Cu2S                             0.0000E+00     2.3078E-08     3.8578E-01
+  As2S3                       T    0.0000E+00     1.1761E-10     4.5224E-15
+  TOTAL:                           0.0000E+00     1.0000E+00     8.2299E-01
+  PHASE: Fe-liq                       gram      MASS FRACTION     ACTIVITY
+  Fe                               1.2674E-03     1.0209E-03     3.6637E-04
+  Al                               9.5668E-17     7.7060E-17     8.6612E-18
+  Ca                               1.7728E-22     1.4280E-22     2.2819E-19
+  Cu                          C    2.2590E-01     1.8196E-01     3.9891E-01
+  Ni                               1.6494E-01     1.3286E-01     1.6620E-02
+  O                           C    6.8111E-02     5.4863E-02     4.0707E-04
+  Pb                          C    6.1502E-01     4.9539E-01     6.5047E-06
+  S                           C    1.6624E-01     1.3390E-01     5.7696E-03
+  Si                               9.7487E-16     7.8525E-16     3.4506E-17
+  Mg                               9.4491E-18     7.6112E-18     7.2206E-14
+  MgO                              3.3775E-10     2.7205E-10     1.3528E-10
+  CaO                              8.8305E-13     7.1129E-13     2.5420E-13
+  AlO                              3.3615E-12     2.7077E-12     1.2625E-12
+  SiO                              1.0856E-13     8.7446E-14     3.9754E-14
+  Al2O                             8.3610E-25     6.7347E-25     1.9292E-25
+  Bi                               2.4881E-06     2.0042E-06     3.1628E-03
+  TOTAL:                           1.2415E+00     1.0000E+00     1.0000E+00
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Bi                            1.1906E-08     2.4881E-06     6.3338E-07     2.0042E-06
+     Pb                            2.9682E-03     0.61502        0.15791        0.49539
+     Cu                            3.5549E-03     0.22590        0.18912        0.18196
+     Ni                            2.8102E-03     0.16494        0.14950        0.13286
+     Fe                            2.2695E-05     1.2674E-03     1.2073E-03     1.0209E-03
+     Ca                            1.5747E-14     6.3110E-13     8.3771E-13     5.0835E-13
+     S                             5.1844E-03     0.16624        0.27580        0.13390
+     Si                            2.4973E-15     7.0138E-14     1.3285E-13     5.6495E-14
+     Al                            7.8213E-14     2.1103E-12     4.1608E-12     1.6998E-12
+     Mg                            8.3799E-12     2.0367E-10     4.4580E-10     1.6406E-10
+     O                             4.2571E-03     6.8111E-02     0.22647        5.4863E-02
+  PHASE: Orthopyroxene                gram      MASS FRACTION     ACTIVITY
+  CaMgSi2O6                        7.0150E-03     9.4430E-03     2.7836E-02
+  CaFeSi2O6                        3.4228E-03     4.6076E-03     3.2330E-02
+  FeFeSi2O6                        9.8000E-02     1.3192E-01     8.4294E-02
+  MgMgSi2O6                        1.8193E-01     2.4490E-01     3.3344E-01
+  CaAl2SiO6                        4.8740E-05     6.5610E-05     4.1971E-03
+  CaFe3+AlSiO6                     7.1632E-05     9.6425E-05     5.3158E-03
+  MgFeSi2O6                        8.9659E-02     1.2069E-01     8.4666E-02
+  FeMgSi2O6                        2.0259E-01     2.7272E-01     3.3198E-01
+  CaAlFe3+SiO6                     2.1882E-05     2.9455E-05     1.6641E-03
+  CaFe3+Fe3+SiO6                   3.1720E-05     4.2698E-05     2.1076E-03
+  FeAlAlSiO6                       1.4070E-03     1.8939E-03     1.0943E-02
+  MgAlAlSiO6                       1.2648E-03     1.7026E-03     1.3729E-02
+  FeFe3+Fe3+SiO6                   9.0271E-04     1.2152E-03     5.4951E-03
+  FeFe3+AlSiO6                     2.0515E-03     2.7615E-03     1.3860E-02
+  FeAlFe3+SiO6                     6.2667E-04     8.4357E-04     4.3387E-03
+  MgFe3+Fe3+SiO6                   8.3655E-04     1.1261E-03     6.8939E-03
+  MgFe3+AlSiO6                     1.8758E-03     2.5250E-03     1.7388E-02
+  MgAlFe3+SiO6                     5.7300E-04     7.7133E-04     5.4431E-03
+  FeFe3+Si2O6[+]                   2.3090E-02     3.1081E-02     1.7363E-01
+  CaFe3+Si2O6[+]                   8.0645E-04     1.0856E-03     6.6594E-02
+  MgFe3+Si2O6[+]                   2.1124E-02     2.8436E-02     1.7440E-01
+  CaFeFe3+SiO6[-]                  1.3463E-04     1.8123E-04     1.0232E-03
+  MgFeFe3+SiO6[-]                  3.5506E-03     4.7795E-03     3.3468E-03
+  FeFeFe3+SiO6[-]                  3.8314E-03     5.1575E-03     2.6678E-03
+  CaFeAlSiO6[-]                    3.0403E-04     4.0926E-04     2.5807E-03
+  MgFeAlSiO6[-]                    7.9614E-03     1.0717E-02     8.4414E-03
+  FeFeAlSiO6[-]                    8.7071E-03     1.1721E-02     6.7287E-03
+  CaMgFe3+SiO6[-]                  2.7996E-04     3.7686E-04     8.8098E-04
+  MgMgFe3+SiO6[-]                  7.3256E-03     9.8611E-03     1.3181E-02
+  FeMgFe3+SiO6[-]                  8.0230E-03     1.0800E-02     1.0507E-02
+  CaAlSi2O6[+]                     5.4905E-04     7.3909E-04     5.2580E-02
+  MgAlSi2O6[+]                     1.4253E-02     1.9187E-02     1.3770E-01
+  FeAlSi2O6[+]                     1.5844E-02     2.1328E-02     1.3709E-01
+  CaMgAlSiO6[-]                    6.2269E-04     8.3822E-04     2.2220E-03
+  MgMgAlSiO6[-]                    1.6143E-02     2.1730E-02     3.3245E-02
+  FeMgAlSiO6[-]                    1.7990E-02     2.4216E-02     2.6500E-02
+  TOTAL:                           7.4288E-01     1.0000E+00     1.0000E+00
+     Site fraction of sublattice constituents:
+     Ca                            1.7891E-02    Stoichiometry = 1
+     Mg                            0.50047
+     Fe                            0.48164
+     ----------------------------------------------------------------------
+     Mg                            0.62361       Stoichiometry = 1
+     Fe                            0.26560
+     Al                            4.8214E-02
+     Fe3+                          6.2577E-02
+     ----------------------------------------------------------------------
+     Al                            7.9336E-02    Stoichiometry = 1
+     Fe3+                          3.1455E-02
+     Si                            0.88921
+     System component              Amount/mol    Amount/gram   Mole fraction  Mass fraction
+     Fe                            2.7469E-03     0.15340        8.4127E-02     0.20649
+     Ca                            5.8418E-05     2.3413E-03     1.7891E-03     3.1516E-03
+     Si                            6.1686E-03     0.17325        0.18892        0.23321
+     Al                            4.1647E-04     1.1237E-02     1.2755E-02     1.5126E-02
+     Mg                            3.6703E-03     8.9207E-02     0.11241        0.12008
+     O                             1.9591E-02     0.31344        0.60000        0.42193
+  PHASE: Olivine#1;#2                 gram      MASS FRACTION     ACTIVITY
+  Mg1Mg1Si1O4                      0.0000E+00     2.0700E-01     2.7789E-01
+  Fe1Fe1Si1O4                      0.0000E+00     1.5673E-01     1.4291E-01
+  Mg1Fe1Si1O4                      0.0000E+00     1.3796E-01     1.2338E-01
+  Fe1Mg1Si1O4                      0.0000E+00     2.4332E-01     2.2104E-01
+  Ca1Ca1Si1O4                      0.0000E+00     2.5138E-08     1.3413E-04
+  Ca1Fe1Si1O4                      0.0000E+00     1.2217E-03     1.9248E-02
+  Fe1Ca1Si1O4                      0.0000E+00     3.2478E-06     2.2697E-04
+  Ca1Mg1Si1O4                      0.0000E+00     1.8675E-03     2.0183E-02
+  Mg1Ca1Si1O4                      0.0000E+00     2.8150E-06     1.2962E-07
+  Zn1Zn1Si1O4                      0.0000E+00     3.7828E-04     4.8011E-03
+  Zn1Ca1Si1O4                      0.0000E+00     8.6943E-08     2.1486E-06
+  Ca1Zn1Si1O4                      0.0000E+00     1.1120E-04     6.2901E-04
+  Zn1Mg1Si1O4                      0.0000E+00     6.5425E-03     5.7744E-03
+  Mg1Zn1Si1O4                      0.0000E+00     1.2613E-02     5.7744E-03
+  Zn1Fe1Si1O4                      0.0000E+00     4.1799E-03     4.8290E-03
+  Fe1Zn1Si1O4                      0.0000E+00     1.4212E-02     2.3242E-02
+  Ca1Ni1Si1O4                      0.0000E+00     7.3973E-04     2.3534E-03
+  Ni1Ca1Si1O4                      0.0000E+00     2.0507E-07     1.1735E-07
+  Mg1Ni1Si1O4                      0.0000E+00     8.3651E-02     8.1437E-02
+  Ni1Mg1Si1O4                      0.0000E+00     1.5385E-02     1.2787E-02
+  Fe1Ni1Si1O4                      0.0000E+00     9.4790E-02     8.0513E-02
+  Ni1Fe1Si1O4                      0.0000E+00     9.8848E-03     1.0369E-02
+  Zn1Ni1Si1O4                      0.0000E+00     2.5265E-03     8.3726E-04
+  Ni1Zn1Si1O4                      0.0000E+00     8.9580E-04     4.5272E-04
+  Ni1Ni1Si1O4                      0.0000E+00     5.9772E-03     5.8421E-03
+  TOTAL:                           0.0000E+00     1.0000E+00     9.9103E-01
+  PHASE: Clinopyroxene#1;#2           gram      MASS FRACTION     ACTIVITY
+  CaMgSi2O6                        0.0000E+00     1.9012E-02     1.3059E-01
+  CaFeSi2O6                        0.0000E+00     6.7474E-03     3.3454E-02
+  FeFeSi2O6                        0.0000E+00     1.2624E-01     8.7941E-02
+  MgMgSi2O6                        0.0000E+00     2.5271E-01     3.2039E-01
+  CaAl2SiO6                        0.0000E+00     8.6045E-05     4.1971E-03
+  CaFe3+AlSiO6                     0.0000E+00     3.3772E-05     5.3158E-03
+  MgFeSi2O6                        0.0000E+00     9.0585E-02     8.4767E-02
+  FeMgSi2O6                        0.0000E+00     3.5880E-01     3.3238E-01
+  CaAlFe3+SiO6                     0.0000E+00     3.8630E-05     1.6641E-03
+  CaFe3+Fe3+SiO6                   0.0000E+00     1.4955E-05     2.1076E-03
+  FeAlAlSiO6                       0.0000E+00     1.6231E-03     1.1033E-02
+  MgAlAlSiO6                       0.0000E+00     1.1444E-03     1.5732E-03
+  FeFe3+Fe3+SiO6                   0.0000E+00     2.7812E-04     5.5404E-03
+  FeFe3+AlSiO6                     0.0000E+00     6.3204E-04     1.3974E-02
+  FeAlFe3+SiO6                     0.0000E+00     7.2294E-04     4.3745E-03
+  MgFe3+Fe3+SiO6                   0.0000E+00     2.0214E-04     7.8999E-04
+  MgFe3+AlSiO6                     0.0000E+00     4.5326E-04     1.9925E-03
+  MgAlFe3+SiO6                     0.0000E+00     5.1845E-04     6.2374E-04
+  FeFe3+Si2O6[+]                   0.0000E+00     1.1035E-02     1.0572E-01
+  CaFe3+Si2O6[+]                   0.0000E+00     5.8981E-04     4.0219E-02
+  MgFe3+Si2O6[+]                   0.0000E+00     7.9182E-03     1.0191E-01
+  CaFeFe3+SiO6[-]                  0.0000E+00     1.7108E-04     1.7531E-03
+  MgFeFe3+SiO6[-]                  0.0000E+00     2.3125E-03     6.5711E-04
+  FeFeFe3+SiO6[-]                  0.0000E+00     3.1817E-03     4.6084E-03
+  CaFeAlSiO6[-]                    0.0000E+00     3.8636E-04     4.4217E-03
+  MgFeAlSiO6[-]                    0.0000E+00     5.1853E-03     1.6574E-03
+  FeFeAlSiO6[-]                    0.0000E+00     7.2306E-03     1.1623E-02
+  CaMgFe3+SiO6[-]                  0.0000E+00     4.8911E-04     6.8434E-03
+  MgMgFe3+SiO6[-]                  0.0000E+00     6.5595E-03     2.4836E-03
+  FeMgFe3+SiO6[-]                  0.0000E+00     9.1596E-03     1.7418E-02
+  CaAlSi2O6[+]                     0.0000E+00     1.5036E-03     3.1755E-02
+  MgAlSi2O6[+]                     0.0000E+00     2.0005E-02     8.0463E-02
+  FeAlSi2O6[+]                     0.0000E+00     2.8353E-02     8.3476E-02
+  CaMgAlSiO6[-]                    0.0000E+00     1.0879E-03     1.7260E-02
+  MgMgAlSiO6[-]                    0.0000E+00     1.4455E-02     6.2641E-03
+  FeMgAlSiO6[-]                    0.0000E+00     2.0539E-02     4.3932E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     9.7666E-01
+  PHASE: Cu2S-s.s.,                   gram      MASS FRACTION     ACTIVITY
+  PbS                              0.0000E+00     4.8487E-07     1.5625E-07
+  Cu2S                             0.0000E+00     9.9960E-01     9.3847E-01
+  ZnS                              0.0000E+00     4.0363E-04     7.1660E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     9.6907E-01
+  PHASE: Antifluorite#1;#2            gram      MASS FRACTION     ACTIVITY
+  Cu2O                             0.0000E+00     8.8999E-06     1.5596E-03
+  Cu2S_digenite                    0.0000E+00     9.9998E-01     9.3848E-01
+  Ca2O[2+]                         0.0000E+00     9.8645E-11     3.1464E-03
+  Ca2S[2+]                         0.0000E+00     1.1630E-05     2.5526E-10
+  Va2O[2-]                         0.0000E+00     1.6415E-11     4.4562E-13
+  Va2S[2-]                         0.0000E+00     3.3231E-06     2.5532E-10
+  TOTAL:                           0.0000E+00     1.0000E+00     9.3855E-01
+  PHASE: Cu-liq_or_speiss             gram      MASS FRACTION     ACTIVITY
+  Pb                               0.0000E+00     1.1265E-05     6.5050E-06
+  Cu                               0.0000E+00     8.5552E-01     3.9892E-01
+  As                               0.0000E+00     9.1562E-03     2.0903E-04
+  Fe                               0.0000E+00     3.7574E-04     3.6637E-04
+  S                           C    0.0000E+00     1.3239E-01     3.9155E-04
+  Zn                               0.0000E+00     1.6231E-06     6.9865E-06
+  O                                0.0000E+00     2.1112E-03     1.7374E-04
+  Ni                               0.0000E+00     4.4135E-04     1.6620E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     8.1902E-01
+  PHASE: Protopyroxene                gram      MASS FRACTION     ACTIVITY
+  CaMgSi2O6                        0.0000E+00     7.3783E-03     3.4696E-02
+  CaFeSi2O6                        0.0000E+00     2.0441E-03     2.3774E-02
+  FeFeSi2O6                        0.0000E+00     7.5380E-02     3.6181E-02
+  MgMgSi2O6                        0.0000E+00     3.7489E-01     3.5123E-01
+  CaAl2SiO6                        0.0000E+00     2.2182E-05     4.1971E-03
+  CaFe3+AlSiO6                     0.0000E+00     3.2482E-05     5.3158E-03
+  MgFeSi2O6                        0.0000E+00     1.0490E-01     5.6929E-02
+  FeMgSi2O6                        0.0000E+00     2.7445E-01     2.2322E-01
+  CaAlFe3+SiO6                     0.0000E+00     9.9584E-06     1.6641E-03
+  CaFe3+Fe3+SiO6                   0.0000E+00     1.4384E-05     2.1076E-03
+  FeAlAlSiO6                       0.0000E+00     8.2471E-04     6.3875E-03
+  MgAlAlSiO6                       0.0000E+00     1.1277E-03     1.1602E-02
+  FeFe3+Fe3+SiO6                   0.0000E+00     5.2723E-04     3.2075E-03
+  FeFe3+AlSiO6                     0.0000E+00     1.1982E-03     8.0899E-03
+  FeAlFe3+SiO6                     0.0000E+00     3.6733E-04     2.5325E-03
+  MgFe3+Fe3+SiO6                   0.0000E+00     7.4317E-04     5.8258E-03
+  MgFe3+AlSiO6                     0.0000E+00     1.6664E-03     1.4694E-02
+  MgAlFe3+SiO6                     0.0000E+00     5.1088E-04     4.5998E-03
+  FeFe3+Si2O6[+]                   0.0000E+00     1.9152E-02     1.4047E-01
+  CaFe3+Si2O6[+]                   0.0000E+00     5.1935E-04     9.2301E-02
+  MgFe3+Si2O6[+]                   0.0000E+00     2.6651E-02     2.2102E-01
+  CaFeFe3+SiO6[-]                  0.0000E+00     5.6613E-05     5.4286E-04
+  MgFeFe3+SiO6[-]                  0.0000E+00     2.9251E-03     1.5006E-03
+  FeFeFe3+SiO6[-]                  0.0000E+00     2.0751E-03     8.2616E-04
+  CaFeAlSiO6[-]                    0.0000E+00     1.2785E-04     1.3692E-03
+  MgFeAlSiO6[-]                    0.0000E+00     6.5589E-03     3.7847E-03
+  FeFeAlSiO6[-]                    0.0000E+00     4.7159E-03     2.0837E-03
+  CaMgFe3+SiO6[-]                  0.0000E+00     2.0734E-04     7.9227E-04
+  MgMgFe3+SiO6[-]                  0.0000E+00     1.0629E-02     9.2580E-03
+  FeMgFe3+SiO6[-]                  0.0000E+00     7.6531E-03     5.0971E-03
+  CaAlSi2O6[+]                     0.0000E+00     3.5487E-04     7.2877E-02
+  MgAlSi2O6[+]                     0.0000E+00     1.8048E-02     1.7451E-01
+  FeAlSi2O6[+]                     0.0000E+00     1.3189E-02     1.1091E-01
+  CaMgAlSiO6[-]                    0.0000E+00     4.6118E-04     1.9983E-03
+  MgMgAlSiO6[-]                    0.0000E+00     2.3423E-02     2.3351E-02
+  FeMgAlSiO6[-]                    0.0000E+00     1.7160E-02     1.2856E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     7.6653E-01
+  PHASE: Rocksalt#1;#2;#3             gram      MASS FRACTION     ACTIVITY
+  CuO[-]                           0.0000E+00     6.9136E-03     1.3364E-03
+  MgO_periclase                    0.0000E+00     4.6048E-03     4.7121E-02
+  CaO_lime                         0.0000E+00     4.6100E-06     6.8727E-05
+  FeO_wustite                      0.0000E+00     4.3115E-01     1.7451E-01
+  NiO                              0.0000E+00     1.0563E-01     6.3245E-02
+  CuO                              0.0000E+00     2.1049E-02     3.3448E-04
+  ZnO                              0.0000E+00     1.2168E-02     1.0372E-02
+  FeO[+]                           0.0000E+00     3.7435E-01     3.5418E-02
+  AlO[+]                           0.0000E+00     2.6508E-03     6.1181E-03
+  VaO[2-]                          0.0000E+00     4.1484E-02     1.9236E-01
+  TOTAL:                           0.0000E+00     1.0000E+00     6.2138E-01
+  PHASE: Monoxide#1;#2                gram      MASS FRACTION     ACTIVITY
+  FeO                              0.0000E+00     4.4719E-01     1.7642E-01
+  Fe2O3                            0.0000E+00     4.4292E-01     1.6287E-03
+  CaO                              0.0000E+00     1.2242E-05     6.8726E-05
+  MgO                              0.0000E+00     1.9701E-02     4.7120E-02
+  ZnO                              0.0000E+00     1.9522E-02     1.0372E-02
+  Al2O3                            0.0000E+00     2.0703E-03     4.8600E-05
+  NiO                              0.0000E+00     4.6988E-02     6.6383E-02
+  CuO                              0.0000E+00     2.1605E-02     3.3169E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     5.4020E-01
+  PHASE: Spinel#1;#2                  gram      MASS FRACTION     ACTIVITY
+  Fe3O4                            0.0000E+00     1.3628E-01     4.8958E-02
+  Fe3O4[1-]                        0.0000E+00     1.2312E-01     1.7847E-02
+  Fe3O4[1+]                        0.0000E+00     3.8629E-01     1.1861E-01
+  Fe3O4[2-]                        0.0000E+00     4.3437E-02     2.0096E-03
+  Fe1O4[5-]                        0.0000E+00     1.1165E-05     3.9255E-10
+  Fe1O4[6-]                        0.0000E+00     3.9390E-06     4.4214E-11
+  Fe1Al2O4                         0.0000E+00     1.3186E-02     1.2915E-02
+  Al3O4[1+]                        0.0000E+00     2.0223E-03     3.5442E-03
+  Al1Fe2O4[1-]                     0.0000E+00     6.9928E-03     4.3425E-05
+  Al1O4[5-]                        0.0000E+00     5.4996E-07     6.1846E-07
+  Fe1Al2O4[1+]                     0.0000E+00     3.7375E-02     3.9604E-03
+  Al1Fe2O4[1+]                     0.0000E+00     2.1939E-02     8.5033E-03
+  Mg1Al2O4                         0.0000E+00     8.8777E-04     1.8207E-02
+  Al1Mg2O4[1-]                     0.0000E+00     1.0586E-03     1.4872E-03
+  Mg3O4[2-]                        0.0000E+00     4.6436E-04     2.9163E-04
+  Mg1O4[6-]                        0.0000E+00     2.3874E-07     1.8659E-11
+  Mg1Fe2O4                         0.0000E+00     9.6827E-03     1.3540E-03
+  Fe1Mg2O4[1-]                     0.0000E+00     1.9688E-02     1.6166E-04
+  Fe1Mg2O4[2-]                     0.0000E+00     6.9458E-03     3.4320E-04
+  Mg1Fe2O4[2-]                     0.0000E+00     3.0862E-03     5.6089E-05
+  Ni1Al2O4                         0.0000E+00     1.1393E-05     9.1247E-04
+  Al1Ni2O4[1-]                     0.0000E+00     4.1749E-03     9.5316E-04
+  Ni3O4[2-]                        0.0000E+00     2.2235E-05     7.2728E-05
+  Ni1O4[6-]                        0.0000E+00     3.4282E-09     9.3351E-10
+  Ni1Fe2O4                         0.0000E+00     1.1728E-04     1.9939E-05
+  Fe1Ni2O4[1-]                     0.0000E+00     7.3258E-02     3.1548E-03
+  Fe1Ni2O4[2-]                     0.0000E+00     2.5845E-02     3.7974E-04
+  Ni1Fe2O4[2-]                     0.0000E+00     3.7381E-05     8.2223E-07
+  Mg1Ni2O4[2-]                     0.0000E+00     1.8432E-03     4.9612E-03
+  Ni1Mg2O4[2-]                     0.0000E+00     6.0047E-06     4.2751E-06
+  Zn1Fe2O4                         0.0000E+00     4.1617E-02     1.2485E-02
+  Zn1Al2O4                         0.0000E+00     4.0795E-03     1.5344E-02
+  Fe1Zn2O4[1-]                     0.0000E+00     4.2918E-03     1.9142E-05
+  Zn1Zn2O4[2-]                     0.0000E+00     4.6099E-04     7.6906E-08
+  Al1Zn2O4[1-]                     0.0000E+00     2.4639E-04     5.4412E-07
+  Zn1Fe2O4[2-]                     0.0000E+00     1.3265E-02     7.1685E-05
+  Fe1Zn2O4[2-]                     0.0000E+00     1.5141E-03     2.1560E-06
+  Zn1Va2O4[6-]                     0.0000E+00     1.2472E-06     8.3450E-14
+  Zn1Mg2O4[2-]                     0.0000E+00     2.1525E-03     2.6921E-03
+  Mg1Zn2O4[2-]                     0.0000E+00     1.0887E-04     8.3311E-09
+  Zn1Ni2O4[2-]                     0.0000E+00     7.8850E-03     1.2230E-03
+  Ni1Zn2O4[2-]                     0.0000E+00     1.3018E-06     2.5750E-38
+  Cu1Fe2O4                         0.0000E+00     3.6393E-03     1.2837E-04
+  Fe1Cu2O4[1-]                     0.0000E+00     3.1247E-04     6.9817E-08
+  Cu1Cu2O4[2-]                     0.0000E+00     2.9379E-06     2.6146E-12
+  Cu1Fe2O4[2-]                     0.0000E+00     1.1600E-03     1.4548E-03
+  Fe1Cu2O4[2-]                     0.0000E+00     1.1023E-04     7.8633E-09
+  Cu1Va2O4[6-]                     0.0000E+00     1.0835E-07     3.4752E-12
+  Cu1Al2O4                    T    0.0000E+00     3.5589E-04     5.1133E-05
+  Al1Cu2O4[1-]                     0.0000E+00     1.7904E-05     4.3039E-08
+  Fe1Ca2O4[1-]                     0.0000E+00     1.9128E-05     9.4833E-10
+  Fe1Ca2O4[2-]                     0.0000E+00     6.7482E-06     1.0681E-10
+  Al1Ca2O4[1-]                     0.0000E+00     1.0620E-06     7.2263E-15
+  Cu1Ca2O4[2-]                     0.0000E+00     1.8113E-07     5.9662E-12
+  Mg1Cu2O4[2-]                     0.0000E+00     7.9093E-06     2.7611E-11
+  Cu1Mg2O4[2-]                     0.0000E+00     1.8772E-04     2.7615E-05
+  Mg1Ca2O4[2-]                     0.0000E+00     4.6754E-07     1.9913E-15
+  Ni1Cu2O4[2-]                     0.0000E+00     9.4795E-08    <1.0000E-75
+  Cu1Ni2O4[2-]                     0.0000E+00     6.8965E-04     2.3748E-02
+  Ni1Ca2O4[2-]                     0.0000E+00     5.8186E-09    <1.0000E-75
+  Zn1Cu2O4[2-]                     0.0000E+00     3.3581E-05     2.5489E-10
+  Cu1Zn2O4[2-]                     0.0000E+00     4.0335E-05     7.8889E-10
+  Zn1Ca2O4[2-]                     0.0000E+00     2.0736E-06     3.8101E-12
+  TOTAL:                           0.0000E+00     1.0000E+00     4.9705E-01
+  PHASE: Wollastonite,                gram      MASS FRACTION     ACTIVITY
+  MgSiO3                           0.0000E+00     2.2737E-01     8.3191E-02
+  FeSiO3                           0.0000E+00     5.9723E-01     2.9909E-01
+  CaSiO3                           0.0000E+00     1.7540E-01     8.3263E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     4.7507E-01
+  PHASE: fcc_Fe-Cu                    gram      MASS FRACTION     ACTIVITY
+  Fe                               0.0000E+00     8.2254E-05     4.5135E-04
+  Cu                          C    0.0000E+00     9.9992E-01     3.6364E-01
+  TOTAL:                           0.0000E+00     1.0000E+00     3.6355E-01
+  PHASE: M2O3(Corundum)#1;#2          gram      MASS FRACTION     ACTIVITY
+  Al2O3                            0.0000E+00     3.8103E-02     2.6986E-02
+  Fe2O3                            0.0000E+00     9.5603E-01     9.5724E-02
+  NiO                              0.0000E+00     5.8698E-03     1.7763E-03
+  TOTAL:                           0.0000E+00     1.0000E+00     3.2803E-01
+  PHASE: LowClinopyroxene             gram      MASS FRACTION     ACTIVITY
+  Ca1Mg1Si2O6                      0.0000E+00     4.0374E-03     1.3795E-02
+  Mg1Mg1Si2O6                      0.0000E+00     9.9596E-01     2.8013E-01
+  TOTAL:                           0.0000E+00     1.0000E+00     2.8117E-01
+  PHASE: Ca(Al,Fe)12O19               gram      MASS FRACTION     ACTIVITY
+  Ca1Al12O19                       0.0000E+00     3.9905E-01     8.1006E-12
+  Ca1Fe12O19                       0.0000E+00     6.0095E-01     7.3242E-12
+  TOTAL:                           0.0000E+00     1.0000E+00     2.3709E-01
+  PHASE: Willemite                    gram      MASS FRACTION     ACTIVITY
+  Zn1Zn1SiO4                       0.0000E+00     7.0251E-02     6.7561E-03
+  Fe1Fe1SiO4                       0.0000E+00     2.0681E-01     3.2516E-02
+  Zn1Fe1SiO4                       0.0000E+00     1.2119E-01     4.2126E-02
+  Fe1Zn1SiO4                       0.0000E+00     1.2013E-01     4.1215E-02
+  Mg1Mg1SiO4                       0.0000E+00     6.7384E-02     2.5433E-02
+  Mg1Zn1SiO4                       0.0000E+00     7.0530E-02     1.3108E-02
+  Zn1Mg1SiO4                       0.0000E+00     7.0729E-02     1.3108E-02
+  Mg1Fe1SiO4                       0.0000E+00     1.2044E-01     2.8757E-02
+  Fe1Mg1SiO4                       0.0000E+00     1.1972E-01     2.8757E-02
+  Ni1Ni1SiO4                       0.0000E+00     2.7159E-04     6.8865E-05
+  Zn1Ni1SiO4                       0.0000E+00     4.0595E-03     5.0157E-04
+  Ni1Zn1SiO4                       0.0000E+00     4.7046E-03     9.2761E-04
+  Fe1Ni1SiO4                       0.0000E+00     6.9320E-03     1.4964E-03
+  Ni1Fe1SiO4                       0.0000E+00     8.1043E-03     1.4964E-03
+  Mg1Ni1SiO4                       0.0000E+00     4.0471E-03     1.3234E-03
+  Ni1Mg1SiO4                       0.0000E+00     4.7034E-03     1.3234E-03
+  TOTAL:                           0.0000E+00     1.0000E+00     2.2446E-01
+  PHASE: Zincite                      gram      MASS FRACTION     ACTIVITY
+  MgO                              0.0000E+00     2.8950E-03     3.3992E-03
+  FeO                              0.0000E+00     9.4570E-02     4.7230E-02
+  ZnO                         C    0.0000E+00     3.8912E-01     2.8902E-02
+  NiO                              0.0000E+00     7.2038E-03     4.1845E-03
+  Fe2O3                            0.0000E+00     5.0621E-01     4.6248E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     2.1998E-01
+  PHASE: Salt-liquid#1;#2             gram      MASS FRACTION     ACTIVITY
+  MgO                              0.0000E+00     3.4194E-03     2.0420E-03
+  CaO                              0.0000E+00     6.9211E-06     3.0053E-06
+  FeO                              0.0000E+00     4.2418E-01     1.4211E-01
+  NiO                              0.0000E+00     4.2347E-02     1.3646E-02
+  Fe2O3                            0.0000E+00     5.3005E-01     2.5531E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     2.1598E-01
+  PHASE: Cordierite                   gram      MASS FRACTION     ACTIVITY
+  Al4Fe2Si5O18                     0.0000E+00     1.9038E-01     1.2958E-03
+  Al4Mg2Si5O18                     0.0000E+00     8.0962E-01     2.8762E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     2.0559E-01
+  PHASE: a'(Ca,Sr,Ba)2SiO4            gram      MASS FRACTION     ACTIVITY
+  Mg2SiO4                          0.0000E+00     6.3518E-02     2.5273E-04
+  Fe2SiO4                          0.0000E+00     7.9486E-01     2.0391E-02
+  Ca2SiO4                          0.0000E+00     1.0347E-01     3.4576E-04
+  Pb2SiO4                     T    0.0000E+00     5.6988E-05     1.1413E-11
+  Zn2SiO4                          0.0000E+00     3.8089E-02     4.7049E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.8399E-01
+  PHASE: a-(Ca,Sr)2SiO4               gram      MASS FRACTION     ACTIVITY
+  Mg2SiO4                          0.0000E+00     7.0546E-02     2.9980E-04
+  Ca2SiO4                          0.0000E+00     9.8996E-02     3.0708E-04
+  Fe2SiO4                          0.0000E+00     8.3046E-01     1.9045E-02
+  TOTAL:                           0.0000E+00     1.0000E+00     1.7359E-01
+  PHASE: Ca(Al,Fe)6O10                gram      MASS FRACTION     ACTIVITY
+  Ca1Al6O10                        0.0000E+00     3.6332E-01     1.0013E-07
+  Ca1Fe6O10                        0.0000E+00     6.3668E-01     3.3033E-07
+  TOTAL:                           0.0000E+00     1.0000E+00     1.6466E-01
+  PHASE: Pb-liq                       gram      MASS FRACTION     ACTIVITY
+  Pb                               0.0000E+00     1.9194E-04     6.4899E-06
+  Zn                               0.0000E+00     2.5891E-05     6.9041E-06
+  Cu                          C    0.0000E+00     2.5391E-01     3.9892E-01
+  Bi                               0.0000E+00     2.2406E-01     3.1720E-03
+  Sb                               0.0000E+00     1.3968E-01     2.9554E-03
+  Fe                               0.0000E+00     1.0482E-04     3.7601E-04
+  S                           C    0.0000E+00     7.2135E-02     3.9154E-04
+  As                               0.0000E+00     9.3879E-03     2.0903E-04
+  CuS                         C    0.0000E+00     2.7426E-01     2.5632E-02
+  O                           C    0.0000E+00     2.6238E-02     4.0811E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.6330E-01
+  PHASE: Ca(Al,Fe)4O7                 gram      MASS FRACTION     ACTIVITY
+  Ca1Al4O7                         0.0000E+00     5.4105E-01     9.0775E-06
+  Ca1Fe4O7                         0.0000E+00     4.5895E-01     1.0809E-06
+  TOTAL:                           0.0000E+00     1.0000E+00     8.7133E-02
+  PHASE: FeS-liq                      gram      MASS FRACTION     ACTIVITY
+  Fe                               0.0000E+00     6.2079E-05     3.7603E-04
+  FeS                         C    0.0000E+00     3.2419E-01     8.4298E-04
+  FeO                              0.0000E+00     6.7575E-01     1.4208E-01
+  MgS                              0.0000E+00     5.6249E-07     1.9567E-07
+  TOTAL:                           0.0000E+00     1.0000E+00     5.7078E-02
+  PHASE: Mullite#1;#2                 gram      MASS FRACTION     ACTIVITY
+  Al2Al1O5[-1]                     0.0000E+00     1.4204E-01     3.0309E-05
+  Al2Al1Va5[+9]                    0.0000E+00     1.2395E-03     4.7674E-14
+  Al2Si1O5[0]                      0.0000E+00     6.9549E-01     2.0841E-02
+  Al2Si1Va5[+10]                   0.0000E+00     6.1100E-03     3.2782E-11
+  Fe2Fe1O5[-1]                     0.0000E+00     4.2468E-07     4.0530E-09
+  Fe2Al1O5[-1]                     0.0000E+00     2.6058E-02     5.5261E-07
+  Fe2Si1O5[0]                      0.0000E+00     1.2737E-01     3.7999E-04
+  Fe2Fe1Va5[+9]                    0.0000E+00     4.9873E-09     6.3750E-18
+  Fe2Al1Va5[+9]                    0.0000E+00     2.8673E-04     8.6922E-16
+  Fe2Si1Va5[+10]                   0.0000E+00     1.4055E-03     5.9770E-13
+  Al2Fe1O5[-1]                     0.0000E+00     2.4117E-06     2.2229E-07
+  Al2Fe1Va5[+9]                    0.0000E+00     2.4208E-08     3.4965E-16
+  TOTAL:                           0.0000E+00     1.0000E+00     4.3899E-02
+  PHASE: Wurtzite#1;#2                gram      MASS FRACTION     ACTIVITY
+  ZnO_zincite                      0.0000E+00     9.6077E-01     2.8902E-02
+  ZnS_wurtzite                     0.0000E+00     3.9227E-02     9.8548E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     2.9888E-02
+  PHASE: Ca(Al,Fe)2O4#1;#2            gram      MASS FRACTION     ACTIVITY
+  Ca1Al2O4                         0.0000E+00     6.3920E-01     8.7267E-05
+  Ca1Fe2O4                         0.0000E+00     3.6080E-01     1.0719E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.2852E-02
+  PHASE: Melilite                     gram      MASS FRACTION     ACTIVITY
+  Ca2Zn1Fe2O7[2-]                  0.0000E+00     1.7742E-03     1.1892E-09
+  Ca2Fe3O7[2-]                     0.0000E+00     2.1979E-03     2.4395E-07
+  Ca2Fe3O7[1-]                     0.0000E+00     2.8661E-04     3.1811E-08
+  Pb2Zn1Fe2O7[2-]                  0.0000E+00     1.1950E-07     1.1329E-15
+  Pb2Fe3O7[2-]                     0.0000E+00     1.4991E-07     1.0741E-14
+  Pb2Fe3O7[1-]                     0.0000E+00     1.9548E-08     1.4007E-15
+  Ca2Zn1Si2O7                      0.0000E+00     1.8156E-01     1.1793E-03
+  Ca2Fe1Si2O7                      0.0000E+00     2.2387E-01     1.4401E-03
+  Ca2Fe1Si2O7[1+]                  0.0000E+00     2.9192E-02     1.8778E-04
+  Pb2Zn1Si2O7                      0.0000E+00     1.3258E-05     6.6873E-12
+  Pb2Fe1Si2O7                      0.0000E+00     1.6611E-05     6.3407E-11
+  Pb2Fe1Si2O7[1+]                  0.0000E+00     2.1661E-06     8.2682E-12
+  Ca2Zn1Al2O7[2-]                  0.0000E+00     7.7973E-03     6.1880E-06
+  Ca2Fe1Al2O7[2-]                  0.0000E+00     9.6120E-03     7.5566E-06
+  Ca2Fe1Al2O7[1-]                  0.0000E+00     1.2534E-03     9.8537E-07
+  Ca2Al3O7[1-]                     0.0000E+00     2.6859E-03     2.3347E-06
+  Pb2Zn1Al2O7[2-]                  0.0000E+00     5.7144E-07     3.5091E-14
+  Pb2Fe1Al2O7[2-]                  0.0000E+00     7.1596E-07     3.3272E-13
+  Pb2Fe1Al2O7[1-]                  0.0000E+00     9.3360E-08     4.3386E-14
+  Pb2Al3O7[1-]                     0.0000E+00     2.1117E-07     1.0280E-13
+  Ca2Al1Fe2O7[1-]                  0.0000E+00     6.2459E-04     7.5372E-08
+  Ca2Al1Si2O7[1+]                  0.0000E+00     6.2603E-02     4.4493E-04
+  Pb2Al1Fe2O7[1-]                  0.0000E+00     4.4390E-08     3.3187E-15
+  Pb2Al1Si2O7[1+]                  0.0000E+00     4.9002E-06     1.9590E-11
+  Ca2Mg1Si2O7                      0.0000E+00     4.5253E-01     3.5336E-03
+  Pb2Mg1Si2O7                      0.0000E+00     3.5612E-05     2.0038E-11
+  Ca2Mg1Al2O7[2-]                  0.0000E+00     1.9413E-02     2.3881E-06
+  Pb2Mg1Al2O7[2-]                  0.0000E+00     1.5346E-06     1.0515E-13
+  Ca2Mg1Fe2O7[2-]                  0.0000E+00     4.5223E-03     5.9861E-07
+  Pb2Mg1Fe2O7[2-]                  0.0000E+00     3.2272E-07     3.3946E-15
+  TOTAL:                           0.0000E+00     1.0000E+00     7.4986E-03
+  PHASE: Sb-liq                       gram      MASS FRACTION     ACTIVITY
+  Sb                               0.0000E+00     9.2714E-01     2.9554E-03
+  As                          T    0.0000E+00     3.9520E-02     2.3752E-04
+  O                           C    0.0000E+00     2.9284E-02     2.2290E-02
+  Pb                               0.0000E+00     4.0542E-03     6.4899E-06
+  TOTAL:                           0.0000E+00     1.0000E+00     6.6309E-03
+  PHASE: PbO-ZnO                      gram      MASS FRACTION     ACTIVITY
+  PbO                              0.0000E+00     3.6248E-03     1.1311E-06
+  ZnO                              0.0000E+00     9.9638E-01     1.9538E-03
+  TOTAL:                           0.0000E+00     1.0000E+00     1.9564E-03
+  PHASE: Wurtzite2                    gram      MASS FRACTION     ACTIVITY
+  ZnS                              0.0000E+00     6.5537E-01     9.8548E-04
+  FeS                              0.0000E+00     3.4463E-01     6.0088E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.5242E-03
+  PHASE: Sphalerite3                  gram      MASS FRACTION     ACTIVITY
+  ZnS                              0.0000E+00     5.9500E-01     8.5009E-04
+  FeS                              0.0000E+00     4.0500E-01     6.5467E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.3487E-03
+  PHASE: Pb-solid                     gram      MASS FRACTION     ACTIVITY
+  Pb                          T    0.0000E+00     1.8214E-02     3.8413E-06
+  Sb                          T    0.0000E+00     9.8179E-01     1.0858E-03
+  TOTAL:                           0.0000E+00     1.0000E+00     1.0978E-03
+  PHASE: Sb-solid                     gram      MASS FRACTION     ACTIVITY
+  Sb                          T    0.0000E+00     9.9258E-01     1.0588E-03
+  Pb                          T    0.0000E+00     7.4175E-03     7.6979E-06
+  TOTAL:                           0.0000E+00     1.0000E+00     1.0635E-03
+  PHASE: Ca2(Al,Fe)2O5                gram      MASS FRACTION     ACTIVITY
+  Ca2Al2O5                         0.0000E+00     1.5430E-01     5.6181E-09
+  Ca2Fe2O5                         0.0000E+00     8.4570E-01     1.0470E-07
+  TOTAL:                           0.0000E+00     1.0000E+00     3.9853E-04
+  PHASE: Zn-liq                       gram      MASS FRACTION     ACTIVITY
+  Zn                               0.0000E+00     9.1690E-01     7.0154E-06
+  O                           C    0.0000E+00     8.3097E-02     1.5206E+01
+  TOTAL:                           0.0000E+00     1.0000E+00     2.7621E-04
+  PHASE: Se-liq                       gram      MASS FRACTION     ACTIVITY
+  O                                0.0000E+00     1.5186E-03     1.6917E-06
+  As                          T    0.0000E+00     9.9848E-01     2.3752E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     2.3921E-04
+  PHASE: Anhydrite#1;#2               gram      MASS FRACTION     ACTIVITY
+  MgSO4                            0.0000E+00     1.2141E-02     2.6550E-06
+  CaSO4_anhydrite                  0.0000E+00     9.8786E-01     1.2841E-04
+  TOTAL:                           0.0000E+00     1.0000E+00     1.3018E-04
+  PHASE: Ca3(Al,Fe)2O6                gram      MASS FRACTION     ACTIVITY
+  Ca3Al2O6                         0.0000E+00     4.1591E-01     1.1554E-12
+  Ca3Fe2O6                         0.0000E+00     5.8409E-01     1.5470E-12
+  TOTAL:                           0.0000E+00     1.0000E+00     2.3187E-06
+  PHASE: Pyrite                       gram      MASS FRACTION     ACTIVITY
+  FeS2_pyrite                      0.0000E+00     5.5546E-02     2.6945E-08
+  NiS2_vaesite                     0.0000E+00     9.2533E-01     1.1550E-06
+  CuS2                             0.0000E+00     1.9123E-02     5.8757E-08
+  TOTAL:                           0.0000E+00     1.0000E+00     1.2652E-06
+  PHASE: Ca2(Al,Fe)8SiO16             gram      MASS FRACTION     ACTIVITY
+  Ca2Fe8Si1O16                     0.0000E+00     3.8006E-01     7.3709E-24
+  Ca2Al8Si1O16                     0.0000E+00     6.1994E-01     2.3153E-10
+  TOTAL:                           0.0000E+00     1.0000E+00     4.4708E-07
+  PHASE: Bredigite                    gram      MASS FRACTION     ACTIVITY
+  Ca7Mg(SiO4)4                     0.0000E+00     1.6996E-01     6.0634E-12
+  Ca3Mg5(SiO4)4                    0.0000E+00     8.3004E-01     5.1131E-09
+  TOTAL:                           0.0000E+00     1.0000E+00     1.0102E-08
+  PHASE: Pb3M2Si3O11                  gram      MASS FRACTION     ACTIVITY
+  Pb3Ca2Si3O11                     0.0000E+00     9.9998E-01     2.2549E-18
+  Pb5Si3O11                        0.0000E+00     1.6370E-05     3.3282E-28
+  TOTAL:                           0.0000E+00     1.0000E+00     1.5016E-09
+                                      gram                        ACTIVITY
+  SiO2_Tridymite(h)(s4)            4.8244E+00                    1.0000E+00
+  SiO2_Cristobalite(h)(s6)         0.0000E+00                    9.9861E-01
+  Cu2S_liquid(liq)                 0.0000E+00                    9.8109E-01
+  SiO2_Quartz(h)(s2)               0.0000E+00                    9.4874E-01
+  Cu2S_Solid-C(s3)                 0.0000E+00                    9.3847E-01
+  Cu2S_Digenite_cF44_(225(s3)      0.0000E+00                    9.3847E-01
+  Cu2S_Solid-B(s2)                 0.0000E+00                    8.5493E-01
+  Cu2S_Chalcocite_(high)_(s2)      0.0000E+00                    8.5493E-01
+  SiO2_liquid(liq)                 0.0000E+00                    8.1359E-01
+  AlAsO4_solid(s)             T    0.0000E+00                    6.5953E-01
+  MgSiO3_proto-enstatite(s3)       0.0000E+00                    5.9264E-01
+  MgSiO3_ortho-enstatite(s2)       0.0000E+00                    5.7745E-01
+  MgSiO3_low-clinoenstatit(s)      0.0000E+00                    5.2927E-01
+  SiO2_coesite(s7)                 0.0000E+00                    4.4585E-01
+  MgSiO3_high-P-clinoenst(s4)      0.0000E+00                    4.1097E-01
+  Cu_liquid(liq)                   0.0000E+00                    3.9806E-01
+  Cu_solid(s)                      0.0000E+00                    3.6364E-01
+  Cu2S_Chalcocite(s)               0.0000E+00                    3.4173E-01
+  Cu2S_Chalcocite_(low)_mP(s)      0.0000E+00                    3.4173E-01
+  SiO2_Quartz(l)(s)           T    0.0000E+00                    3.1620E-01
+  FeSiO3_Clino-ferrosilite(s)      0.0000E+00                    2.9655E-01
+  FeSiO3_Ortho-ferrosilit(s3)      0.0000E+00                    2.9033E-01
+  Mg2SiO4_forsterite(s)            0.0000E+00                    2.7789E-01
+  Fe2SiO4_fayalite(s)              0.0000E+00                    1.4291E-01
+  FeO_liquid(liq)                  0.0000E+00                    1.4211E-01
+  CaMgSi2O6_diopside(cl-py(s)      0.0000E+00                    1.3059E-01
+  CaAl2Si2O8_Anorthite(s2)         0.0000E+00                    1.1941E-01
+  Fe2O3_hematite(s)                0.0000E+00                    9.5724E-02
+  CaSiO3_Ps-wollastonite(s2)       0.0000E+00                    8.6234E-02
+  CaSiO3_Wollastonite(s)           0.0000E+00                    8.3262E-02
+  NiO_solid(s)                     0.0000E+00                    6.6383E-02
+  MgO_periclase(s)                 0.0000E+00                    4.7120E-02
+  MgO_Periclase(s)                 0.0000E+00                    4.7120E-02
+  CuFeO2_solid(s)                  0.0000E+00                    4.4950E-02
+  SiO2_Cristobalite(l)(s5)    T    0.0000E+00                    4.3298E-02
+  CaFeSi2O6_Hedenbergite(c(s)      0.0000E+00                    3.3454E-02
+  ZnO_Zincite(s)                   0.0000E+00                    2.8902E-02
+  Mg2Al4Si5O18_Cordierite(s)       0.0000E+00                    2.8762E-02
+  Al2O3_corundum(alpha)(s4)        0.0000E+00                    2.6986E-02
+  Ni_Solid_FCC(s)                  0.0000E+00                    2.0411E-02
+  CuAlO2_delafossite(s)            0.0000E+00                    1.8680E-02
+  NiSb_solid(s)               T    0.0000E+00                    1.8440E-02
+  Al2O3_delta(s2)                  0.0000E+00                    1.6897E-02
+  Ni_liquid(liq)                   0.0000E+00                    1.6620E-02
+  Fe2SiO4_beta-fayalite(f(s2)      0.0000E+00                    1.5859E-02
+  Al2O3_kappa(s3)                  0.0000E+00                    1.5721E-02
+  Fe2SiO4_gamma-fayalite((s3)      0.0000E+00                    1.4538E-02
+  NiO_liquid(liq)                  0.0000E+00                    1.3950E-02
+  MgSiO3_Mg-garnet(s6)             0.0000E+00                    1.2241E-02
+  NiCaSi2O6_Ni-clino-pyrox(s)      0.0000E+00                    1.0968E-02
+  Al2O3_gamma(s)                   0.0000E+00                    1.0341E-02
+  SiO2_Tridymite(l)(s3)       T    0.0000E+00                    9.9334E-03
+  Mg2SiO4_beta-forsterite(s2)      0.0000E+00                    8.9252E-03
+  Cu2O_solid(s)                    0.0000E+00                    8.7324E-03
+  Cu2O_Cuprite_C3_cP6_(224(s)      0.0000E+00                    8.6056E-03
+  Cu2O_liquid(liq)                 0.0000E+00                    7.3948E-03
+  Zn2SiO4_Willemite(s)             0.0000E+00                    6.7561E-03
+  ZnO_liquid(liq)                  0.0000E+00                    6.2545E-03
+  Ni2SiO4_Olivine(s)               0.0000E+00                    5.8421E-03
+  Cu2Sb_solid(s2)             T    0.0000E+00                    5.1269E-03
+  SiO2_stishovite(s8)              0.0000E+00                    4.4193E-03
+  CaAl2SiO6_Ca-Tschermak(s)        0.0000E+00                    4.1971E-03
+  Ca2MgSi2O7_Akermanite(me(s)      0.0000E+00                    3.5336E-03
+  Al2Fe2O6_solid(s)                0.0000E+00                    3.3486E-03
+  Bi_liquid(liq)                   0.0000E+00                    3.1721E-03
+  Sb_liquid(liq)                   0.0000E+00                    2.9554E-03
+  Mg3Al2Si3O12_Pyrope(s)           0.0000E+00                    2.5112E-03
+  CuS_Covellite(s)            T    0.0000E+00                    2.4894E-03
+  Mg2SiO4_gamma-forsterit(s3)      0.0000E+00                    2.0968E-03
+  MgO_liquid(liq)                  0.0000E+00                    2.0420E-03
+  MgO_liquid(liq)                  0.0000E+00                    2.0420E-03
+  NiS_Solid_beta(s2)               0.0000E+00                    1.8792E-03
+  Cu2Sb_solid(s)              T    0.0000E+00                    1.8608E-03
+  MgSiO3_Mg-ilmenite(s5)           0.0000E+00                    1.7193E-03
+  Ca2FeSi2O7_Fe-akermanite(s)      0.0000E+00                    1.4401E-03
+  CuO_Tenorite(s)                  0.0000E+00                    1.3926E-03
+  CuO_Tenorite(s)                  0.0000E+00                    1.3926E-03
+  Fe2Al4Si5O18_Ferrocordie(s)      0.0000E+00                    1.2958E-03
+  Fe3Al2Si3O12_Almandine(s)        0.0000E+00                    1.2928E-03
+  Ca2ZnSi2O7_Hardystonite((s)      0.0000E+00                    1.1793E-03
+  Sb_solid(s)                 T    0.0000E+00                    1.0588E-03
+  FeS_solid(s3)                    0.0000E+00                    1.0540E-03
+  FeS_solid(s2)               T    0.0000E+00                    1.0052E-03
+  ZnS_Wurtzite(s2)                 0.0000E+00                    9.8547E-04
+  NiS_Solid_alpha(s)          T    0.0000E+00                    8.6981E-04
+  Al2O3_liquid(liq)                0.0000E+00                    8.6166E-04
+  ZnS_Sphalerite(s)           T    0.0000E+00                    8.4981E-04
+  SbO2_Cervantite(s)          T    0.0000E+00                    8.2248E-04
+  ZnS_liquid(liq)                  0.0000E+00                    7.9290E-04
+  CuO_liquid(liq)                  0.0000E+00                    7.4023E-04
+  FeS_solid(s)                T    0.0000E+00                    7.0741E-04
+  Bi_solid(s)                 T    0.0000E+00                    6.9746E-04
+  Sb2O3_liquid(liq)                0.0000E+00                    6.3024E-04
+  Cu2Al2O4_solid(s)                0.0000E+00                    4.6018E-04
+  Fe_fcc(s2)                       0.0000E+00                    4.5135E-04
+  Fe_bcc(s)                        0.0000E+00                    4.4885E-04
+  S_liquid(liq)               T    0.0000E+00                    3.7827E-04
+  Fe_liquid(liq)                   0.0000E+00                    3.6637E-04
+  Ca2SiO4_Alpha-prime(s2)          0.0000E+00                    3.4576E-04
+  Ca2SiO4_Alpha(s3)                0.0000E+00                    3.0708E-04
+  Fe2O3_High-Pressure-Hem(s3)      0.0000E+00                    1.7872E-04
+  Fe2O3_High-Pressure-Hem(s2)      0.0000E+00                    1.6884E-04
+  CuFe2O4_tetragonal_spine(s)      0.0000E+00                    1.6630E-04
+  S_beta_monoclinic_Ak_mP(s2) T    0.0000E+00                    1.6248E-04
+  S_alpha_orthorhombic_A16(s) T    0.0000E+00                    1.4201E-04
+  Ca2SiO4_Gamma(olivine)(s)        0.0000E+00                    1.3413E-04
+  FeSiO3_Fe-perovskite(me(s2)      0.0000E+00                    1.3235E-04
+  Ca2Al2SiO7_Gehlenite(s)          0.0000E+00                    1.2892E-04
+  CaSO4_gamma_prototype_C(s2)      0.0000E+00                    1.2841E-04
+  CaSO4_Anhydrite_prototyp(s)      0.0000E+00                    1.2841E-04
+  MgSiO3_Mg-perovskite(s7)         0.0000E+00                    1.1917E-04
+  As_Rhombohedral(s)          T    0.0000E+00                    1.1575E-04
+  CaFe2O4_solid(s)                 0.0000E+00                    1.0719E-04
+  CaAl2O4_solid(s)                 0.0000E+00                    8.7267E-05
+  Ca3Fe2Si3O12_Andradite(g(s)      0.0000E+00                    8.0276E-05
+  CaSO4_liquid(liq)                0.0000E+00                    7.4377E-05
+  CaO_Lime(s)                      0.0000E+00                    6.8726E-05
+  CaO_Lime(s)                      0.0000E+00                    6.8726E-05
+  Ca3Si2O7_Rankinite(s)            0.0000E+00                    5.1276E-05
+  Sb2O3_Solid_(orthorhomb(s2) T    0.0000E+00                    2.9927E-05
+  NiBi_solid(s)               T    0.0000E+00                    2.8482E-05
+  Ca3MgSi2O8_Merwinite(s)          0.0000E+00                    2.7975E-05
+  Ni3S2_Solid_II(s2)               0.0000E+00                    2.1411E-05
+  Sb2O3_Solid_(cubic)(s)      T    0.0000E+00                    2.0561E-05
+  Ca3Al2Si3O12_Grossularit(s)      0.0000E+00                    1.3274E-05
+  CaFe4O7_solid(s)                 0.0000E+00                    1.0824E-05
+  CaAl4O7_solid(s)                 0.0000E+00                    9.0775E-06
+  CaAl2Si2O8_Hexagonal(s)     T    0.0000E+00                    8.0162E-06
+  Zn_liquid(liq)                   0.0000E+00                    7.0154E-06
+  Pb_liquid(liq)                   0.0000E+00                    6.4899E-06
+  PbSiO3_Solid-2(s2)          T    0.0000E+00                    5.6348E-06
+  PbSiO3_solid(s)             T    0.0000E+00                    5.6210E-06
+  CaSO3_solid(s)              T    0.0000E+00                    4.2114E-06
+  Pb_solid(s)                 T    0.0000E+00                    3.8413E-06
+  Zn_solid(s)                 T    0.0000E+00                    3.5948E-06
+  MgSO4_L2(liq)                    0.0000E+00                    3.0218E-06
+  CaO_liquid(liq)                  0.0000E+00                    3.0053E-06
+  CaO_liquid(liq)                  0.0000E+00                    3.0053E-06
+  MgSO4_beta_prototype_Cu(s2)      0.0000E+00                    2.7720E-06
+  MgSO4_prototype_CrVO4_oS(s)      0.0000E+00                    2.6731E-06
+  PbO_liquid(liq)                  0.0000E+00                    1.9898E-06
+  PbO_liquid(liq)                  0.0000E+00                    1.9898E-06
+  FeSO4_solid(s)                   0.0000E+00                    1.9880E-06
+  FeAsO4_solid(s)             T    0.0000E+00                    1.7191E-06
+  NiS2_Vaesite_C2_cP12_(20(s)      0.0000E+00                    1.1550E-06
+  PbO_Massicot_(yellow)(s2)        0.0000E+00                    1.1311E-06
+  PbO_Massicot_(yellow)(s2)        0.0000E+00                    1.1311E-06
+  PbO_Litharge_(red)(s)            0.0000E+00                    1.1177E-06
+  PbO_Litharge_(red)(s)            0.0000E+00                    1.1177E-06
+  CuSbS2_solid(s)             T    0.0000E+00                    9.5081E-07
+  PbZnSiO4_solid(s)           T    0.0000E+00                    9.0540E-07
+  CaS_solid(s)                     0.0000E+00                    8.3257E-07
+  AsFe_Westerveldite(s)       T    0.0000E+00                    7.5677E-07
+  As2O3_liquid(liq)           T    0.0000E+00                    6.8530E-07
+  PbS_solid(s)                     0.0000E+00                    6.0032E-07
+  MgS_solid(s)                     0.0000E+00                    5.4772E-07
+  Mg4Al10Si2O23_Sapphirine(s)      0.0000E+00                    4.5316E-07
+  Mg3(AsO4)2_solid(s)         T    0.0000E+00                    4.5071E-07
+  Ni3S2_Solid_I(s)            T    0.0000E+00                    3.3078E-07
+  ZnSO4_Solid_Beta(s3)             0.0000E+00                    2.4820E-07
+  NiSO4_solid(s)              T    0.0000E+00                    1.7183E-07
+  ZnSO4_Solid_Alpha_prime(s2) T    0.0000E+00                    1.1414E-07
+  Ca2Fe2O5_solid(s)                0.0000E+00                    1.0470E-07
+  (PbO)(Al2O3)_solid(s)            0.0000E+00                    1.0250E-07
+  ZnSb_liquid(liq)            T    0.0000E+00                    7.1092E-08
+  CuS2_prototype_FeS2_C2_c(s) T    0.0000E+00                    5.8757E-08
+  PbCa2Si3O9_Margarosinite(s) T    0.0000E+00                    5.2269E-08
+  ZnSO4_Solid_Alpha(s)        T    0.0000E+00                    5.0202E-08
+  As2O3_claudetite(s)         T    0.0000E+00                    4.1653E-08
+  PbFe4O7_Plumboferrite(s)         0.0000E+00                    3.1718E-08
+  Fe3(AsO4)2_solid(s)         T    0.0000E+00                    2.9879E-08
+  FeS2_Pyrite_C2_cP12_(205(s)      0.0000E+00                    2.6945E-08
+  Ca3SiO5_Hatrurite(s)             0.0000E+00                    2.2493E-08
+  Cu3AsO4_solid(s)            T    0.0000E+00                    1.9428E-08
+  As2O3_arsenolite(s2)        T    0.0000E+00                    1.8014E-08
+  ZnSb_solid(s)               T    0.0000E+00                    9.1145E-09
+  PbSO4_liquid(liq)                0.0000E+00                    6.2709E-09
+  PbSO4_solid-B(s2)                0.0000E+00                    5.8557E-09
+  PbSO4_Anglesite(s)               0.0000E+00                    3.8983E-09
+  Bi2O3_L1(liq)                    0.0000E+00                    3.1889E-09
+  Bi2O3_S2(s2)                T    0.0000E+00                    1.6532E-09
+  Cu2SO4_prototype_Na2SO4_(s) T    0.0000E+00                    1.4885E-09
+  BiAsO4_solid(s)             T    0.0000E+00                    1.2987E-09
+  CaO2_solid(s)               T    0.0000E+00                    7.4353E-10
+  CuSO4_solid(s)                   0.0000E+00                    6.8597E-10
+  Sb2S3_liquid(liq)           T    0.0000E+00                    5.6152E-10
+  Bi2O3_S1(s)                !T    0.0000E+00                    5.0339E-10
+  O3PbS_solid(s)                   0.0000E+00                    4.7832E-10
+  SO3_liquid(liq)             T    0.0000E+00                    8.4289E-11
+  PbFe10O16_Magnetoplumbit(s)      0.0000E+00                    7.0914E-11
+  Ni3S4_polydymite(s)         T    0.0000E+00                    2.7347E-11
+  Sb2S3_Stibnite(s)           T    0.0000E+00                    2.3196E-11
+  Pb2SiO4_Solid-2(s2)         T    0.0000E+00                    1.7173E-11
+  Pb2SiO4_solid(s)            T    0.0000E+00                    1.7135E-11
+  Pb2Fe2Si2O9_Melanotekite(s) T    0.0000E+00                    1.4111E-11
+  Al2Si2O7_solid(s)                0.0000E+00                    1.2835E-11
+  Pb2FeSi2O7_Pb-Fe_melilit(s)      0.0000E+00                    9.3148E-12
+  CaAl12O19_solid(s)               0.0000E+00                    8.1006E-12
+  Pb2ZnSi2O7_Pb-Zn_melilit(s) T    0.0000E+00                    6.5797E-12
+  (CuO)(CuSO4)_solid(s)            0.0000E+00                    2.3562E-12
+  Bi2S3_liquid(liq)           T    0.0000E+00                    1.7108E-12
+  Ca3Al2O6_solid(s)                0.0000E+00                    1.1554E-12
+  Ca3(AsO4)2_solid(s)              0.0000E+00                    1.1414E-12
+  SO3_solid(s)                T    0.0000E+00                    1.1234E-12
+  PbO2_solid(s)               T    0.0000E+00                    4.4698E-13
+  Pb2Fe2O5_solid(s)           T    0.0000E+00                    3.8013E-13
+  CaMg2Al16O27_solid(s)            0.0000E+00                    3.5216E-13
+  Zn3(AsO4)2_solid(s)         T    0.0000E+00                    3.3977E-13
+  (PbO)2(Al2O3)_solid(s)           0.0000E+00                    1.3151E-13
+  Ca3MgAl4O10_solid(s)             0.0000E+00                    1.1311E-13
+  Bi2S3_Bi..inite(s)          T    0.0000E+00                    1.0477E-13
+  PbOPbSO4_Lanarkite(s)       T    0.0000E+00                    3.4898E-14
+  Mg_liquid(liq)                   0.0000E+00                    3.2430E-14
+  Sb2O5_solid(s)              T    0.0000E+00                    2.5989E-14
+  (PbO)(Al2O3)6_solid(s)           0.0000E+00                    2.5810E-14
+  Mg_solid(s)                 T    0.0000E+00                    2.1447E-14
+  Cu2Mg_laves_C14(s)               0.0000E+00                    6.2915E-15
+  SiS_solid(s)                T    0.0000E+00                    2.8411E-15
+  Ni2Si_<DELTA_>(s)                0.0000E+00                    1.6737E-15
+  NiSi_liquid(liq)                 0.0000E+00                    1.3096E-15
+  Ni7S6(s)                         0.0000E+00                    1.1044E-15
+  NiSi_solid(s)               T    0.0000E+00                    7.1252E-16
+  NiAl_solid(s)                    0.0000E+00                    4.7567E-16
+  MgNi2_solid(s)              T    0.0000E+00                    3.3172E-16
+  NiAl_liquid(liq)                 0.0000E+00                    1.4775E-16
+  FeSb2S4_solid(s)            T    0.0000E+00                    1.1028E-16
+  As2O5_solid(s)              T    0.0000E+00                    6.8482E-17
+  Si_solid(s)                      0.0000E+00                    5.7871E-17
+  SiS2_liquid(liq)                 0.0000E+00                    5.0038E-17
+  SiS2_solid(s)                    0.0000E+00                    4.3570E-17
+  ZnO(ZnSO4)2_solid(s)        T    0.0000E+00                    3.7121E-17
+  Si_liquid(liq)                   0.0000E+00                    3.4568E-17
+  Cu3(AsO4)2_solid(s)         T    0.0000E+00                    2.3412E-17
+  Al_liquid(liq)                   0.0000E+00                    8.4844E-18
+  FeSi(s)                          0.0000E+00                    5.7062E-18
+  Al_solid(s)                 T    0.0000E+00                    5.2826E-18
+  AlAs_solid(s)                    0.0000E+00                    4.5413E-18
+  Ni3Al_solid(s)                   0.0000E+00                    2.5519E-18
+  Pb3Ca2Si3O11_solid(s)            0.0000E+00                    2.2549E-18
+  Ca_liquid(liq)                   0.0000E+00                    1.8729E-18
+  Ca_Solid_Beta(s2)                0.0000E+00                    1.5739E-18
+  Ca_Solid_Alpha(s)                0.0000E+00                    1.4593E-18
+  (CaO)2(PbO2)_solid(s)            0.0000E+00                    1.3177E-18
+  (PbO)2(PbSO4)_solid(s)      T    0.0000E+00                    1.7716E-19
+  AlSb_liquid(liq)                 0.0000E+00                    1.3241E-19
+  AlSb_solid(s)               T    0.0000E+00                    6.5396E-20
+  CaPb_solid(s)               T    0.0000E+00                    3.3510E-21
+  Ni9S8(s)                         0.0000E+00                    1.8221E-21
+  CaZn_Ca.5Zn.5_<CAZN>(s)          0.0000E+00                    7.5234E-23
+  Pb4SiO6_solid(s)            T    0.0000E+00                    2.8055E-23
+  Ca2Mg2Al28O46_solid(s)           0.0000E+00                    1.3487E-23
+  Fe2(SO4)3_solid(s)               0.0000E+00                    8.1404E-24
+  Pb3O4_solid(s)                   0.0000E+00                    3.9026E-24
+  Al2(SO4)3_solid(s)          T    0.0000E+00                    3.7334E-24
+  Fe3Si_solid(s)              T    0.0000E+00                    1.8198E-24
+  'Fe7S8'_pyrrhotite-4C(s)         0.0000E+00                    4.7500E-25
+  (PbO)3(PbSO4)_solid(s)      T    0.0000E+00                    4.9237E-26
+  Al2S3_liquid(liq)                0.0000E+00                    4.0655E-26
+  Al2S3_solid(s)              T    0.0000E+00                    2.8572E-26
+  'CaZn2'_Ca.33333Zn.66667(s)      0.0000E+00                    3.5490E-27
+  Pb3(AsO4)2_solid(s)         T    0.0000E+00                    2.4467E-27
+  Bi2(SO4)3_solid(s)          T    0.0000E+00                    5.1352E-28
+  (PbO)4(PbSO4)_solid(s)      T    0.0000E+00                    2.3755E-31
+  CaSi_oC8-Cmcm(s)                 0.0000E+00                    1.6263E-31
+  Mg2Pb_Fm3m(s)                    0.0000E+00                    2.3504E-32
+  Sb2(SO4)3_solid(s)          T    0.0000E+00                    1.6986E-32
+  Fe9S10_pyrrhotite-5C(s)          0.0000E+00                    5.5661E-33
+  FeSi2_<FeSi2_L>(s)               0.0000E+00                    3.4505E-34
+  Fe10S11_pyrrhotite-11C(s)        0.0000E+00                    2.7074E-36
+  Ca2Pb_solid(s)              T    0.0000E+00                    4.9941E-37
+  Ca3Sb2_solid(s)             T    0.0000E+00                    1.8383E-38
+  Fe11S12_pyrrhotite-6C(s)         0.0000E+00                    1.3692E-39
+  Mg3Sb2_Solid-B(s2)               0.0000E+00                    1.2548E-39
+  Mg3Sb2_Solid-A(s)          !T    0.0000E+00                    3.1799E-40
+  Mg2Si_cF12-Fm(3)m(s)             0.0000E+00                    1.1882E-42
+  Pb8ZnSi6O21_solid(s)        T    0.0000E+00                    1.3584E-43
+  Pb8CaSi6O21_solid(s)        T    0.0000E+00                    1.1600E-43
+  Mg2Ca_Laves_C-14(s)              0.0000E+00                    4.0907E-45
+  Ca3Bi2_solid(s)             T    0.0000E+00                    2.0581E-45
+  Ni2Al3_solid(s)             T    0.0000E+00                    4.1770E-47
+  CaSi2_hR18-R3m(s)                0.0000E+00                    1.7037E-47
+  Ca2Si_oP12-Pnma(s)               0.0000E+00                    6.1300E-48
+  Al3Ni(s)                         0.0000E+00                    5.9383E-50
+  Al2Ca_cF24-Laves_C15(s)     T    0.0000E+00                    1.2610E-50
+  FeAl3_solid(s)              T    0.0000E+00                    5.1916E-53
+  Pb10Fe2Si2O17_solid(s)      T    0.0000E+00                    1.6487E-57
+  *************************************************************************
+        Cp             H              S              G              V
+      J.K-1            J            J.K-1            J             dm3
+  *************************************************************************
+   1.822723E+02  -4.482796E+05   2.920225E+02  -8.784725E+05   3.214732E+01
+  **********************************************************
+        Cp             H              S              G
+      J.K-1            J            J.K-1            J
+  **********************************************************
+  gas_real
+   1.542596E+01  -6.258351E+04   8.711862E+01  -1.909223E+05
+  Fe-liq
+   6.547317E-01  -6.372373E+02   2.031220E+00  -3.629529E+03
+  Matte
+   1.667128E+01   3.512404E+03   3.975639E+01  -5.505472E+04
+  Slag-liq#1
+   9.395983E+01  -1.926575E+05   5.172749E+01  -2.688599E+05
+  Orthopyroxene
+   2.972407E+00  -8.228939E+03   1.759952E+00  -1.082161E+04
+  Sphalerite#1
+   4.673251E+01  -1.211008E+05   9.792612E+01  -2.653607E+05
+  SiO2_Tridymite(h)(s4)
+   5.855591E+00  -6.658390E+04   1.170269E+01  -8.382372E+04
+  
+  Cut-off limit for gaseous fractions/phase activities = 1.00E-75
+  
+  Data on 129 product species identified with "T" have been extrapolated outside their valid temperature ranges
+  
+  Data on 14 product species identified with "C" have been extrapolated outside their suggested composition ranges
+  
+  4 product species identified with "V" are modeled with an equation of state
+  
+  Databases: FTmisc 8.3, FToxid 8.3, FTsalt 8.3, FactPS 8.3                                          
+  Data Search options: exclude gas ions; organic CxHy.. X(max) = 2; min soln cpts = 2                
+  Final conditions: T(C) = 1200, P(atm) = 1                                                          

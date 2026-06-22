@@ -1,0 +1,25 @@
+# 外部仓库的模型权重（太大）
+TabPFN-main/models/
+tabpfn-extensions-main/
+
+# IDE
+.idea/
+.vscode/
+
+# Claude
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# 模型权重文件
+*.ckpt
+*.pt
+*.pth
+
+# 系统文件
+.DS_Store
+Thumbs.db
