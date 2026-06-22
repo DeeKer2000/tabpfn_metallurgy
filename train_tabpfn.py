@@ -15,8 +15,8 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 # --- 路径 ---
 DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'           # 数据文件
 MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'  # 预训练权重
-OUTPUT_PATH = r'data\3000固定温度\evaluation_results.csv'    # 评估结果输出
-SAVE_DIR    = r'data\3000固定温度\saved_models'              # 训练好的模型保存目录
+RESULTS_DIR = r'results'                                     # 实验结果总目录
+EXPERIMENT_NAME = '3000固定温度'                              # 实验名称（会出现在文件夹名中）
 
 # --- 设备 ---
 DEVICE = 'cpu'  # 'cpu' 或 'cuda'（需要 PyTorch CUDA 版本）
@@ -57,6 +57,7 @@ OUTPUT_COLS = [
 import numpy as np
 import pandas as pd
 from pathlib import Path
+from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from tabpfn import TabPFNRegressor
@@ -76,10 +77,16 @@ def predict_batched(reg, X, batch_size=1000):
 
 
 def main():
+    # 0. 生成时间戳，创建实验目录
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M')
+    exp_dir = Path(RESULTS_DIR) / f'{timestamp}_{EXPERIMENT_NAME}'
+    save_dir = exp_dir / 'saved_models'
+    save_dir.mkdir(parents=True, exist_ok=True)
+    output_path = exp_dir / 'evaluation_results.csv'
+
     # 1. 加载数据
     print("=" * 60)
     print("加载数据...")
-    Path(SAVE_DIR).mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(DATA_PATH, encoding='utf-8-sig')
     print(f"  样本数: {len(df)}, 列数: {len(df.columns)}")
 
@@ -122,7 +129,7 @@ def main():
         y_pred = predict_batched(reg, X_test, BATCH_SIZE)
 
         # 保存训练好的模型
-        save_path = Path(SAVE_DIR) / f'{target}.tabpfn_fit'
+        save_path = save_dir / f'{target}.tabpfn_fit'
         save_fitted_tabpfn_model(reg, save_path)
 
         r2 = r2_score(y_test, y_pred)
@@ -151,9 +158,9 @@ def main():
 
     print(f"\n平均 R2: {df_res['R2'].mean():.4f}")
 
-    df_res.to_csv(OUTPUT_PATH, index=False, encoding='utf-8-sig')
-    print(f"\n评估结果已保存至: {OUTPUT_PATH}")
-    print(f"训练好的模型已保存至: {SAVE_DIR}/")
+    df_res.to_csv(output_path, index=False, encoding='utf-8-sig')
+    print(f"\n评估结果已保存至: {output_path}")
+    print(f"训练好的模型已保存至: {save_dir}/")
 
 
 if __name__ == '__main__':

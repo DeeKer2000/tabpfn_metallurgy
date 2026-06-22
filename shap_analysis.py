@@ -12,9 +12,8 @@ os.environ['TABPFN_TOKEN'] = 'tabpfn_sk_LelHYWBZTv7hyvkS0GfY_H8oC4BMwsQ-VTUcP01s
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 # --- 路径 ---
-DATA_PATH  = r'data\3000固定温度\ml_dataset.csv'
-MODEL_DIR  = r'data\3000固定温度\saved_models'
-OUTPUT_DIR = r'data\3000固定温度\shap_results'
+DATA_PATH    = r'data\3000固定温度\ml_dataset.csv'
+RESULTS_DIR  = r'results'                    # 实验结果总目录（自动选最新实验）
 
 # --- 分析设置 ---
 TARGET = 'matte_Cu_pct'  # 要分析的目标变量（必须是已训练过的目标）
@@ -43,8 +42,23 @@ from tabpfn.utils import load_fitted_tabpfn_model
 from tabpfn_extensions.interpretability import shapiq as tabpfn_shapiq, shapiq_to_shap_explanation
 
 
+def find_latest_experiment(results_dir):
+    """找到 results 下最新的实验目录。"""
+    base = Path(results_dir)
+    subdirs = sorted([d for d in base.iterdir() if d.is_dir()], reverse=True)
+    if not subdirs:
+        raise FileNotFoundError(f"未找到实验目录: {results_dir}")
+    return subdirs[0]
+
+
 def main():
-    Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
+    # 自动选择最新的实验目录
+    exp_dir = find_latest_experiment(RESULTS_DIR)
+    model_dir = exp_dir / 'saved_models'
+    output_dir = exp_dir / 'shap_results'
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"实验目录: {exp_dir}")
 
     # 1. 加载数据
     print("加载数据...")
@@ -53,7 +67,7 @@ def main():
     feature_names = INPUT_COLS
 
     # 2. 加载训练好的模型
-    model_path = Path(MODEL_DIR) / f'{TARGET}.tabpfn_fit'
+    model_path = model_dir / f'{TARGET}.tabpfn_fit'
     print(f"加载模型: {model_path}")
     if not model_path.exists():
         print(f"错误: 模型文件不存在，请先运行 train_tabpfn.py 训练 {TARGET}")
@@ -78,7 +92,7 @@ def main():
     )
 
     # 5. 生成可视化
-    prefix = Path(OUTPUT_DIR) / TARGET
+    prefix = output_dir / TARGET
 
     print("生成 SHAP summary plot...")
     plt.figure()
@@ -111,7 +125,7 @@ def main():
         bar = '█' * int(val / max(mean_abs_shap) * 30)
         print(f"  {name:12s} {val:.4f}  {bar}")
 
-    print(f"\nSHAP 结果已保存至: {OUTPUT_DIR}/")
+    print(f"\nSHAP 结果已保存至: {output_dir}/")
 
 
 if __name__ == '__main__':

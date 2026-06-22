@@ -2,6 +2,9 @@
 TabPFN-main/models/
 tabpfn-extensions-main/
 
+# 实验结果（模型文件太大，不提交）
+results/
+
 # IDE
 .idea/
 .vscode/

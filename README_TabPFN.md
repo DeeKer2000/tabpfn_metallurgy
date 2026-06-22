@@ -52,9 +52,10 @@ DEVICE = 'cpu'   # 'cpu' 或 'cuda'
 ### 数据路径
 
 ```python
-DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'
-MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'
-OUTPUT_PATH = r'data\3000固定温度\evaluation_results.csv'
+DATA_PATH      = r'data\3000固定温度\ml_dataset.csv'
+MODEL_PATH     = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'
+RESULTS_DIR    = r'results'               # 实验结果总目录
+EXPERIMENT_NAME = '3000固定温度'           # 实验名称
 ```
 
 ### 训练参数
@@ -64,6 +65,26 @@ TEST_SIZE    = 0.2      # 测试集比例
 RANDOM_STATE = 42       # 随机种子
 BATCH_SIZE   = 1000     # 预测分批大小（数据量大时防OOM）
 ```
+
+## 实验结果目录结构
+
+每次训练会自动创建带时间戳的实验目录，所有产物保存在其中：
+
+```
+results/
+└── 20260622_1430_3000固定温度/
+    ├── evaluation_results.csv      # 评估指标
+    ├── saved_models/               # 29个训练好的模型文件
+    │   ├── matte_Cu_pct.tabpfn_fit
+    │   ├── matte_Fe_pct.tabpfn_fit
+    │   └── ...
+    └── shap_results/               # SHAP 分析图表（运行 shap_analysis.py 后生成）
+        ├── matte_Cu_pct_summary.png
+        ├── matte_Cu_pct_bar.png
+        └── matte_Cu_pct_waterfall.png
+```
+
+每次实验互不覆盖，方便对比不同数据集或参数的训练结果。
 
 ### 输入/输出列
 
