@@ -16,10 +16,10 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'           # 数据文件
 MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'  # 预训练权重
 RESULTS_DIR = r'results'                                     # 实验结果总目录
-EXPERIMENT_NAME = '3000固定温度'                              # 实验名称（会出现在文件夹名中）
-
+# EXPERIMENT_NAME = '3000固定温度'                              # 实验名称（会出现在文件夹名中）
+EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))
 # --- 设备 ---
-DEVICE = 'cpu'  # 'cpu' 或 'cuda'（需要 PyTorch CUDA 版本）
+DEVICE = 'cuda'  # 'cpu' 或 'cuda'
 
 # --- 训练参数 ---
 TEST_SIZE  = 0.2       # 测试集比例
@@ -61,7 +61,7 @@ from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from tabpfn import TabPFNRegressor
-from tabpfn.utils import save_fitted_tabpfn_model, load_fitted_tabpfn_model
+from tabpfn import save_fitted_tabpfn_model, load_fitted_tabpfn_model
 import warnings
 warnings.filterwarnings('ignore')
 

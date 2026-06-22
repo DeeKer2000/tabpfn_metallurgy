@@ -13,7 +13,8 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 # --- 路径 ---
 DATA_PATH    = r'data\3000固定温度\ml_dataset.csv'
-RESULTS_DIR  = r'results'                    # 实验结果总目录（自动选最新实验）
+RESULTS_DIR  = r'results'                    # 实验结果总目录
+EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))  # 与 train_tabpfn.py 一致
 
 # --- 分析设置 ---
 TARGET = 'matte_Cu_pct'  # 要分析的目标变量（必须是已训练过的目标）
@@ -38,22 +39,25 @@ import matplotlib
 matplotlib.use('Agg')  # 无GUI后端
 import matplotlib.pyplot as plt
 import shap
-from tabpfn.utils import load_fitted_tabpfn_model
+from tabpfn import load_fitted_tabpfn_model
 from tabpfn_extensions.interpretability import shapiq as tabpfn_shapiq, shapiq_to_shap_explanation
 
 
-def find_latest_experiment(results_dir):
-    """找到 results 下最新的实验目录。"""
+def find_latest_experiment(results_dir, experiment_name):
+    """找到 results 下匹配实验名的最新目录（格式: 时间戳_实验名）。"""
     base = Path(results_dir)
-    subdirs = sorted([d for d in base.iterdir() if d.is_dir()], reverse=True)
-    if not subdirs:
-        raise FileNotFoundError(f"未找到实验目录: {results_dir}")
-    return subdirs[0]
+    matches = sorted(
+        [d for d in base.iterdir() if d.is_dir() and d.name.endswith(f'_{experiment_name}')],
+        reverse=True
+    )
+    if not matches:
+        raise FileNotFoundError(f"未找到匹配 '{experiment_name}' 的实验目录: {results_dir}")
+    return matches[0]
 
 
 def main():
-    # 自动选择最新的实验目录
-    exp_dir = find_latest_experiment(RESULTS_DIR)
+    # 根据 DATA_PATH 推导实验名，找到最新的匹配实验
+    exp_dir = find_latest_experiment(RESULTS_DIR, EXPERIMENT_NAME)
     model_dir = exp_dir / 'saved_models'
     output_dir = exp_dir / 'shap_results'
     output_dir.mkdir(parents=True, exist_ok=True)
