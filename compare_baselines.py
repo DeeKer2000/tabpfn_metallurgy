@@ -15,6 +15,9 @@ DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'
 RESULTS_DIR = r'results'
 EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))
 
+# --- TabPFN 实验结果路径（如果有） ---
+TABPFN_RESULTS_DIR = r'results\20260622_2247_3000固定温度'  # TabPFN 评估结果目录
+
 # --- 训练参数 ---
 TEST_SIZE  = 0.2
 RANDOM_STATE = 42
@@ -58,6 +61,10 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
+plt.rcParams['axes.unicode_minus'] = False
 
 # 尝试导入 XGBoost
 try:
@@ -212,6 +219,43 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
     plt.close()
 
 
+def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
+    """加载 TabPFN 模型并计算预测结果。"""
+    from tabpfn import load_fitted_tabpfn_model
+    import os
+
+    tabpfn_dir = Path(tabpfn_dir)
+    model_dir = tabpfn_dir / 'saved_models'
+
+    if not model_dir.exists():
+        print(f"警告: TabPFN 模型目录不存在: {model_dir}")
+        return None
+
+    print("加载 TabPFN 模型并计算预测...")
+    results = {}
+
+    for i, target in enumerate(OUTPUT_COLS):
+        model_path = model_dir / f'{target}.tabpfn_fit'
+        if not model_path.exists():
+            continue
+
+        try:
+            reg = load_fitted_tabpfn_model(model_path, device='cuda')
+            y_pred = reg.predict(X_test)
+            y_test = Y_test[:, i]
+
+            results[target] = {
+                'R2': r2_score(y_test, y_pred),
+                'MAE': mean_absolute_error(y_test, y_pred),
+                'RMSE': np.sqrt(mean_squared_error(y_test, y_pred)),
+                'predictions': y_pred
+            }
+        except Exception as e:
+            print(f"  跳过 {target}: {e}")
+
+    return results
+
+
 def main():
     # 生成时间戳，创建实验目录
     timestamp = datetime.now().strftime('%Y%m%d_%H%M')
@@ -237,6 +281,11 @@ def main():
     )
     print(f"  训练集: {len(X_train)}, 测试集: {len(X_test)}")
 
+    # 2.5 加载 TabPFN 结果（如果存在）
+    tabpfn_results = None
+    if TABPFN_RESULTS_DIR:
+        tabpfn_results = load_tabpfn_results(TABPFN_RESULTS_DIR, X_test, Y_test)
+
     # 3. 逐目标变量训练 baseline 模型
     print("\n" + "=" * 60)
     print("开始训练 Baseline 模型...")
@@ -251,6 +300,10 @@ def main():
         if results is None:
             print(f"  跳过（常数列）")
             continue
+
+        # 添加 TabPFN 结果（如果存在）
+        if tabpfn_results and target in tabpfn_results:
+            results['TabPFN'] = tabpfn_results[target]
 
         all_results[target] = results
 
