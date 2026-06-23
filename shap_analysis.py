@@ -223,7 +223,7 @@ def main():
     for i, target in enumerate(targets, 1):
         print(f"\n[{i}/{len(targets)}] 分析: {target}")
         result = analyze_single_target(target, model_dir, output_dir, X, feature_names)
-        if result is not None:
+        if result is not False:
             shap_values.append(result)
             analyzed_targets.append(target)
             success += 1
