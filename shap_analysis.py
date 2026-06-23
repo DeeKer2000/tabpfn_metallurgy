@@ -15,7 +15,7 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 DATA_PATH    = r'data\3000固定温度\ml_dataset.csv'
 RESULTS_DIR  = r'results'                    # 实验结果总目录
 EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))  # 与 train_tabpfn.py 一致
-
+#EXPERIMENT_NAME = '3000固定温度'
 # --- 设备 ---
 DEVICE = 'cuda'  # 'cpu' 或 'cuda'
 
@@ -23,6 +23,10 @@ DEVICE = 'cuda'  # 'cpu' 或 'cuda'
 TARGETS = None            # None = 全部目标变量，或指定列表如 ['matte_Cu_pct', 'slag_Cu_pct']
 N_EXPLAIN = 50            # 解释的样本数（越多越慢）
 BUDGET = 256              # SHAP 计算预算（2^特征数，16个特征用 65536 精确，256 近似）
+
+# --- 实验目录选择 ---
+# None = 自动选 results/ 下最新的匹配目录，或手动指定如 '20260622_2247_3000固定温度'
+EXPERIMENT_DIR = None
 
 # --- 输入特征列 ---
 INPUT_COLS = [
@@ -61,6 +65,10 @@ import matplotlib.pyplot as plt
 import shap
 from tabpfn import load_fitted_tabpfn_model
 from tabpfn_extensions.interpretability import shapiq as tabpfn_shapiq, shapiq_to_shap_explanation
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
+plt.rcParams['axes.unicode_minus'] = False
 
 
 def find_latest_experiment(results_dir, experiment_name):
@@ -129,8 +137,13 @@ def analyze_single_target(target, model_dir, output_dir, X, feature_names):
 
 
 def main():
-    # 根据 DATA_PATH 推导实验名，找到最新的匹配实验
-    exp_dir = find_latest_experiment(RESULTS_DIR, EXPERIMENT_NAME)
+    # 选择实验目录：手动指定 > 自动找最新
+    if EXPERIMENT_DIR:
+        exp_dir = Path(RESULTS_DIR) / EXPERIMENT_DIR
+        if not exp_dir.exists():
+            raise FileNotFoundError(f"指定的实验目录不存在: {exp_dir}")
+    else:
+        exp_dir = find_latest_experiment(RESULTS_DIR, EXPERIMENT_NAME)
     model_dir = exp_dir / 'saved_models'
     output_dir = exp_dir / 'shap_results'
     output_dir.mkdir(parents=True, exist_ok=True)

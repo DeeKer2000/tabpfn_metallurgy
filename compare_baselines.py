@@ -62,8 +62,9 @@ from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 
-# 设置中文字体
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
+# ── Nature publication style（来自 nature-figure skill） ─────────────────
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans', 'Liberation Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 # 尝试导入 XGBoost
@@ -288,10 +289,6 @@ def plot_comparison_bar(all_results, output_dir):
 
     # ── Save PNG ─────────────────────────────────────────────────────────────
     fig.savefig(output_dir / 'algorithm_comparison_bar.png', dpi=300, bbox_inches='tight')
-
-    # ── Save SVG with editable text ──────────────────────────────────────────
-    plt.rcParams['svg.fonttype'] = 'none'
-    fig.savefig(output_dir / 'algorithm_comparison_bar.svg', bbox_inches='tight')
     plt.close(fig)
 
 
@@ -333,6 +330,75 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
     plt.tight_layout()
     plt.savefig(output_dir / 'scatter_true_vs_pred_grid.png', dpi=150, bbox_inches='tight')
     plt.close()
+
+
+def plot_line_comparison(all_results, output_dir, n_cols=5):
+    """生成真实值 vs 预测值折线对比图（按真实值排序，观察趋势拟合程度）。"""
+    # PALETTE_NMI_PASTEL（与 algorithm_comparison_bar 统一）
+    METHOD_COLORS = {
+        'TabPFN':            '#484878',
+        'RandomForest':      '#7884B4',
+        'XGBoost':           '#B4C0E4',
+        'GradientBoosting':  '#E4CCD8',
+        'MLP':               '#F0C0CC',
+    }
+    DISPLAY_NAMES = {
+        'TabPFN':           'TabPFN',
+        'RandomForest':     'Random Forest',
+        'XGBoost':          'XGBoost',
+        'GradientBoosting': 'Gradient Boosting',
+        'MLP':              'MLP',
+    }
+
+    targets = list(all_results.keys())
+    n_targets = len(targets)
+    n_rows = (n_targets + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4 * n_cols, 3 * n_rows))
+    axes = axes.flatten()
+    legend_handles = {}
+
+    for idx, target in enumerate(targets):
+        ax = axes[idx]
+        y_test = all_results[target]['y_test']
+
+        # 按真实值排序，使折线呈现趋势
+        sort_idx = np.argsort(y_test)
+        y_sorted = y_test[sort_idx]
+        x_idx = np.arange(len(y_sorted))
+
+        ax.plot(x_idx, y_sorted, 'k-', linewidth=1.5, alpha=0.9, label='真实值', zorder=5)
+
+        algorithms = [a for a in all_results[target].keys() if a != 'y_test']
+        for algo in algorithms:
+            y_pred = all_results[target][algo]['predictions']
+            y_pred_sorted = y_pred[sort_idx]
+            color = METHOD_COLORS.get(algo, '#999999')
+            display = DISPLAY_NAMES.get(algo, algo)
+            line = ax.plot(x_idx, y_pred_sorted, '-', color=color, linewidth=1.0,
+                           alpha=0.8, label=display, zorder=4)
+            if display not in legend_handles:
+                legend_handles[display] = line[0]
+
+        ax.set_xlabel('样本（按真实值排序）', fontsize=8)
+        ax.set_ylabel('值', fontsize=8)
+        ax.set_title(target, fontsize=9)
+        ax.tick_params(axis='both', labelsize=7, length=3, width=0.8)
+        ax.grid(axis='y', alpha=0.2)
+
+    # 隐藏多余子图
+    for idx in range(n_targets, len(axes)):
+        axes[idx].set_visible(False)
+
+    # 全局图例
+    if legend_handles:
+        fig.legend(legend_handles.values(), legend_handles.keys(),
+                   loc='lower center', ncol=min(len(legend_handles), 5),
+                   fontsize=8, frameon=False, handlelength=1.5)
+    fig.tight_layout(rect=[0, 0.03, 1, 1])
+
+    fig.savefig(output_dir / 'line_true_vs_pred.png', dpi=300, bbox_inches='tight')
+    plt.close(fig)
 
 
 def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
@@ -461,12 +527,13 @@ def main():
     print("\n生成可视化图表...")
     plot_comparison_bar(all_results, exp_dir)
     plot_scatter_grid(all_results, exp_dir)
+    plot_line_comparison(all_results, exp_dir)
 
     print(f"\n结果已保存至: {exp_dir}/")
     print("  - baseline_comparison.csv (详细指标)")
-    print("  - algorithm_comparison_bar.svg (算法对比柱状图，矢量)")
-    print("  - algorithm_comparison_bar.png (算法对比柱状图，600dpi)")
+    print("  - algorithm_comparison_bar.png (算法对比柱状图，300dpi)")
     print("  - scatter_true_vs_pred_grid.png (真实值vs预测值散点图)")
+    print("  - line_true_vs_pred.png (真实值vs预测值折线对比图，300dpi)")
 
 
 if __name__ == '__main__':
