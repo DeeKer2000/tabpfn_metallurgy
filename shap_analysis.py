@@ -187,6 +187,25 @@ def plot_shap_heatmap(shap_matrix, feature_names, target_names, output_dir):
     plt.close(fig)
 
 
+def plot_heatmap_from_csv(csv_path, output_dir=None):
+    """从已保存的 shap_importance.csv 生成热力图（无需重跑 SHAP 计算）。
+
+    用法:
+        plot_heatmap_from_csv('results/xxx/shap_results/shap_importance.csv')
+    """
+    csv_path = Path(csv_path)
+    if output_dir is None:
+        output_dir = csv_path.parent
+
+    df = pd.read_csv(csv_path, index_col=0, encoding='utf-8-sig')
+    shap_matrix = df.values
+    target_names = list(df.index)
+    feature_names = list(df.columns)
+
+    plot_shap_heatmap(shap_matrix, feature_names, target_names, output_dir)
+    print(f"热力图已保存: {output_dir / 'shap_heatmap.png'}")
+
+
 def main():
     # 选择实验目录：手动指定 > 自动找最新
     if EXPERIMENT_DIR:
@@ -230,11 +249,14 @@ def main():
         else:
             fail += 1
 
-    # 4. 生成热力图（特征 × 目标）
+    # 4. 保存 SHAP 重要性矩阵 + 生成热力图
     if shap_values:
         shap_matrix = np.array(shap_values)  # shape: (n_targets, n_features)
+        df_shap = pd.DataFrame(shap_matrix, index=analyzed_targets, columns=feature_names)
+        df_shap.to_csv(output_dir / 'shap_importance.csv', encoding='utf-8-sig')
+        print(f"\nSHAP 重要性矩阵已保存: {output_dir / 'shap_importance.csv'}")
         plot_shap_heatmap(shap_matrix, feature_names, analyzed_targets, output_dir)
-        print(f"\n热力图已保存: {output_dir / 'shap_heatmap.png'}")
+        print(f"热力图已保存: {output_dir / 'shap_heatmap.png'}")
 
     print(f"\n{'='*40}")
     print(f"分析完成: 成功 {success}, 跳过 {fail}")
