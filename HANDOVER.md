@@ -33,9 +33,10 @@
 │   │   ├── evaluation_results.csv        # 评估指标（R2, MAE, RMSE）
 │   │   ├── saved_models/                 # 29 个训练好的模型文件
 │   │   └── shap_results/                 # SHAP 分析图表
-│   └── 20260623_1007_3000固定温度_baselines/
+│   └── 20260623_1144_3000固定温度_baselines/
 │       ├── baseline_comparison.csv       # Baseline 对比详细指标
-│       ├── algorithm_comparison_bar.png  # 算法对比柱状图
+│       ├── algorithm_comparison_bar.png  # 算法对比柱状图（Nature 风格）
+│       ├── algorithm_comparison_bar.svg  # 算法对比柱状图（矢量，可编辑）
 │       └── scatter_true_vs_pred_grid.png # 真实值vs预测值散点图
 │
 ├── TabPFN-main/                         # TabPFN 源码（不提交 git）
@@ -220,6 +221,7 @@ conda run -n tabpfn python compare_baselines.py
 
 | 算法 | 说明 |
 |---|---|
+| TabPFN | 预训练基础模型（与 compare_baselines.py 中的 baselines 对比） |
 | Random Forest | 随机森林，100棵树 |
 | Gradient Boosting | 梯度提升树，100棵树 |
 | MLP | 多层感知机，(128, 64, 32) 结构 |
@@ -230,28 +232,39 @@ conda run -n tabpfn python compare_baselines.py
 每次运行创建带时间戳的实验目录：
 
 ```
-results/20260623_1007_3000固定温度_baselines/
-├── baseline_comparison.csv       # 29个目标×4个算法的详细指标
-├── algorithm_comparison_bar.png  # 算法对比柱状图（R2, MAE, RMSE）
+results/20260623_1144_3000固定温度_baselines/
+├── baseline_comparison.csv       # 29个目标×5个算法的详细指标
+├── algorithm_comparison_bar.png  # 算法对比柱状图（Nature 风格，R²/MAE/RMSE 三面板）
+├── algorithm_comparison_bar.svg  # 矢量版本（可编辑文字）
 └── scatter_true_vs_pred_grid.png # 真实值vs预测值散点图（29个目标）
 ```
 
+图表采用 Nature 发表风格：
+- NMI pastel 配色（蓝紫色调统一色系）
+- 三面板布局（a: R², b: MAE, c: RMSE）+ 独立图例面板
+- R² 面板支持负值显示（0 刻度对齐底部，负值在下方）
+- 极端负值用红色箭头标注实际值
+- 直接柱上数值标注 + 误差棒
+- SVG 可编辑文字（`svg.fonttype='none'`）
+
 ### 7.4 实验结果摘要
 
-基于 3000 固定温度数据集（2400训练/600测试）：
+基于 3000 固定温度数据集（2400训练/600测试），含 TabPFN 共 5 个算法：
 
-| 算法 | 平均 R2 | 平均 MAE | 平均 RMSE |
+| 算法 | 平均 R² | 平均 MAE | 平均 RMSE |
 |---|---|---|---|
-| Random Forest | 0.8373 | 0.2429 | 0.3774 |
-| XGBoost | 0.7663 | 0.2182 | 0.3399 |
-| Gradient Boosting | 0.6792 | 0.2831 | 0.4164 |
-| MLP | 不稳定 | 0.1639 | 0.2633 |
+| TabPFN | 0.989 | 0.039 | 0.114 |
+| Random Forest | 0.837 | 0.243 | 0.377 |
+| XGBoost | 0.766 | 0.218 | 0.340 |
+| Gradient Boosting | 0.679 | 0.283 | 0.416 |
+| MLP | 极端负值 | 0.164 | 0.263 |
 
-**注意：** MLP 在部分目标上出现负 R2（如气相微量成分），可能是因为：
+**注意：** MLP 在部分目标上出现极端负 R²（如 -185M），可能是因为：
 - 数据标准化后，小数值目标的预测偏差被放大
 - 某些目标变量值域极小（如 gas_Pb_mol ~1e-8），MLP 难以学习
+- 后续需优化 MLP 超参数或替换为其他算法
 
-**结论：** Random Forest 和 XGBoost 表现最稳定，可作为 TabPFN 的 baseline 对比。
+**结论：** TabPFN 显著优于所有传统 ML 算法，R² 接近 1.0，MAE 和 RMSE 最低。
 
 ## 8. 版本历史
 
@@ -260,6 +273,8 @@ results/20260623_1007_3000固定温度_baselines/
 | 2026-06-22 | 初始版本，10 样本 demo 数据，完成数据转换脚本 |
 | 2026-06-22 | 完成 TabPFN 训练脚本、模型保存、SHAP 分析脚本 |
 | 2026-06-22 | 升级 Python 3.9→3.12，TabPFN 7.1.1→8.0.8，支持 CUDA |
+| 2026-06-23 | 完成 Baseline 算法对比（RF/XGBoost/GB/MLP），Nature 风格图表 |
+| 2026-06-23 | 优化对比柱状图：支持负值 R² 显示、0 刻度对齐、极端值截断标注 |
 
 ## 8. 已知问题与解决方案
 

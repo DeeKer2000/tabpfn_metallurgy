@@ -152,31 +152,147 @@ def train_baseline_models(X_train, Y_train, X_test, Y_test, target_idx, target_n
 
 
 def plot_comparison_bar(all_results, output_dir):
-    """生成算法对比柱状图。"""
+    """生成 Nature 风格算法对比柱状图（grouped bar，每个指标一个 panel）。"""
+    # ── Nature publication style ──────────────────────────────────────────────
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['Arial', 'SimHei', 'DejaVu Sans', 'Liberation Sans']
+    plt.rcParams['axes.spines.right'] = False
+    plt.rcParams['axes.spines.top'] = False
+    plt.rcParams['axes.linewidth'] = 1.0
+    plt.rcParams['legend.frameon'] = False
+    plt.rcParams['font.size'] = 9
+
+    # ── NMI pastel palette (unified cool family) ─────────────────────────────
+    METHOD_COLORS = {
+        'TabPFN':            '#484878',   # baseline_dark — hero method
+        'RandomForest':      '#7884B4',   # baseline_mid
+        'XGBoost':           '#B4C0E4',   # baseline_soft
+        'GradientBoosting':  '#E4CCD8',   # ours_base — warm accent
+        'MLP':               '#F0C0CC',   # ours_large — warm accent
+    }
+    DISPLAY_NAMES = {
+        'TabPFN':           'TabPFN',
+        'RandomForest':     'Random Forest',
+        'XGBoost':          'XGBoost',
+        'GradientBoosting': 'Gradient Boosting',
+        'MLP':              'MLP',
+    }
+
+    # ── Metric display config ────────────────────────────────────────────────
     metrics = ['R2', 'MAE', 'RMSE']
-    algorithms = list(next(iter(all_results.values())).keys())
-    algorithms = [a for a in algorithms if a != 'y_test']
+    metric_labels = {
+        'R2':   r'$R^2$',
+        'MAE':  'MAE',
+        'RMSE': 'RMSE',
+    }
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    algorithms = [a for a in next(iter(all_results.values())).keys() if a != 'y_test']
+    n_algos = len(algorithms)
+    n_metrics = len(metrics)
 
-    for ax, metric in zip(axes, metrics):
-        data = []
-        for algo in algorithms:
-            values = [all_results[target][algo][metric] for target in all_results]
-            data.append(values)
+    # ── Collect data: mean ± std per algorithm per metric ─────────────────────
+    means = {m: [] for m in metrics}
+    stds  = {m: [] for m in metrics}
+    for algo in algorithms:
+        for m in metrics:
+            vals = [all_results[t][algo][m] for t in all_results]
+            means[m].append(np.mean(vals))
+            stds[m].append(np.std(vals))
 
-        x = np.arange(len(algorithms))
-        ax.bar(x, [np.mean(d) for d in data], yerr=[np.std(d) for d in data],
-               capsize=5, alpha=0.8)
-        ax.set_xticks(x)
-        ax.set_xticklabels(algorithms, rotation=45, ha='right')
-        ax.set_ylabel(metric)
-        ax.set_title(f'平均 {metric} 对比')
-        ax.grid(axis='y', alpha=0.3)
+    # ── Figure layout: 1×3 data panels + 1 legend panel ──────────────────────
+    fig = plt.figure(figsize=(8.0, 3.2))
+    gs = fig.add_gridspec(1, n_metrics + 1, width_ratios=[1]*n_metrics + [0.5],
+                          wspace=0.35)
 
-    plt.tight_layout()
-    plt.savefig(output_dir / 'algorithm_comparison_bar.png', dpi=150, bbox_inches='tight')
-    plt.close()
+    axes = [fig.add_subplot(gs[0, i]) for i in range(n_metrics)]
+    ax_leg = fig.add_subplot(gs[0, n_metrics])
+
+    bar_width = 0.7
+    w = bar_width / n_algos
+    x = np.arange(1)  # single category per panel
+
+    for ax_idx, (ax, metric) in enumerate(zip(axes, metrics)):
+        colors = [METHOD_COLORS.get(a, '#999999') for a in algorithms]
+
+        # ── Compute y-axis limits first (handle extreme outliers) ─────────────
+        all_vals = means[metric]
+        all_errs = stds[metric]
+        positive_vals = [v for v in all_vals if v >= 0]
+        positive_errs = [e for v, e in zip(all_vals, all_errs) if v >= 0]
+
+        if metric == 'R2':
+            # R²: cap at [-0.05, 1.05], show reference line at 0
+            y_lo, y_hi = -0.05, 1.05
+            ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
+        elif positive_vals:
+            y_lo = max(0, min(v - e for v, e in zip(positive_vals, positive_errs)) * 0.85)
+            y_hi = max(v + e for v, e in zip(positive_vals, positive_errs)) * 1.15
+        else:
+            y_lo, y_hi = 0, 1
+
+        ax.set_ylim(y_lo, y_hi)
+
+        # ── Draw bars and annotations ────────────────────────────────────────
+        for i, (algo, color) in enumerate(zip(algorithms, colors)):
+            offset = (i - (n_algos - 1) / 2) * w
+            val = means[metric][i]
+            err = stds[metric][i]
+
+            # Clip bar height to visible range for drawing
+            bar_height = min(val, y_hi) if val > 0 else max(val, y_lo)
+            bar = ax.bar(
+                x + offset, bar_height, width=w,
+                color=color, edgecolor='black', linewidth=0.6,
+                yerr=err if val >= 0 else None,
+                error_kw={'elinewidth': 0.8, 'capthick': 0.8, 'capsize': 3},
+                label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
+                clip_on=False,
+            )
+
+            # ── Direct value annotation (only if within visible range) ───────
+            text_y = val + err + 0.01 * (y_hi - y_lo)
+            if y_lo <= text_y <= y_hi * 1.05:
+                ax.text(
+                    x[0] + offset, text_y,
+                    f'{val:.3f}',
+                    ha='center', va='bottom', fontsize=6.5,
+                    color='#272727',
+                )
+            elif val < y_lo:
+                # Mark extreme negative values with arrow annotation
+                ax.annotate(
+                    f'{val:.1f}',
+                    xy=(x[0] + offset, y_lo + 0.02 * (y_hi - y_lo)),
+                    xytext=(x[0] + offset, y_lo - 0.12 * (y_hi - y_lo)),
+                    ha='center', va='top', fontsize=5.5, color='#B64342',
+                    arrowprops=dict(arrowstyle='->', lw=0.6, color='#B64342'),
+                )
+
+        # ── Axis styling ─────────────────────────────────────────────────────
+        ax.set_xticks([])
+        ax.set_ylabel(metric_labels[metric], fontsize=10, fontweight='bold')
+        ax.set_title('')
+        ax.tick_params(axis='y', labelsize=7.5, length=3, width=0.8)
+
+    # ── Dedicated legend panel ────────────────────────────────────────────────
+    handles, labels = axes[0].get_legend_handles_labels()
+    ax_leg.legend(handles, labels, fontsize=7.5, loc='center',
+                  frameon=False, handlelength=1.5, handletextpad=0.5)
+    ax_leg.set_axis_off()
+
+    # ── Panel labels (a, b, c) ───────────────────────────────────────────────
+    for i, ax in enumerate(axes):
+        ax.text(-0.08, 1.05, chr(97 + i), transform=ax.transAxes,
+                fontsize=11, fontweight='bold', color='#272727',
+                ha='left', va='bottom')
+
+    # ── Save PNG ─────────────────────────────────────────────────────────────
+    fig.savefig(output_dir / 'algorithm_comparison_bar.png', dpi=300, bbox_inches='tight')
+
+    # ── Save SVG with editable text ──────────────────────────────────────────
+    plt.rcParams['svg.fonttype'] = 'none'
+    fig.savefig(output_dir / 'algorithm_comparison_bar.svg', bbox_inches='tight')
+    plt.close(fig)
 
 
 def plot_scatter_grid(all_results, output_dir, n_cols=5):
@@ -348,7 +464,8 @@ def main():
 
     print(f"\n结果已保存至: {exp_dir}/")
     print("  - baseline_comparison.csv (详细指标)")
-    print("  - algorithm_comparison_bar.png (算法对比柱状图)")
+    print("  - algorithm_comparison_bar.svg (算法对比柱状图，矢量)")
+    print("  - algorithm_comparison_bar.png (算法对比柱状图，600dpi)")
     print("  - scatter_true_vs_pred_grid.png (真实值vs预测值散点图)")
 
 
