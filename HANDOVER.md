@@ -14,6 +14,7 @@
 动态闭环智能配矿/
 ├── train_tabpfn.py              # 训练脚本（主要入口）
 ├── shap_analysis.py             # SHAP 可解释性分析脚本
+├── compare_baselines.py         # Baseline 算法对比脚本
 ├── test_tabpfn.py               # TabPFN 环境验证
 ├── test_extensions.py           # tabpfn-extensions 环境验证
 ├── README_TabPFN.md             # 使用文档
@@ -28,10 +29,14 @@
 │       └── results/                      # FactSage 原始计算结果（result_*.txt）
 │
 ├── results/                             # 实验结果（按时间戳组织，不提交 git）
-│   └── 20260622_2247_3000固定温度/
-│       ├── evaluation_results.csv        # 评估指标（R2, MAE, RMSE）
-│       ├── saved_models/                 # 29 个训练好的模型文件
-│       └── shap_results/                 # SHAP 分析图表
+│   ├── 20260622_2247_3000固定温度/
+│   │   ├── evaluation_results.csv        # 评估指标（R2, MAE, RMSE）
+│   │   ├── saved_models/                 # 29 个训练好的模型文件
+│   │   └── shap_results/                 # SHAP 分析图表
+│   └── 20260623_1007_3000固定温度_baselines/
+│       ├── baseline_comparison.csv       # Baseline 对比详细指标
+│       ├── algorithm_comparison_bar.png  # 算法对比柱状图
+│       └── scatter_true_vs_pred_grid.png # 真实值vs预测值散点图
 │
 ├── TabPFN-main/                         # TabPFN 源码（不提交 git）
 │   └── models/                          # 预训练权重文件
@@ -203,7 +208,52 @@ results/20260622_2247_3000固定温度/shap_results/
 | `bar.png` | 特征重要性排名（mean\|SHAP\|），直观看哪些特征最重要 |
 | `waterfall.png` | 单样本瀑布图，展示预测值如何从基准值被各特征推向最终预测 |
 
-## 7. 版本历史
+## 7. Baseline 算法对比
+
+### 7.1 运行对比实验
+
+```bash
+conda run -n tabpfn python compare_baselines.py
+```
+
+### 7.2 对比算法
+
+| 算法 | 说明 |
+|---|---|
+| Random Forest | 随机森林，100棵树 |
+| Gradient Boosting | 梯度提升树，100棵树 |
+| MLP | 多层感知机，(128, 64, 32) 结构 |
+| XGBoost | 极端梯度提升（需安装：`pip install xgboost`） |
+
+### 7.3 输出
+
+每次运行创建带时间戳的实验目录：
+
+```
+results/20260623_1007_3000固定温度_baselines/
+├── baseline_comparison.csv       # 29个目标×4个算法的详细指标
+├── algorithm_comparison_bar.png  # 算法对比柱状图（R2, MAE, RMSE）
+└── scatter_true_vs_pred_grid.png # 真实值vs预测值散点图（29个目标）
+```
+
+### 7.4 实验结果摘要
+
+基于 3000 固定温度数据集（2400训练/600测试）：
+
+| 算法 | 平均 R2 | 平均 MAE | 平均 RMSE |
+|---|---|---|---|
+| Random Forest | 0.8373 | 0.2429 | 0.3774 |
+| XGBoost | 0.7663 | 0.2182 | 0.3399 |
+| Gradient Boosting | 0.6792 | 0.2831 | 0.4164 |
+| MLP | 不稳定 | 0.1639 | 0.2633 |
+
+**注意：** MLP 在部分目标上出现负 R2（如气相微量成分），可能是因为：
+- 数据标准化后，小数值目标的预测偏差被放大
+- 某些目标变量值域极小（如 gas_Pb_mol ~1e-8），MLP 难以学习
+
+**结论：** Random Forest 和 XGBoost 表现最稳定，可作为 TabPFN 的 baseline 对比。
+
+## 8. 版本历史
 
 | 日期 | 事件 |
 |---|---|
@@ -224,13 +274,14 @@ results/20260622_2247_3000固定温度/shap_results/
 
 ## 9. 后续开发建议
 
-1. **对比其他算法：** 用相同数据集训练 XGBoost、Random Forest、MLP 等作为 baseline 对比（`RANDOM_STATE=42` 保证训练/测试划分一致）
+1. **✅ 对比其他算法：** 已完成！使用 `compare_baselines.py` 对比了 XGBoost、Random Forest、MLP、GradientBoosting
 2. **超参数调优：** 调整 `N_EXPLAIN`、`BUDGET` 提高 SHAP 分析精度
 3. **PDP 分析：** 使用 `tabpfn_extensions.interpretability.pdp` 生成部分依赖图
 4. **特征选择：** 使用 `tabpfn_extensions.interpretability.feature_selection` 进行自动特征选择
 5. **高阶交互：** 将 SHAP 的 `max_order` 改为 2，分析特征间交互效应
 6. **新数据集：** 将新的 FactSage 结果放入 `data/` 目录，运行 `convert_results_to_csv.py` 生成 CSV，修改 `DATA_PATH` 即可训练
 7. **模型部署：** 训练好的模型可以用 `load_fitted_tabpfn_model` 加载后直接调用 `predict()` 做推理
+8. **补充验证图：** 根据 nature-figure skill 建议，可补充残差分析图、特征重要性热力图等
 
 ## 10. 联系与参考
 
