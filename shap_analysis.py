@@ -133,7 +133,58 @@ def analyze_single_target(target, model_dir, output_dir, X, feature_names):
         bar = '█' * int(val / max(mean_abs_shap) * 30)
         print(f"    {name:12s} {val:.4f}  {bar}")
 
-    return True
+    return mean_abs_shap
+
+
+def plot_shap_heatmap(shap_matrix, feature_names, target_names, output_dir):
+    """生成 SHAP 特征重要性热力图（特征 × 目标）。
+
+    Parameters
+    ----------
+    shap_matrix : np.ndarray, shape (n_targets, n_features)
+        每行是一个目标的 mean |SHAP| 值
+    feature_names : list[str]
+    target_names : list[str]
+    output_dir : Path
+    """
+    n_targets = len(target_names)
+    n_features = len(feature_names)
+
+    # 归一化：每行（每个目标）除以该行最大值，便于跨目标比较
+    row_max = shap_matrix.max(axis=1, keepdims=True)
+    row_max[row_max == 0] = 1  # 避免除零
+    norm_matrix = shap_matrix / row_max
+
+    fig_h = max(4, n_features * 0.35 + 1.5)
+    fig_w = max(6, n_targets * 0.45 + 3)
+    fig, ax = plt.subplots(figsize=(fig_w, fig_h))
+
+    im = ax.imshow(norm_matrix, cmap='YlOrRd', aspect='auto', vmin=0, vmax=1)
+
+    # 坐标轴
+    ax.set_xticks(range(n_targets))
+    ax.set_xticklabels(target_names, rotation=45, ha='right', fontsize=7)
+    ax.set_yticks(range(n_features))
+    ax.set_yticklabels(feature_names, fontsize=8)
+
+    # 在格子中标注原始数值
+    for i in range(n_targets):
+        for j in range(n_features):
+            val = shap_matrix[i, j]
+            # 深色格子用白字，浅色格子用黑字
+            text_color = 'white' if norm_matrix[i, j] > 0.6 else 'black'
+            ax.text(j, i, f'{val:.3f}', ha='center', va='center',
+                    fontsize=6, color=text_color)
+
+    # 颜色条
+    cbar = fig.colorbar(im, ax=ax, shrink=0.8, pad=0.02)
+    cbar.set_label('归一化 mean |SHAP|', fontsize=9)
+    cbar.ax.tick_params(labelsize=7)
+
+    ax.set_title('SHAP 特征重要性热力图', fontsize=11, fontweight='bold')
+    fig.tight_layout()
+    fig.savefig(output_dir / 'shap_heatmap.png', dpi=300, bbox_inches='tight')
+    plt.close(fig)
 
 
 def main():
@@ -164,14 +215,26 @@ def main():
 
     print(f"待分析目标: {len(targets)} 个")
 
-    # 3. 逐个分析
+    # 3. 逐个分析，收集 SHAP 重要性矩阵
     success, fail = 0, 0
+    shap_values = []  # 收集每个目标的 mean |SHAP|
+    analyzed_targets = []
+
     for i, target in enumerate(targets, 1):
         print(f"\n[{i}/{len(targets)}] 分析: {target}")
-        if analyze_single_target(target, model_dir, output_dir, X, feature_names):
+        result = analyze_single_target(target, model_dir, output_dir, X, feature_names)
+        if result is not None:
+            shap_values.append(result)
+            analyzed_targets.append(target)
             success += 1
         else:
             fail += 1
+
+    # 4. 生成热力图（特征 × 目标）
+    if shap_values:
+        shap_matrix = np.array(shap_values)  # shape: (n_targets, n_features)
+        plot_shap_heatmap(shap_matrix, feature_names, analyzed_targets, output_dir)
+        print(f"\n热力图已保存: {output_dir / 'shap_heatmap.png'}")
 
     print(f"\n{'='*40}")
     print(f"分析完成: 成功 {success}, 跳过 {fail}")
