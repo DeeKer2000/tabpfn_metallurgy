@@ -56,6 +56,7 @@ OUTPUT_COLS = [
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from pathlib import Path
 from datetime import datetime
 from sklearn.model_selection import train_test_split
@@ -64,6 +65,10 @@ from tabpfn import TabPFNRegressor
 from tabpfn import save_fitted_tabpfn_model, load_fitted_tabpfn_model
 import warnings
 warnings.filterwarnings('ignore')
+
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
+plt.rcParams['axes.unicode_minus'] = False
 
 
 def predict_batched(reg, X, batch_size=1000):
@@ -105,6 +110,7 @@ def main():
     print("=" * 60)
 
     results = []
+    predictions = {}  # 保存预测值用于绘图
 
     for i, target in enumerate(OUTPUT_COLS):
         y_train = Y_train[:, i]
@@ -116,6 +122,7 @@ def main():
                 'target': target, 'R2': 1.0, 'MAE': 0.0,
                 'RMSE': 0.0, 'mean_val': np.mean(y_train)
             })
+            predictions[target] = {'y_test': y_test, 'y_pred': y_test}  # 常数列预测=真实值
             continue
 
         print(f"\n[{i+1}/{len(OUTPUT_COLS)}] 训练: {target}")
@@ -141,6 +148,9 @@ def main():
             'RMSE': rmse, 'mean_val': np.mean(y_test)
         })
 
+        # 保存预测值
+        predictions[target] = {'y_test': y_test, 'y_pred': y_pred}
+
         print(f"  R2={r2:.4f}  MAE={mae:.4f}  RMSE={rmse:.4f}")
 
     # 4. 汇总结果
@@ -161,6 +171,49 @@ def main():
     df_res.to_csv(output_path, index=False, encoding='utf-8-sig')
     print(f"\n评估结果已保存至: {output_path}")
     print(f"训练好的模型已保存至: {save_dir}/")
+
+    # 5. 生成真实值 vs 预测值散点图
+    print("\n生成真实值 vs 预测值散点图...")
+    n_cols = 5
+    n_rows = (len(OUTPUT_COLS) + n_cols - 1) // n_cols
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4*n_cols, 4*n_rows))
+    axes = axes.flatten()
+
+    for idx, target in enumerate(OUTPUT_COLS):
+        ax = axes[idx]
+        y_test = predictions[target]['y_test']
+        y_pred = predictions[target]['y_pred']
+
+        ax.scatter(y_test, y_pred, alpha=0.5, s=20, color='steelblue')
+
+        # 对角线
+        min_val = min(y_test.min(), y_pred.min())
+        max_val = max(y_test.max(), y_pred.max())
+        ax.plot([min_val, max_val], [min_val, max_val], 'r--', alpha=0.7, label='完美预测')
+
+        # 添加 R2 信息
+        r2 = df_res[df_res['target'] == target]['R2'].values[0]
+        ax.text(0.05, 0.95, f'R²={r2:.4f}', transform=ax.transAxes,
+                fontsize=8, verticalalignment='top',
+                bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+
+        ax.set_xlabel('真实值')
+        ax.set_ylabel('预测值')
+        ax.set_title(target, fontsize=9)
+        ax.legend(fontsize=6, loc='lower right')
+        ax.grid(alpha=0.3)
+
+    # 隐藏多余的子图
+    for idx in range(len(OUTPUT_COLS), len(axes)):
+        axes[idx].set_visible(False)
+
+    plt.suptitle('TabPFN 真实值 vs 预测值', fontsize=14, y=1.02)
+    plt.tight_layout()
+    scatter_path = exp_dir / 'scatter_true_vs_pred.png'
+    plt.savefig(scatter_path, dpi=150, bbox_inches='tight')
+    plt.close()
+
+    print(f"散点图已保存至: {scatter_path}")
 
 
 if __name__ == '__main__':
