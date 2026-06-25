@@ -33,7 +33,8 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
 DATA_PATH = PROJECT_ROOT / 'data' / '3000_fixed_temp' / 'ml_dataset.csv'
 MODELS_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'tabpfn' / '20260622_2247' / 'saved_models'
-OUTPUT_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'optimization' / 'figures'
+OPT_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'optimization'
+OUTPUT_DIR = OPT_DIR / 'figures'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DEVICE = 'cuda'
@@ -665,13 +666,13 @@ def main():
         return
 
     # 保存完整结果
-    all_results_path = OUTPUT_DIR / 'optimization_pareto_all.csv'
+    all_results_path = OPT_DIR / 'optimization_pareto_all.csv'
     df_all.to_csv(all_results_path, index=False, encoding='utf-8-sig')
     print(f"  Full results saved: {all_results_path}")
 
     # 选取代表性方案
     df_rep = select_representative_solutions(df_all, n=5)
-    rep_path = OUTPUT_DIR / 'optimization_results.csv'
+    rep_path = OPT_DIR / 'optimization_results.csv'
     df_rep.to_csv(rep_path, index=False, encoding='utf-8-sig')
     print(f"  Representative solutions saved: {rep_path}")
 
