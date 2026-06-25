@@ -1,18 +1,21 @@
 """
 合成炉料样本生成器
 用途：为铜熔炼热力学计算生成批量合成炉料成分数据
+用法: cd scripts/data_processing && conda run -n tabpfn python generate_samples.py
 """
 
 import pandas as pd
 import numpy as np
 import openpyxl
+import os
 
 # ============================================================
 #                        参 数 设 置
 # ============================================================
 
-# 矿源文件路径
-ORE_FILE = "矿源.xlsx"
+# 矿源文件路径（相对于项目根目录）
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ORE_FILE = os.path.join(PROJECT_ROOT, "data", "矿源.xlsx")
 
 # 生成样本数量
 N_SAMPLES = 30000
@@ -49,8 +52,8 @@ CONSTRAINTS = {
 }
 
 # 输出文件
-OUTPUT_EXCEL = "合成炉料样本.xlsx"
-OUTPUT_TXT = "合成炉料样本.txt"
+OUTPUT_EXCEL = os.path.join(PROJECT_ROOT, "data", "合成炉料样本.xlsx")
+OUTPUT_TXT = os.path.join(PROJECT_ROOT, "data", "合成炉料样本.txt")
 SHEET_NAME = "FurnaceCharge"
 
 # ============================================================

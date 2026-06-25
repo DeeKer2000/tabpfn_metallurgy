@@ -1,14 +1,14 @@
 """
-配矿优化（GA单目标）
-用法: cd 文章 && conda run -n tabpfn --env PYTHONIOENCODING=utf-8 python nsga2_optimization.py
+配矿优化（NSGA-II 单目标）
+用法: conda run -n tabpfn --env PYTHONIOENCODING=utf-8 python scripts/optimization/nsga2_optimization.py
 
 优化目标：
   1. 最小化 slag_Cu_pct（渣含铜损失）
 约束：
-  - 渣FeO/SiO₂ ∈ [1.0, 1.5]
+  - 渣FeO/SiO₂ ∈ [1.15, 1.30]
   - 冰铜品位 matte_Cu ∈ [58, 60] wt%
 
-输出：文章/figures/ 和 文章/optimization_results.csv
+输出：experiments/3000_fixed_temp/optimization/
 """
 
 import sys
@@ -29,11 +29,11 @@ os.environ['TABPFN_TOKEN'] = 'tabpfn_sk_LelHYWBZTv7hyvkS0GfY_H8oC4BMwsQ-VTUcP01s
 # ============================================================
 
 SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = SCRIPT_DIR.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
-DATA_PATH = PROJECT_ROOT / 'data' / '3000固定温度' / 'ml_dataset.csv'
-MODELS_DIR = PROJECT_ROOT / 'results' / '20260622_2247_3000固定温度' / 'saved_models'
-OUTPUT_DIR = SCRIPT_DIR / 'figures'
+DATA_PATH = PROJECT_ROOT / 'data' / '3000_fixed_temp' / 'ml_dataset.csv'
+MODELS_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'tabpfn' / '20260622_2247' / 'saved_models'
+OUTPUT_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'optimization' / 'figures'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DEVICE = 'cuda'
@@ -665,13 +665,13 @@ def main():
         return
 
     # 保存完整结果
-    all_results_path = SCRIPT_DIR / 'optimization_pareto_all.csv'
+    all_results_path = OUTPUT_DIR / 'optimization_pareto_all.csv'
     df_all.to_csv(all_results_path, index=False, encoding='utf-8-sig')
     print(f"  Full results saved: {all_results_path}")
 
     # 选取代表性方案
     df_rep = select_representative_solutions(df_all, n=5)
-    rep_path = SCRIPT_DIR / 'optimization_results.csv'
+    rep_path = OUTPUT_DIR / 'optimization_results.csv'
     df_rep.to_csv(rep_path, index=False, encoding='utf-8-sig')
     print(f"  Representative solutions saved: {rep_path}")
 

@@ -1,6 +1,6 @@
 """
 对比算法 Baseline — 与 TabPFN 进行性能对比
-用法: conda run -n tabpfn python compare_baselines.py
+用法: conda run -n tabpfn python scripts/analysis/compare_baselines.py
 """
 
 # ============================================================
@@ -10,13 +10,12 @@
 import os
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
-# --- 路径 ---
-DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'
-RESULTS_DIR = r'results'
-EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))
+# --- 路径（相对于项目根目录） ---
+DATA_PATH   = r'data\3000_fixed_temp\ml_dataset.csv'
+RESULTS_DIR = r'experiments\3000_fixed_temp\baselines'        # 基线算法结果目录
 
-# --- TabPFN 实验结果路径（如果有） ---
-TABPFN_RESULTS_DIR = r'results\20260622_2247_3000固定温度'  # TabPFN 评估结果目录
+# --- TabPFN 实验结果路径（用于加载评估指标对比） ---
+TABPFN_RESULTS_DIR = r'experiments\3000_fixed_temp\tabpfn\20260622_2247'
 
 # --- 训练参数 ---
 TEST_SIZE  = 0.2
@@ -445,7 +444,7 @@ def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
 def main():
     # 生成时间戳，创建实验目录
     timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-    exp_dir = Path(RESULTS_DIR) / f'{timestamp}_{EXPERIMENT_NAME}_baselines'
+    exp_dir = Path(RESULTS_DIR) / timestamp
     exp_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 60)

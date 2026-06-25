@@ -3,7 +3,11 @@ TabPFN-main/models/
 tabpfn-extensions-main/
 
 # 实验结果（模型文件太大，不提交）
+experiments/
 results/
+
+# FactSage 原始计算结果（大量 txt 文件）
+data/3000_fixed_temp/factsage_results/
 
 # IDE
 .idea/
@@ -22,6 +26,9 @@ __pycache__/
 *.ckpt
 *.pt
 *.pth
+
+# Excel 临时锁定文件
+~$*.xlsx
 
 # 系统文件
 .DS_Store

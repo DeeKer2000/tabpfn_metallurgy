@@ -1,5 +1,5 @@
 """从 NSGA-II 优化结果生成论文图表。
-用法: cd 文章 && conda run -n tabpfn python plot_nsga2_figures.py
+用法: conda run -n tabpfn python scripts/optimization/plot_optimization.py
 """
 import sys
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
@@ -12,7 +12,9 @@ import matplotlib as mpl
 from pathlib import Path
 
 SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
-OUTPUT_DIR = SCRIPT_DIR / 'figures'
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+OPT_DIR = PROJECT_ROOT / 'experiments' / '3000_fixed_temp' / 'optimization'
+OUTPUT_DIR = OPT_DIR
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Fe/SiO2 constraint range（与 nsga2_optimization.py 一致）
@@ -148,8 +150,8 @@ def main():
     print("=" * 50)
 
     # Load data
-    all_csv = SCRIPT_DIR / 'optimization_pareto_all.csv'
-    rep_csv = SCRIPT_DIR / 'optimization_results.csv'
+    all_csv = OPT_DIR / 'optimization_pareto_all.csv'
+    rep_csv = OPT_DIR / 'optimization_results.csv'
 
     df_all = pd.read_csv(all_csv)
     print(f"\n  Loaded {len(df_all)} Pareto solutions")

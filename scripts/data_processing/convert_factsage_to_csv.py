@@ -168,10 +168,11 @@ def parse_result_file(filepath):
 
 
 def main():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    input_file = os.path.join(base_dir, '合成炉料样本3000组_输入数据.txt')
-    results_dir = os.path.join(base_dir, 'results')
-    output_file = os.path.join(base_dir, 'ml_dataset.csv')
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dataset_dir = os.path.join(project_root, 'data', '3000_fixed_temp')
+    input_file = os.path.join(dataset_dir, 'factsage_inputs.txt')
+    results_dir = os.path.join(dataset_dir, 'factsage_results')
+    output_file = os.path.join(dataset_dir, 'ml_dataset.csv')
 
     # 解析输入数据
     print("正在解析输入数据...")

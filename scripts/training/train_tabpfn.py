@@ -1,6 +1,6 @@
 """
 TabPFN 多输出回归预测 — FactSage 配矿数据
-用法: conda run -n tabpfn python train_tabpfn.py
+用法: conda run -n tabpfn python scripts/training/train_tabpfn.py
 """
 
 # ============================================================
@@ -12,12 +12,11 @@ import os
 os.environ['TABPFN_TOKEN'] = 'tabpfn_sk_LelHYWBZTv7hyvkS0GfY_H8oC4BMwsQ-VTUcP01sAVM'
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
-# --- 路径 ---
-DATA_PATH   = r'data\3000固定温度\ml_dataset.csv'           # 数据文件
+# --- 路径（相对于项目根目录） ---
+DATA_PATH   = r'data\3000_fixed_temp\ml_dataset.csv'         # 数据文件
 MODEL_PATH  = r'TabPFN-main\models\tabpfn-v3-regressor-v3_20260417_mediumdata.ckpt'  # 预训练权重
-RESULTS_DIR = r'results'                                     # 实验结果总目录
-# EXPERIMENT_NAME = '3000固定温度'                              # 实验名称（会出现在文件夹名中）
-EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))
+RESULTS_DIR = r'experiments\3000_fixed_temp\tabpfn'           # TabPFN 训练结果目录
+EXPERIMENT_NAME = ''                                          # 留空，仅用时间戳命名
 # --- 设备 ---
 DEVICE = 'cuda'  # 'cpu' 或 'cuda'
 
@@ -84,7 +83,7 @@ def predict_batched(reg, X, batch_size=1000):
 def main():
     # 0. 生成时间戳，创建实验目录
     timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-    exp_dir = Path(RESULTS_DIR) / f'{timestamp}_{EXPERIMENT_NAME}'
+    exp_dir = Path(RESULTS_DIR) / (f'{timestamp}_{EXPERIMENT_NAME}' if EXPERIMENT_NAME else timestamp)
     save_dir = exp_dir / 'saved_models'
     save_dir.mkdir(parents=True, exist_ok=True)
     output_path = exp_dir / 'evaluation_results.csv'

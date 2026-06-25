@@ -1,6 +1,6 @@
 """
 TabPFN SHAP 特征重要性分析
-用法: conda activate tabpfn && python shap_analysis.py
+用法: conda run -n tabpfn python scripts/analysis/shap_analysis.py
 """
 
 # ============================================================
@@ -11,11 +11,10 @@ import os
 os.environ['TABPFN_TOKEN'] = 'tabpfn_sk_LelHYWBZTv7hyvkS0GfY_H8oC4BMwsQ-VTUcP01sAVM'
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
-# --- 路径 ---
-DATA_PATH    = r'data\3000固定温度\ml_dataset.csv'
-RESULTS_DIR  = r'results'                    # 实验结果总目录
-EXPERIMENT_NAME = os.path.basename(os.path.dirname(DATA_PATH))  # 与 train_tabpfn.py 一致
-#EXPERIMENT_NAME = '3000固定温度'
+# --- 路径（相对于项目根目录） ---
+DATA_PATH    = r'data\3000_fixed_temp\ml_dataset.csv'
+TABPFN_DIR   = r'experiments\3000_fixed_temp\tabpfn'         # TabPFN 训练结果目录（含模型）
+
 # --- 设备 ---
 DEVICE = 'cuda'  # 'cpu' 或 'cuda'
 
@@ -25,7 +24,7 @@ N_EXPLAIN = 50            # 解释的样本数（越多越慢）
 BUDGET = 256              # SHAP 计算预算（2^特征数，16个特征用 65536 精确，256 近似）
 
 # --- 实验目录选择 ---
-# None = 自动选 results/ 下最新的匹配目录，或手动指定如 '20260622_2247_3000固定温度'
+# None = 自动选 TABPFN_DIR 下最新的目录，或手动指定如 '20260622_2247'
 EXPERIMENT_DIR = None
 
 # --- 输入特征列 ---
@@ -71,15 +70,15 @@ plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode M
 plt.rcParams['axes.unicode_minus'] = False
 
 
-def find_latest_experiment(results_dir, experiment_name):
-    """找到 results 下匹配实验名的最新目录（格式: 时间戳_实验名）。"""
-    base = Path(results_dir)
+def find_latest_experiment(base_dir):
+    """找到目录下最新的子目录（按名称排序，通常为时间戳）。"""
+    base = Path(base_dir)
     matches = sorted(
-        [d for d in base.iterdir() if d.is_dir() and d.name.endswith(f'_{experiment_name}')],
+        [d for d in base.iterdir() if d.is_dir()],
         reverse=True
     )
     if not matches:
-        raise FileNotFoundError(f"未找到匹配 '{experiment_name}' 的实验目录: {results_dir}")
+        raise FileNotFoundError(f"未找到任何实验目录: {base_dir}")
     return matches[0]
 
 
@@ -209,11 +208,11 @@ def plot_heatmap_from_csv(csv_path, output_dir=None):
 def main():
     # 选择实验目录：手动指定 > 自动找最新
     if EXPERIMENT_DIR:
-        exp_dir = Path(RESULTS_DIR) / EXPERIMENT_DIR
+        exp_dir = Path(TABPFN_DIR) / EXPERIMENT_DIR
         if not exp_dir.exists():
             raise FileNotFoundError(f"指定的实验目录不存在: {exp_dir}")
     else:
-        exp_dir = find_latest_experiment(RESULTS_DIR, EXPERIMENT_NAME)
+        exp_dir = find_latest_experiment(TABPFN_DIR)
     model_dir = exp_dir / 'saved_models'
     output_dir = exp_dir / 'shap_results'
     output_dir.mkdir(parents=True, exist_ok=True)
