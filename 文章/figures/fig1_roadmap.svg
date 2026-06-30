@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="418.882812pt" height="416.423622pt" viewBox="0 0 418.882812 416.423622" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-26T17:55:17.147264</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 416.423622 
+L 418.882812 416.423622 
+L 418.882812 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 16.470068 107.705906 
+L 402.412745 107.705906 
+L 402.412745 15.240472 
+L 16.470068 15.240472 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #e8f6f5; opacity: 0.25"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 16.470068 196.151102 
+L 402.412745 196.151102 
+L 402.412745 103.685669 
+L 16.470068 103.685669 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #fff5eb; opacity: 0.25"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 16.470068 284.596299 
+L 402.412745 284.596299 
+L 402.412745 192.130866 
+L 16.470068 192.130866 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #e8eef6; opacity: 0.25"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 16.470068 373.041496 
+L 402.412745 373.041496 
+L 402.412745 280.576063 
+L 16.470068 280.576063 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ecf4ed; opacity: 0.25"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 102.893467 87.604724 
+Q 107.527627 87.604724 111.26736 87.604724 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #4db8b0; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 106.46736 85.204724 
+L 111.26736 87.604724 
+L 106.46736 90.004724 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #4db8b0; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 221.494263 87.604724 
+Q 229.143104 87.604724 235.897518 87.604724 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #4db8b0; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 231.097518 85.204724 
+L 235.897518 87.604724 
+L 231.097518 90.004724 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #4db8b0; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 209.441406 101.664755 
+Q 209.441406 111.725285 209.441406 120.667782 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 211.841406 115.867782 
+L 209.441406 120.667782 
+L 207.041406 115.867782 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 102.893467 176.049921 
+Q 107.527627 176.049921 111.26736 176.049921 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #e8a040; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 106.46736 173.649921 
+L 111.26736 176.049921 
+L 106.46736 178.449921 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #e8a040; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 221.494263 176.049921 
+Q 229.143104 176.049921 235.897518 176.049921 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #e8a040; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 231.097518 173.649921 
+L 235.897518 176.049921 
+L 231.097518 178.449921 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #e8a040; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 209.441406 190.109951 
+Q 209.441406 200.170482 209.441406 209.112979 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 211.841406 204.312979 
+L 209.441406 209.112979 
+L 207.041406 204.312979 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 102.893467 264.495118 
+Q 107.527627 264.495118 111.26736 264.495118 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #0f4d92; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 106.46736 262.095118 
+L 111.26736 264.495118 
+L 106.46736 266.895118 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #0f4d92; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 221.494263 264.495118 
+Q 229.143104 264.495118 235.897518 264.495118 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #0f4d92; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 231.097518 262.095118 
+L 235.897518 264.495118 
+L 231.097518 266.895118 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #0f4d92; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 209.441406 278.555148 
+Q 209.441406 288.615679 209.441406 297.558176 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 211.841406 292.758176 
+L 209.441406 297.558176 
+L 207.041406 292.758176 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 102.893467 352.940315 
+Q 107.527627 352.940315 111.26736 352.940315 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #3a7d44; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 106.46736 350.540315 
+L 111.26736 352.940315 
+L 106.46736 355.340315 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #3a7d44; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 221.494263 352.940315 
+Q 229.143104 352.940315 235.897518 352.940315 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #3a7d44; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 231.097518 350.540315 
+L 235.897518 352.940315 
+L 231.097518 355.340315 
+" clip-path="url(#p96a86e4354)" style="fill: none; stroke: #3a7d44; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #333333" x="209.441406" y="23.85862" transform="rotate(-0 209.441406 23.85862)">Thermodynamics-Informed Machine Learning Framework for Intelligent Ore Blending</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 20.490304 106.700846 
+L 34.561131 106.700846 
+Q 40.591485 106.700846 40.591485 100.670492 
+L 40.591485 74.538957 
+Q 40.591485 68.508602 34.561131 68.508602 
+L 20.490304 68.508602 
+Q 14.45995 68.508602 14.45995 74.538957 
+L 14.45995 100.670492 
+Q 14.45995 106.700846 20.490304 106.700846 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #4db8b0; stroke: #4db8b0; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #4db8b0" transform="translate(42.601603 77.362418)">Synthetic Ore</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #4db8b0" transform="translate(42.601603 85.525406)">Blending Data</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #4db8b0" transform="translate(42.601603 93.688394)">Generation</text>
+   </g>
+   <g id="patch_18">
+    <path d="M 52.652194 104.690728 
+L 100.895028 104.690728 
+Q 106.925383 104.690728 106.925383 98.660374 
+L 106.925383 76.549075 
+Q 106.925383 70.51872 100.895028 70.51872 
+L 52.652194 70.51872 
+Q 46.621839 70.51872 46.621839 76.549075 
+L 46.621839 98.660374 
+Q 46.621839 104.690728 52.652194 104.690728 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #4db8b0; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 118.986091 104.690728 
+L 219.491997 104.690728 
+Q 225.522351 104.690728 225.522351 98.660374 
+L 225.522351 76.549075 
+Q 225.522351 70.51872 219.491997 70.51872 
+L 118.986091 70.51872 
+Q 112.955737 70.51872 112.955737 76.549075 
+L 112.955737 98.660374 
+Q 112.955737 104.690728 118.986091 104.690728 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #4db8b0; stroke: #4db8b0; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 243.613414 104.690728 
+L 291.856249 104.690728 
+Q 297.886603 104.690728 297.886603 98.660374 
+L 297.886603 76.549075 
+Q 297.886603 70.51872 291.856249 70.51872 
+L 243.613414 70.51872 
+Q 237.58306 70.51872 237.58306 76.549075 
+L 237.58306 98.660374 
+Q 237.58306 104.690728 243.613414 104.690728 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #4db8b0; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 71.422441)">N_ore = 2–6 per blend</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 79.026898)">SiO2 flux = 0–15%</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 86.101199)">Cu: 14–26 wt%</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 93.177312)">S: 8–38 wt%</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 100.253426)">Fe: 8–36 wt%</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 107.331351)">SiO2: 3–25 wt%</text>
+   </g>
+   <g id="patch_21">
+    <path d="M 20.490304 195.146043 
+L 34.561131 195.146043 
+Q 40.591485 195.146043 40.591485 189.115689 
+L 40.591485 162.984154 
+Q 40.591485 156.953799 34.561131 156.953799 
+L 20.490304 156.953799 
+Q 14.45995 156.953799 14.45995 162.984154 
+L 14.45995 189.115689 
+Q 14.45995 195.146043 20.490304 195.146043 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #e8a040; stroke: #e8a040; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #e8a040" transform="translate(42.601603 165.807615)">FactSage 8.3</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #e8a040" transform="translate(42.601603 173.970603)">Thermodynamic</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #e8a040" transform="translate(42.601603 182.133591)">Batch Calculation</text>
+   </g>
+   <g id="patch_22">
+    <path d="M 52.652194 193.135925 
+L 100.895028 193.135925 
+Q 106.925383 193.135925 106.925383 187.105571 
+L 106.925383 164.994272 
+Q 106.925383 158.963917 100.895028 158.963917 
+L 52.652194 158.963917 
+Q 46.621839 158.963917 46.621839 164.994272 
+L 46.621839 187.105571 
+Q 46.621839 193.135925 52.652194 193.135925 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #e8a040; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 118.986091 193.135925 
+L 219.491997 193.135925 
+Q 225.522351 193.135925 225.522351 187.105571 
+L 225.522351 164.994272 
+Q 225.522351 158.963917 219.491997 158.963917 
+L 118.986091 158.963917 
+Q 112.955737 158.963917 112.955737 164.994272 
+L 112.955737 187.105571 
+Q 112.955737 193.135925 118.986091 193.135925 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #e8a040; stroke: #e8a040; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 243.613414 193.135925 
+L 291.856249 193.135925 
+Q 297.886603 193.135925 297.886603 187.105571 
+L 297.886603 164.994272 
+Q 297.886603 158.963917 291.856249 158.963917 
+L 243.613414 158.963917 
+Q 237.58306 158.963917 237.58306 164.994272 
+L 237.58306 187.105571 
+Q 237.58306 193.135925 243.613414 193.135925 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #e8a040; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 159.860388)">T = 1200 degC, P = 1 atm</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 166.938314)">O2 = 21 g</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 172.511865)"/>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 181.663744)">Matte: Cu/Fe/S/Ni/Zn/Pb/As</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 188.166654)">Slag: Cu/FeO/SiO2/CaO/...</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 195.817783)">Gas: SO2/S2/SO/...</text>
+   </g>
+   <g id="patch_25">
+    <path d="M 20.490304 283.59124 
+L 34.561131 283.59124 
+Q 40.591485 283.59124 40.591485 277.560886 
+L 40.591485 251.42935 
+Q 40.591485 245.398996 34.561131 245.398996 
+L 20.490304 245.398996 
+Q 14.45995 245.398996 14.45995 251.42935 
+L 14.45995 277.560886 
+Q 14.45995 283.59124 20.490304 283.59124 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #0f4d92; stroke: #0f4d92; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(42.601603 254.252812)">TabPFN Surrogate</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(42.601603 262.4158)">Model Training</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #0f4d92" transform="translate(42.601603 270.578788)">&amp; Evaluation</text>
+   </g>
+   <g id="patch_26">
+    <path d="M 52.652194 281.581122 
+L 100.895028 281.581122 
+Q 106.925383 281.581122 106.925383 275.550768 
+L 106.925383 253.439469 
+Q 106.925383 247.409114 100.895028 247.409114 
+L 52.652194 247.409114 
+Q 46.621839 247.409114 46.621839 253.439469 
+L 46.621839 275.550768 
+Q 46.621839 281.581122 52.652194 281.581122 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #0f4d92; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 118.986091 281.581122 
+L 219.491997 281.581122 
+Q 225.522351 281.581122 225.522351 275.550768 
+L 225.522351 253.439469 
+Q 225.522351 247.409114 219.491997 247.409114 
+L 118.986091 247.409114 
+Q 112.955737 247.409114 112.955737 253.439469 
+L 112.955737 275.550768 
+Q 112.955737 281.581122 118.986091 281.581122 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #0f4d92; stroke: #0f4d92; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 243.613414 281.581122 
+L 291.856249 281.581122 
+Q 297.886603 281.581122 297.886603 275.550768 
+L 297.886603 253.439469 
+Q 297.886603 247.409114 291.856249 247.409114 
+L 243.613414 247.409114 
+Q 237.58306 247.409114 237.58306 253.439469 
+L 237.58306 275.550768 
+Q 237.58306 281.581122 243.613414 281.581122 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #0f4d92; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 248.339569)">80/20 train-test split</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 255.581526)">Metrics: R², MAE, RMSE</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 260.957061)"/>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 270.10894)">Matte Cu R² = 0.9998</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 276.611851)">Slag FeO/SiO2 R² = 0.9972</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 283.686151)">Slag Cu R² = 0.890</text>
+   </g>
+   <g id="patch_29">
+    <path d="M 20.490304 372.036437 
+L 34.561131 372.036437 
+Q 40.591485 372.036437 40.591485 366.006083 
+L 40.591485 339.874547 
+Q 40.591485 333.844193 34.561131 333.844193 
+L 20.490304 333.844193 
+Q 14.45995 333.844193 14.45995 339.874547 
+L 14.45995 366.006083 
+Q 14.45995 372.036437 20.490304 372.036437 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #3a7d44; stroke: #3a7d44; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #3a7d44" transform="translate(42.601603 342.698082)">NSGA-II</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #3a7d44" transform="translate(42.601603 350.860923)">Ore Blending</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #3a7d44" transform="translate(42.601603 359.023912)">Optimization</text>
+   </g>
+   <g id="patch_30">
+    <path d="M 52.652194 370.026319 
+L 100.895028 370.026319 
+Q 106.925383 370.026319 106.925383 363.995965 
+L 106.925383 341.884665 
+Q 106.925383 335.854311 100.895028 335.854311 
+L 52.652194 335.854311 
+Q 46.621839 335.854311 46.621839 341.884665 
+L 46.621839 363.995965 
+Q 46.621839 370.026319 52.652194 370.026319 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #3a7d44; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 118.986091 370.026319 
+L 219.491997 370.026319 
+Q 225.522351 370.026319 225.522351 363.995965 
+L 225.522351 341.884665 
+Q 225.522351 335.854311 219.491997 335.854311 
+L 118.986091 335.854311 
+Q 112.955737 335.854311 112.955737 341.884665 
+L 112.955737 363.995965 
+Q 112.955737 370.026319 118.986091 370.026319 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #3a7d44; stroke: #3a7d44; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 243.613414 370.026319 
+L 291.856249 370.026319 
+Q 297.886603 370.026319 297.886603 363.995965 
+L 297.886603 341.884665 
+Q 297.886603 335.854311 291.856249 335.854311 
+L 243.613414 335.854311 
+Q 237.58306 335.854311 237.58306 341.884665 
+L 237.58306 363.995965 
+Q 237.58306 370.026319 243.613414 370.026319 
+z
+" clip-path="url(#p96a86e4354)" style="fill: #ffffff; opacity: 0.9; stroke: #3a7d44; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 337.300422)">12D decision variables</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 343.828708)">(11 ore ratios + SiO2 flux)</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 349.402258)"/>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 357.980934)">Objective: min slag_Cu_pct</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 365.091032)">Constraints: FeO/SiO2: [1.15, 1.30]</text>
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(309.947312 372.165333)">matte Cu: [58, 60] wt%</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #e0e0e0" x="209.441406" y="405.004791" transform="rotate(-0 209.441406 405.004791)">Input  →  Method  →  Output</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="27.525717" y="90.968982" transform="rotate(-0 27.525717 90.968982)">a</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(56.499611 85.835181)">11 ore sources</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(53.513439 92.583131)">(13 components)</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(128.247911 78.674969)">Dirichlet random sampling</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(167.340841 85.749558)">+</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(130.954552 92.824021)">Metallurgical constraints</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(125.539239 99.898611)">(Cu/S/Fe/SiO2/Fe-SiO2 ratio)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(246.883941 82.461146)">3,000 synthetic</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(247.056863 89.209217)">furnace charge</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(249.644394 95.957287)">compositions</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="27.525717" y="179.414179" transform="rotate(-0 27.525717 179.414179)">b</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(55.92272 170.906343)">3,000 synthetic</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(56.095642 177.654413)">furnace charge</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(58.683173 184.402484)">compositions</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(145.949239 167.120229)">Equilib module</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(141.606427 174.194692)">Gibbs free energy</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(149.377989 181.269282)">minimization</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(125.488458 188.343745)">(FToxid/FTmisc/FTsalt/FTps)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(246.025628 170.906343)">29 metallurgical</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(254.468285 177.654413)">indicators</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(240.861222 184.402363)">(Matte / Slag / Gas)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="27.525717" y="267.859376" transform="rotate(-0 27.525717 267.859376)">c</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(53.681517 262.723819)">16 input features</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(44.873158 269.47528)">(composition + T/P/O2)</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(127.230255 252.028194)">TabPFN in-context learning</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(136.197716 259.102784)">(no gradient descent)</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(167.340841 266.177374)">+</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(131.143458 273.251837)">RF / XGBoost / GB / MLP</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(136.911192 280.3263)">baseline comparison</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(246.360816 259.351601)">29 independent</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(243.61441 266.09955)">predictive models</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(242.494535 272.847499)">(mean R² = 0.989)</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #ffffff" x="27.525717" y="356.304573" transform="rotate(-0 27.525717 356.304573)">d</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(54.375627 347.796737)">Trained TabPFN</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(52.824658 354.544686)">surrogate models</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(62.647783 361.292756)">(3 targets)</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(124.989786 340.473328)">NSGA-II (Pop=100, Gen=200)</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(122.915372 347.547917)">SBX crossover + PM mutation</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(124.903966 354.62238)">Early stopping (patience=30)</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(167.340841 361.69697)">+</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #ffffff" transform="translate(140.527833 368.771433)">Feasibility filtering</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(251.713644 347.798493)">Optimal ore</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(246.71005 354.546442)">blending recipe</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #333333" transform="translate(241.113581 361.294512)">(slag Cu = 0.386%)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p96a86e4354">
+   <rect x="8.429595" y="7.2" width="402.023622" height="402.023622"/>
+  </clipPath>
+ </defs>
+</svg>
