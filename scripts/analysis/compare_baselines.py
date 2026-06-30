@@ -269,19 +269,16 @@ def plot_comparison_bar(all_results, output_dir):
         for i, (algo, color) in enumerate(zip(algorithms, colors)):
             offset = (i - (n_algos - 1) / 2) * w
             val = means[metric][i]
-            err = stds[metric][i]
 
             # Clip bar height to visible range for drawing
             bar_height = min(val, y_hi) if val > 0 else max(val, y_lo)
-            bar = ax.bar(
+            ax.bar(
                 x + offset, bar_height, width=w,
                 color=color, edgecolor='black', linewidth=0.6,
-                yerr=err if val >= 0 else None,
-                error_kw={'elinewidth': 0.8, 'capthick': 0.8, 'capsize': 3},
                 label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
             )
 
-            # ── Value label: 固定在柱顶上方 (不依赖 error bar 位置) ──────────
+            # ── Value label: 固定在柱顶上方 ──────────────────────────────────
             label_y = max(val, 0) + 0.06 * (y_hi - y_lo)
             if y_lo <= label_y <= y_hi * 1.05:
                 ax.text(
@@ -315,11 +312,13 @@ def plot_comparison_bar(all_results, output_dir):
 
 
 def plot_scatter_grid(all_results, output_dir, n_cols=5):
-    """生成真实值 vs 预测值散点图网格。"""
+    """生成 TabPFN 真实值 vs 预测值散点图网格（仅展示 TabPFN，避免多算法遮挡）。"""
     # ── 中文字体设置 ──
     plt.rcParams['font.family'] = 'sans-serif'
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
     plt.rcParams['axes.unicode_minus'] = False
+
+    TABPFN_COLOR = '#484878'
 
     targets = list(all_results.keys())
     n_targets = len(targets)
@@ -332,41 +331,130 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
         ax = axes[idx]
         y_test = all_results[target]['y_test']
 
-        # 绘制各算法的散点图
-        algorithms = [a for a in all_results[target].keys() if a != 'y_test']
-        for algo in algorithms:
+        # 检查是否存在 TabPFN 结果
+        if 'TabPFN' in all_results[target]:
+            y_pred = all_results[target]['TabPFN']['predictions']
+            r2 = all_results[target]['TabPFN']['R2']
+        else:
+            # Fallback: 取第一个算法
+            algo = [a for a in all_results[target].keys() if a != 'y_test'][0]
             y_pred = all_results[target][algo]['predictions']
-            ax.scatter(y_test, y_pred, alpha=0.5, s=20, label=algo)
+            r2 = all_results[target][algo]['R2']
+
+        ax.scatter(y_test, y_pred, alpha=0.6, s=15, color=TABPFN_COLOR, label='TabPFN')
 
         # 对角线
-        min_val = min(y_test.min(), min(all_results[target][a]['predictions'].min() for a in algorithms))
-        max_val = max(y_test.max(), max(all_results[target][a]['predictions'].max() for a in algorithms))
-        ax.plot([min_val, max_val], [min_val, max_val], 'k--', alpha=0.5, label='完美预测')
+        min_val = min(y_test.min(), y_pred.min())
+        max_val = max(y_test.max(), y_pred.max())
+        ax.plot([min_val, max_val], [min_val, max_val], 'k--', alpha=0.4, linewidth=0.8)
 
-        ax.set_xlabel('真实值')
-        ax.set_ylabel('预测值')
-        ax.set_title(target, fontsize=9)
-        ax.legend(fontsize=6, loc='upper left')
-        ax.grid(alpha=0.3)
+        # R² 标注
+        ax.text(0.05, 0.95, f'R²={r2:.4f}', transform=ax.transAxes,
+                fontsize=7, verticalalignment='top',
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8, edgecolor='none'))
+
+        ax.set_xlabel('真实值', fontsize=7)
+        ax.set_ylabel('预测值', fontsize=7)
+        ax.set_title(target, fontsize=8)
+        ax.tick_params(labelsize=6)
+        ax.grid(alpha=0.2)
 
     # 隐藏多余的子图
     for idx in range(n_targets, len(axes)):
         axes[idx].set_visible(False)
 
-    plt.suptitle('真实值 vs 预测值对比', fontsize=14, y=1.02)
+    plt.suptitle('TabPFN 真实值 vs 预测值', fontsize=13, y=1.02)
     plt.tight_layout()
     plt.savefig(output_dir / 'scatter_true_vs_pred_grid.png', dpi=150, bbox_inches='tight')
     plt.close()
 
 
 def plot_line_comparison(all_results, output_dir, n_cols=5):
-    """生成真实值 vs 预测值折线对比图（按真实值排序，观察趋势拟合程度）。"""
+    """生成真实值 vs 预测值折线对比图（仅 TabPFN + CatBoost，采样 100 点防重叠）。"""
     # ── 中文字体设置 ──
     plt.rcParams['font.family'] = 'sans-serif'
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
     plt.rcParams['axes.unicode_minus'] = False
 
-    # PALETTE_NMI_PASTEL（与 algorithm_comparison_bar 统一）
+    COLORS = {'TabPFN': '#484878', 'CatBoost': '#D4A976', 'true': '#272727'}
+    LINE_WID = {'TabPFN': 1.2, 'CatBoost': 0.8, 'true': 1.8}
+    ALPHA = {'TabPFN': 0.9, 'CatBoost': 0.6, 'true': 0.9}
+
+    targets = list(all_results.keys())
+    n_targets = len(targets)
+    n_rows = (n_targets + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4 * n_cols, 3 * n_rows))
+    axes = axes.flatten()
+
+    N_SAMPLE = 100  # 采样点数
+
+    for idx, target in enumerate(targets):
+        ax = axes[idx]
+        y_test = all_results[target]['y_test']
+
+        # 按真实值排序
+        sort_idx = np.argsort(y_test)
+        y_sorted = y_test[sort_idx]
+
+        # 均匀采样 N_SAMPLE 个点
+        step = max(1, len(y_sorted) // N_SAMPLE)
+        sample_idx = np.arange(0, len(y_sorted), step)[:N_SAMPLE]
+        x_plot = np.arange(len(sample_idx))
+
+        # 真实值（黑色粗线）
+        ax.plot(x_plot, y_sorted[sample_idx], '-', color=COLORS['true'],
+                linewidth=LINE_WID['true'], alpha=ALPHA['true'], label='真实值', zorder=5)
+
+        # TabPFN（主算法）
+        if 'TabPFN' in all_results[target]:
+            y_pred = all_results[target]['TabPFN']['predictions']
+            ax.plot(x_plot, y_pred[sort_idx][sample_idx], '-', color=COLORS['TabPFN'],
+                    linewidth=LINE_WID['TabPFN'], alpha=ALPHA['TabPFN'], label='TabPFN', zorder=4)
+
+        # CatBoost（次优基线，作为参考）
+        if 'CatBoost' in all_results[target]:
+            y_pred = all_results[target]['CatBoost']['predictions']
+            ax.plot(x_plot, y_pred[sort_idx][sample_idx], '-', color=COLORS['CatBoost'],
+                    linewidth=LINE_WID['CatBoost'], alpha=ALPHA['CatBoost'], label='CatBoost', zorder=3)
+
+        ax.set_xlabel('采样点', fontsize=8)
+        ax.set_ylabel('值', fontsize=8)
+        ax.set_title(target, fontsize=9)
+        ax.tick_params(axis='both', labelsize=7, length=3, width=0.8)
+        ax.grid(axis='y', alpha=0.2)
+
+    # 隐藏多余子图
+    for idx in range(n_targets, len(axes)):
+        axes[idx].set_visible(False)
+
+    # 全局图例
+    handles = [plt.Line2D([0], [0], color=c, linewidth=lw, label=lb)
+               for lb, c, lw in [('真实值', COLORS['true'], LINE_WID['true']),
+                                 ('TabPFN', COLORS['TabPFN'], LINE_WID['TabPFN']),
+                                 ('CatBoost', COLORS['CatBoost'], LINE_WID['CatBoost'])]]
+    fig.legend(handles=handles, loc='lower center', ncol=3,
+               fontsize=8, frameon=False, handlelength=1.5)
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+
+    fig.savefig(output_dir / 'line_true_vs_pred.png', dpi=300, bbox_inches='tight')
+    plt.close(fig)
+
+
+def plot_radar_chart(all_results, output_dir):
+    """生成雷达图（五维图），对比算法在5个关键冶金目标上的 R²。"""
+    # ── 5 个关键冶金目标 ──
+    KEY_TARGETS = [
+        'matte_Cu_pct',    # 冰铜品位
+        'slag_Cu_pct',     # 渣含铜
+        'slag_FeO_pct',    # 渣中 FeO
+        'slag_SiO2_pct',   # 渣中 SiO2
+        'gas_SO2_mol',     # 气相 SO2
+    ]
+    TARGET_LABELS = [
+        'matte_Cu', 'slag_Cu', 'slag_FeO', 'slag_SiO2', 'gas_SO2'
+    ]
+
     METHOD_COLORS = {
         'TabPFN':            '#484878',
         'RandomForest':      '#7884B4',
@@ -384,55 +472,61 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
         'GradientBoosting': 'Gradient Boosting',
     }
 
-    targets = list(all_results.keys())
-    n_targets = len(targets)
-    n_rows = (n_targets + n_cols - 1) // n_cols
+    # 只保留数据中存在的关键目标
+    available = [t for t in KEY_TARGETS if t in all_results]
+    if len(available) < 3:
+        print("  [雷达图] 关键目标不足 3 个，跳过")
+        return
 
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4 * n_cols, 3 * n_rows))
-    axes = axes.flatten()
-    legend_handles = {}
+    algorithms = [a for a in next(iter(all_results.values())).keys() if a != 'y_test']
 
-    for idx, target in enumerate(targets):
-        ax = axes[idx]
-        y_test = all_results[target]['y_test']
+    # 收集数据：algo × target R² 矩阵
+    n_algos = len(algorithms)
+    n_targets = len(available)
+    data = np.zeros((n_algos, n_targets))
+    for i, algo in enumerate(algorithms):
+        for j, target in enumerate(available):
+            data[i, j] = all_results[target][algo]['R2']
 
-        # 按真实值排序，使折线呈现趋势
-        sort_idx = np.argsort(y_test)
-        y_sorted = y_test[sort_idx]
-        x_idx = np.arange(len(y_sorted))
+    # 角度
+    angles = np.linspace(0, 2 * np.pi, n_targets, endpoint=False).tolist()
+    angles += angles[:1]  # 闭合
 
-        ax.plot(x_idx, y_sorted, 'k-', linewidth=1.5, alpha=0.9, label='真实值', zorder=5)
+    fig, ax = plt.subplots(figsize=(2.8, 2.8), subplot_kw=dict(polar=True))
+    ax.set_theta_offset(np.pi / 2)
+    ax.set_theta_direction(-1)
 
-        algorithms = [a for a in all_results[target].keys() if a != 'y_test']
-        for algo in algorithms:
-            y_pred = all_results[target][algo]['predictions']
-            y_pred_sorted = y_pred[sort_idx]
-            color = METHOD_COLORS.get(algo, '#999999')
-            display = DISPLAY_NAMES.get(algo, algo)
-            line = ax.plot(x_idx, y_pred_sorted, '-', color=color, linewidth=1.0,
-                           alpha=0.8, label=display, zorder=4)
-            if display not in legend_handles:
-                legend_handles[display] = line[0]
+    # 画刻度线和标签
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(TARGET_LABELS[:n_targets], fontsize=8)
 
-        ax.set_xlabel('样本（按真实值排序）', fontsize=8)
-        ax.set_ylabel('值', fontsize=8)
-        ax.set_title(target, fontsize=9)
-        ax.tick_params(axis='both', labelsize=7, length=3, width=0.8)
-        ax.grid(axis='y', alpha=0.2)
+    # R² 从 0 到 1.0，间隔 0.2
+    ax.set_ylim(0, 1.05)
+    ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
+    ax.set_yticklabels(['0.2', '0.4', '0.6', '0.8', '1.0'], fontsize=6, color='gray')
+    ax.set_rlabel_position(0)
 
-    # 隐藏多余子图
-    for idx in range(n_targets, len(axes)):
-        axes[idx].set_visible(False)
+    # 画网格线
+    ax.yaxis.grid(True, color='#CCCCCC', linewidth=0.5)
+    ax.xaxis.grid(True, color='#CCCCCC', linewidth=0.5)
 
-    # 全局图例
-    if legend_handles:
-        fig.legend(legend_handles.values(), legend_handles.keys(),
-                   loc='lower center', ncol=min(len(legend_handles), 5),
-                   fontsize=8, frameon=False, handlelength=1.5)
-    fig.tight_layout(rect=[0, 0.03, 1, 1])
+    # 绘制各算法多边形
+    for i, algo in enumerate(algorithms):
+        values = data[i].tolist()
+        values += values[:1]  # 闭合
+        color = METHOD_COLORS.get(algo, '#999999')
+        display = DISPLAY_NAMES.get(algo, algo)
+        ax.plot(angles, values, 'o-', color=color, linewidth=1.2,
+                markersize=3, label=display, alpha=0.85)
+        ax.fill(angles, values, color=color, alpha=0.08)
 
-    fig.savefig(output_dir / 'line_true_vs_pred.png', dpi=300, bbox_inches='tight')
+    ax.set_title('关键冶金目标 R² 雷达图', fontsize=10, pad=15)
+    ax.legend(loc='upper right', bbox_to_anchor=(1.35, 1.1),
+              fontsize=6.5, frameon=False, handlelength=1.2)
+
+    fig.savefig(output_dir / 'radar_r2_comparison.png', dpi=300, bbox_inches='tight')
     plt.close(fig)
+    print("  - radar_r2_comparison.png (关键目标 R2 雷达图)")
 
 
 def load_tabpfn_results(tabpfn_dir, X_test, Y_test, output_cols=None):
@@ -577,12 +671,14 @@ def main():
     # 5. 生成可视化
     print("\n生成可视化图表...")
     plot_comparison_bar(all_results, exp_dir)
+    plot_radar_chart(all_results, exp_dir)
     plot_scatter_grid(all_results, exp_dir)
     plot_line_comparison(all_results, exp_dir)
 
     print(f"\n结果已保存至: {exp_dir}/")
     print("  - baseline_comparison.csv (详细指标)")
     print("  - algorithm_comparison_bar.png (算法对比柱状图，300dpi)")
+    print("  - radar_r2_comparison.png (关键目标 R2 雷达图，300dpi)")
     print("  - scatter_true_vs_pred_grid.png (真实值vs预测值散点图)")
     print("  - line_true_vs_pred.png (真实值vs预测值折线对比图，300dpi)")
 
