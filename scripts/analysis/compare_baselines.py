@@ -254,8 +254,8 @@ def plot_comparison_bar(all_results, output_dir):
         positive_errs = [e for v, e in zip(all_vals, all_errs) if v >= 0]
 
         if metric == 'R2':
-            # R²: cap at [-0.05, 1.05], show reference line at 0
-            y_lo, y_hi = -0.05, 1.05
+            # R²: y轴从0开始，柱子落在X轴上
+            y_lo, y_hi = 0, 1.05
             ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
         elif positive_vals:
             y_lo = max(0, min(v - e for v, e in zip(positive_vals, positive_errs)) * 0.85)
@@ -436,8 +436,12 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
     plt.close(fig)
 
 
-def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
-    """加载 TabPFN 模型并计算预测结果。"""
+def load_tabpfn_results(tabpfn_dir, X_test, Y_test, output_cols=None):
+    """加载 TabPFN 模型并计算预测结果。
+
+    output_cols: 当前实验的目标列列表（用于正确索引 Y_test）。
+                 为 None 时使用模块级 OUTPUT_COLS。
+    """
     from tabpfn import load_fitted_tabpfn_model
     import os
 
@@ -448,10 +452,16 @@ def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
         print(f"警告: TabPFN 模型目录不存在: {model_dir}")
         return None
 
+    cols = output_cols if output_cols is not None else OUTPUT_COLS
+    # 建立目标名 → Y_test 列索引的映射
+    col_index = {name: idx for idx, name in enumerate(cols)}
+
     print("加载 TabPFN 模型并计算预测...")
     results = {}
 
-    for i, target in enumerate(OUTPUT_COLS):
+    for target in OUTPUT_COLS:
+        if target not in col_index:
+            continue  # 当前实验不需要该目标
         model_path = model_dir / f'{target}.tabpfn_fit'
         if not model_path.exists():
             continue
@@ -459,7 +469,7 @@ def load_tabpfn_results(tabpfn_dir, X_test, Y_test):
         try:
             reg = load_fitted_tabpfn_model(model_path, device='cuda')
             y_pred = reg.predict(X_test)
-            y_test = Y_test[:, i]
+            y_test = Y_test[:, col_index[target]]
 
             results[target] = {
                 'R2': r2_score(y_test, y_pred),
@@ -507,7 +517,7 @@ def main():
     # 2.5 加载 TabPFN 结果（如果存在）
     tabpfn_results = None
     if TABPFN_RESULTS_DIR:
-        tabpfn_results = load_tabpfn_results(TABPFN_RESULTS_DIR, X_test, Y_test)
+        tabpfn_results = load_tabpfn_results(TABPFN_RESULTS_DIR, X_test, Y_test, output_cols)
 
     # 3. 逐目标变量训练 baseline 模型
     print(f"\n待分析目标: {len(output_cols)} 个")
