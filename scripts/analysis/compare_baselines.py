@@ -253,15 +253,15 @@ def plot_comparison_bar(all_results, output_dir):
         positive_vals = [v for v in all_vals if v >= 0]
         positive_errs = [e for v, e in zip(all_vals, all_errs) if v >= 0]
 
+        # 所有面板统一 y 轴从 0 开始，柱子落在 X 轴上
         if metric == 'R2':
-            # R²: y轴从0开始，柱子落在X轴上
             y_lo, y_hi = 0, 1.05
-            ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
         elif positive_vals:
-            y_lo = max(0, min(v - e for v, e in zip(positive_vals, positive_errs)) * 0.85)
             y_hi = max(v + e for v, e in zip(positive_vals, positive_errs)) * 1.15
+            y_lo = 0
         else:
             y_lo, y_hi = 0, 1
+        ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
 
         ax.set_ylim(y_lo, y_hi)
 
@@ -279,7 +279,6 @@ def plot_comparison_bar(all_results, output_dir):
                 yerr=err if val >= 0 else None,
                 error_kw={'elinewidth': 0.8, 'capthick': 0.8, 'capsize': 3},
                 label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
-                clip_on=False,
             )
 
             # ── Value label: 固定在柱顶上方 (不依赖 error bar 位置) ──────────
