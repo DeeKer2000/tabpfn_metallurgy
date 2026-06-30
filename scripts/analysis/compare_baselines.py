@@ -254,8 +254,8 @@ def plot_comparison_bar(all_results, output_dir):
         positive_errs = [e for v, e in zip(all_vals, all_errs) if v >= 0]
 
         if metric == 'R2':
-            # R²: cap at [-0.15, 1.15] to leave room for value labels
-            y_lo, y_hi = -0.15, 1.15
+            # R²: cap at [-0.05, 1.05], show reference line at 0
+            y_lo, y_hi = -0.05, 1.05
             ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
         elif positive_vals:
             y_lo = max(0, min(v - e for v, e in zip(positive_vals, positive_errs)) * 0.85)
@@ -276,9 +276,8 @@ def plot_comparison_bar(all_results, output_dir):
             bar = ax.bar(
                 x + offset, bar_height, width=w,
                 color=color, edgecolor='black', linewidth=0.6,
-                # 统一显示误差棒，透明度和粗细调整
                 yerr=err if val >= 0 else None,
-                error_kw={'elinewidth': 0.6, 'capthick': 0.6, 'capsize': 2, 'alpha': 0.5},
+                error_kw={'elinewidth': 0.8, 'capthick': 0.8, 'capsize': 3},
                 label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
                 clip_on=False,
             )
