@@ -60,7 +60,6 @@ from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
@@ -77,6 +76,22 @@ try:
 except ImportError:
     HAS_XGBOOST = False
     print("警告: 未安装 XGBoost，将跳过 XGBoost 对比")
+
+# 尝试导入 LightGBM
+try:
+    import lightgbm as lgb
+    HAS_LIGHTGBM = True
+except ImportError:
+    HAS_LIGHTGBM = False
+    print("警告: 未安装 LightGBM，将跳过 LightGBM 对比")
+
+# 尝试导入 CatBoost
+try:
+    from catboost import CatBoostRegressor
+    HAS_CATBOOST = True
+except ImportError:
+    HAS_CATBOOST = False
+    print("警告: 未安装 CatBoost，将跳过 CatBoost 对比")
 
 
 def train_baseline_models(X_train, Y_train, X_test, Y_test, target_idx, target_name):
@@ -114,27 +129,7 @@ def train_baseline_models(X_train, Y_train, X_test, Y_test, target_idx, target_n
         'predictions': y_pred_gb
     }
 
-    # 3. MLP (需要标准化)
-    print(f"    训练 MLP...")
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
-
-    mlp = MLPRegressor(
-        hidden_layer_sizes=(128, 64, 32),
-        max_iter=500,
-        random_state=RANDOM_STATE,
-        early_stopping=True,
-        validation_fraction=0.1
-    )
-    mlp.fit(X_train_scaled, y_train)
-    y_pred_mlp = mlp.predict(X_test_scaled)
-    results['MLP'] = {
-        'R2': r2_score(y_test, y_pred_mlp),
-        'MAE': mean_absolute_error(y_test, y_pred_mlp),
-        'RMSE': np.sqrt(mean_squared_error(y_test, y_pred_mlp)),
-        'predictions': y_pred_mlp
-    }
+    # (MLP 已移除：对低方差目标的预测稳定性不足)
 
     # 4. XGBoost (如果可用)
     if HAS_XGBOOST:
@@ -147,6 +142,38 @@ def train_baseline_models(X_train, Y_train, X_test, Y_test, target_idx, target_n
             'MAE': mean_absolute_error(y_test, y_pred_xgb),
             'RMSE': np.sqrt(mean_squared_error(y_test, y_pred_xgb)),
             'predictions': y_pred_xgb
+        }
+
+    # 5. LightGBM (如果可用)
+    if HAS_LIGHTGBM:
+        print(f"    训练 LightGBM...")
+        lgb_model = lgb.LGBMRegressor(
+            n_estimators=100, random_state=RANDOM_STATE,
+            verbosity=-1, force_row_wise=True
+        )
+        lgb_model.fit(X_train, y_train)
+        y_pred_lgb = lgb_model.predict(X_test)
+        results['LightGBM'] = {
+            'R2': r2_score(y_test, y_pred_lgb),
+            'MAE': mean_absolute_error(y_test, y_pred_lgb),
+            'RMSE': np.sqrt(mean_squared_error(y_test, y_pred_lgb)),
+            'predictions': y_pred_lgb
+        }
+
+    # 6. CatBoost (如果可用)
+    if HAS_CATBOOST:
+        print(f"    训练 CatBoost...")
+        cb = CatBoostRegressor(
+            n_estimators=100, random_state=RANDOM_STATE,
+            verbose=0, allow_writing_files=False
+        )
+        cb.fit(X_train, y_train)
+        y_pred_cb = cb.predict(X_test)
+        results['CatBoost'] = {
+            'R2': r2_score(y_test, y_pred_cb),
+            'MAE': mean_absolute_error(y_test, y_pred_cb),
+            'RMSE': np.sqrt(mean_squared_error(y_test, y_pred_cb)),
+            'predictions': y_pred_cb
         }
 
     # 保存真实值
@@ -171,15 +198,17 @@ def plot_comparison_bar(all_results, output_dir):
         'TabPFN':            '#484878',   # baseline_dark — hero method
         'RandomForest':      '#7884B4',   # baseline_mid
         'XGBoost':           '#B4C0E4',   # baseline_soft
-        'GradientBoosting':  '#E4CCD8',   # ours_base — warm accent
-        'MLP':               '#F0C0CC',   # ours_large — warm accent
+        'LightGBM':          '#8DBD8D',   # green accent
+        'CatBoost':          '#D4A976',   # warm amber
+        'GradientBoosting':  '#E4CCD8',   # warm accent
     }
     DISPLAY_NAMES = {
         'TabPFN':           'TabPFN',
         'RandomForest':     'Random Forest',
         'XGBoost':          'XGBoost',
+        'LightGBM':         'LightGBM',
+        'CatBoost':         'CatBoost',
         'GradientBoosting': 'Gradient Boosting',
-        'MLP':              'MLP',
     }
 
     # ── Metric display config ────────────────────────────────────────────────
@@ -225,8 +254,8 @@ def plot_comparison_bar(all_results, output_dir):
         positive_errs = [e for v, e in zip(all_vals, all_errs) if v >= 0]
 
         if metric == 'R2':
-            # R²: cap at [-0.05, 1.05], show reference line at 0
-            y_lo, y_hi = -0.05, 1.05
+            # R²: cap at [-0.15, 1.15] to leave room for value labels
+            y_lo, y_hi = -0.15, 1.15
             ax.axhline(0, color='#A0A0A0', linestyle='--', linewidth=0.6, zorder=0)
         elif positive_vals:
             y_lo = max(0, min(v - e for v, e in zip(positive_vals, positive_errs)) * 0.85)
@@ -247,29 +276,21 @@ def plot_comparison_bar(all_results, output_dir):
             bar = ax.bar(
                 x + offset, bar_height, width=w,
                 color=color, edgecolor='black', linewidth=0.6,
+                # 统一显示误差棒，透明度和粗细调整
                 yerr=err if val >= 0 else None,
-                error_kw={'elinewidth': 0.8, 'capthick': 0.8, 'capsize': 3},
+                error_kw={'elinewidth': 0.6, 'capthick': 0.6, 'capsize': 2, 'alpha': 0.5},
                 label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
                 clip_on=False,
             )
 
-            # ── Direct value annotation (only if within visible range) ───────
-            text_y = val + err + 0.01 * (y_hi - y_lo)
-            if y_lo <= text_y <= y_hi * 1.05:
+            # ── Value label: 固定在柱顶上方 (不依赖 error bar 位置) ──────────
+            label_y = max(val, 0) + 0.06 * (y_hi - y_lo)
+            if y_lo <= label_y <= y_hi * 1.05:
                 ax.text(
-                    x[0] + offset, text_y,
+                    x[0] + offset, label_y,
                     f'{val:.3f}',
                     ha='center', va='bottom', fontsize=6.5,
                     color='#272727',
-                )
-            elif val < y_lo:
-                # Mark extreme negative values with arrow annotation
-                ax.annotate(
-                    f'{val:.1f}',
-                    xy=(x[0] + offset, y_lo + 0.02 * (y_hi - y_lo)),
-                    xytext=(x[0] + offset, y_lo - 0.12 * (y_hi - y_lo)),
-                    ha='center', va='top', fontsize=5.5, color='#B64342',
-                    arrowprops=dict(arrowstyle='->', lw=0.6, color='#B64342'),
                 )
 
         # ── Axis styling ─────────────────────────────────────────────────────
@@ -297,6 +318,11 @@ def plot_comparison_bar(all_results, output_dir):
 
 def plot_scatter_grid(all_results, output_dir, n_cols=5):
     """生成真实值 vs 预测值散点图网格。"""
+    # ── 中文字体设置 ──
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     targets = list(all_results.keys())
     n_targets = len(targets)
     n_rows = (n_targets + n_cols - 1) // n_cols
@@ -337,20 +363,27 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
 
 def plot_line_comparison(all_results, output_dir, n_cols=5):
     """生成真实值 vs 预测值折线对比图（按真实值排序，观察趋势拟合程度）。"""
+    # ── 中文字体设置 ──
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     # PALETTE_NMI_PASTEL（与 algorithm_comparison_bar 统一）
     METHOD_COLORS = {
         'TabPFN':            '#484878',
         'RandomForest':      '#7884B4',
         'XGBoost':           '#B4C0E4',
+        'LightGBM':          '#8DBD8D',
+        'CatBoost':          '#D4A976',
         'GradientBoosting':  '#E4CCD8',
-        'MLP':               '#F0C0CC',
     }
     DISPLAY_NAMES = {
         'TabPFN':           'TabPFN',
         'RandomForest':     'Random Forest',
         'XGBoost':          'XGBoost',
+        'LightGBM':         'LightGBM',
+        'CatBoost':         'CatBoost',
         'GradientBoosting': 'Gradient Boosting',
-        'MLP':              'MLP',
     }
 
     targets = list(all_results.keys())
@@ -527,11 +560,11 @@ def main():
     df_summary.to_csv(exp_dir / 'baseline_comparison.csv', index=False, encoding='utf-8-sig')
 
     # 打印平均指标
-    print(f"\n{'算法':20s} {'平均R2':>10s} {'平均MAE':>10s} {'平均RMSE':>10s}")
-    print("-" * 55)
+    print(f"\n{'算法':20s} {'平均R2':>8s} {'中位数R2':>10s} {'平均MAE':>10s} {'平均RMSE':>10s}")
+    print("-" * 60)
     for algo in algorithms:
         algo_data = df_summary[df_summary['algorithm'] == algo]
-        print(f"{algo:20s} {algo_data['R2'].mean():10.4f} {algo_data['MAE'].mean():10.4f} {algo_data['RMSE'].mean():10.4f}")
+        print(f"{algo:20s} {algo_data['R2'].mean():8.4f} {algo_data['R2'].median():10.4f} {algo_data['MAE'].mean():10.4f} {algo_data['RMSE'].mean():10.4f}")
 
     # 5. 生成可视化
     print("\n生成可视化图表...")
