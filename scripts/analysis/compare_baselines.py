@@ -315,7 +315,7 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
     """生成 TabPFN 真实值 vs 预测值散点图网格（仅展示 TabPFN，避免多算法遮挡）。"""
     # ── 中文字体设置 ──
     plt.rcParams['font.family'] = 'sans-serif'
-    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DengXian', 'DejaVu Sans']
     plt.rcParams['axes.unicode_minus'] = False
 
     TABPFN_COLOR = '#484878'
@@ -348,8 +348,8 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
         max_val = max(y_test.max(), y_pred.max())
         ax.plot([min_val, max_val], [min_val, max_val], 'k--', alpha=0.4, linewidth=0.8)
 
-        # R² 标注
-        ax.text(0.05, 0.95, f'R²={r2:.4f}', transform=ax.transAxes,
+        # R2 标注（避免使用 ² 字符导致编码问题）
+        ax.text(0.05, 0.95, f'R2={r2:.4f}', transform=ax.transAxes,
                 fontsize=7, verticalalignment='top',
                 bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8, edgecolor='none'))
 
@@ -370,15 +370,15 @@ def plot_scatter_grid(all_results, output_dir, n_cols=5):
 
 
 def plot_line_comparison(all_results, output_dir, n_cols=5):
-    """生成真实值 vs 预测值折线对比图（仅 TabPFN + CatBoost，采样 100 点防重叠）。"""
+    """生成真实值 vs 预测值折线对比图（仅 TabPFN，采样 100 点防重叠）。"""
     # ── 中文字体设置 ──
     plt.rcParams['font.family'] = 'sans-serif'
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
     plt.rcParams['axes.unicode_minus'] = False
 
-    COLORS = {'TabPFN': '#484878', 'CatBoost': '#D4A976', 'true': '#272727'}
-    LINE_WID = {'TabPFN': 1.2, 'CatBoost': 0.8, 'true': 1.8}
-    ALPHA = {'TabPFN': 0.9, 'CatBoost': 0.6, 'true': 0.9}
+    COLORS = {'TabPFN': '#484878', 'true': '#272727'}
+    LINE_WID = {'TabPFN': 1.0, 'true': 2.0}
+    ALPHA = {'TabPFN': 0.8, 'true': 0.9}
 
     targets = list(all_results.keys())
     n_targets = len(targets)
@@ -412,12 +412,6 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
             ax.plot(x_plot, y_pred[sort_idx][sample_idx], '-', color=COLORS['TabPFN'],
                     linewidth=LINE_WID['TabPFN'], alpha=ALPHA['TabPFN'], label='TabPFN', zorder=4)
 
-        # CatBoost（次优基线，作为参考）
-        if 'CatBoost' in all_results[target]:
-            y_pred = all_results[target]['CatBoost']['predictions']
-            ax.plot(x_plot, y_pred[sort_idx][sample_idx], '-', color=COLORS['CatBoost'],
-                    linewidth=LINE_WID['CatBoost'], alpha=ALPHA['CatBoost'], label='CatBoost', zorder=3)
-
         ax.set_xlabel('采样点', fontsize=8)
         ax.set_ylabel('值', fontsize=8)
         ax.set_title(target, fontsize=9)
@@ -431,9 +425,8 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
     # 全局图例
     handles = [plt.Line2D([0], [0], color=c, linewidth=lw, label=lb)
                for lb, c, lw in [('真实值', COLORS['true'], LINE_WID['true']),
-                                 ('TabPFN', COLORS['TabPFN'], LINE_WID['TabPFN']),
-                                 ('CatBoost', COLORS['CatBoost'], LINE_WID['CatBoost'])]]
-    fig.legend(handles=handles, loc='lower center', ncol=3,
+                                 ('TabPFN', COLORS['TabPFN'], LINE_WID['TabPFN'])]]
+    fig.legend(handles=handles, loc='lower center', ncol=2,
                fontsize=8, frameon=False, handlelength=1.5)
     fig.tight_layout(rect=[0, 0.04, 1, 1])
 
@@ -443,6 +436,11 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
 
 def plot_radar_chart(all_results, output_dir):
     """生成雷达图（五维图），对比算法在5个关键冶金目标上的 R²。"""
+    # ── 中文字体设置（独立设置，不受之前函数影响） ──
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     # ── 5 个关键冶金目标 ──
     KEY_TARGETS = [
         'matte_Cu_pct',    # 冰铜品位
@@ -506,11 +504,13 @@ def plot_radar_chart(all_results, output_dir):
     ax.set_yticklabels(['0.2', '0.4', '0.6', '0.8', '1.0'], fontsize=6, color='gray')
     ax.set_rlabel_position(0)
 
-    # 画网格线
-    ax.yaxis.grid(True, color='#CCCCCC', linewidth=0.5)
-    ax.xaxis.grid(True, color='#CCCCCC', linewidth=0.5)
+    # ── 网格线（浅灰色，不抢眼） ──
+    ax.set_facecolor('white')
+    ax.yaxis.grid(True, color='#E8E8E8', linewidth=0.4)
+    ax.xaxis.grid(True, color='#E8E8E8', linewidth=0.4)
+    ax.spines['polar'].set_color('#E8E8E8')
 
-    # 绘制各算法多边形
+    # 绘制各算法多边形（不带填充，避免灰色遮挡）
     for i, algo in enumerate(algorithms):
         values = data[i].tolist()
         values += values[:1]  # 闭合
@@ -518,7 +518,6 @@ def plot_radar_chart(all_results, output_dir):
         display = DISPLAY_NAMES.get(algo, algo)
         ax.plot(angles, values, 'o-', color=color, linewidth=1.2,
                 markersize=3, label=display, alpha=0.85)
-        ax.fill(angles, values, color=color, alpha=0.08)
 
     ax.set_title('关键冶金目标 R² 雷达图', fontsize=10, pad=15)
     ax.legend(loc='upper right', bbox_to_anchor=(1.35, 1.1),
