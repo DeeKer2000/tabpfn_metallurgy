@@ -223,14 +223,15 @@ def plot_comparison_bar(all_results, output_dir):
     n_algos = len(algorithms)
     n_metrics = len(metrics)
 
-    # ── Collect data: mean ± std per algorithm per metric ─────────────────────
+    # ── Collect data: mean ± 95% CI per algorithm per metric ──────────────
+    n_targets = len(all_results)
     means = {m: [] for m in metrics}
     stds  = {m: [] for m in metrics}
     for algo in algorithms:
         for m in metrics:
             vals = [all_results[t][algo][m] for t in all_results]
             means[m].append(np.mean(vals))
-            stds[m].append(np.std(vals))
+            stds[m].append(np.std(vals, ddof=1))  # 样本标准差
 
     # ── Figure layout: 1×3 data panels + 1 legend panel ──────────────────────
     fig = plt.figure(figsize=(8.0, 3.2))
@@ -269,12 +270,15 @@ def plot_comparison_bar(all_results, output_dir):
         for i, (algo, color) in enumerate(zip(algorithms, colors)):
             offset = (i - (n_algos - 1) / 2) * w
             val = means[metric][i]
+            err = stds[metric][i]
 
             # Clip bar height to visible range for drawing
             bar_height = min(val, y_hi) if val > 0 else max(val, y_lo)
-            ax.bar(
+            bar = ax.bar(
                 x + offset, bar_height, width=w,
                 color=color, edgecolor='black', linewidth=0.6,
+                yerr=1.96 * err / np.sqrt(n_targets) if val >= 0 else None,
+                error_kw={'elinewidth': 0.6, 'capthick': 0.6, 'capsize': 2},
                 label=DISPLAY_NAMES.get(algo, algo) if ax_idx == 0 else '_nolegend_',
             )
 
