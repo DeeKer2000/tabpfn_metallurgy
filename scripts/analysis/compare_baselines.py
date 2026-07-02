@@ -381,8 +381,8 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
     plt.rcParams['axes.unicode_minus'] = False
 
     COLORS = {'TabPFN': '#484878', 'true': '#272727'}
-    LINE_WID = {'TabPFN': 1.0, 'true': 2.0}
-    ALPHA = {'TabPFN': 0.8, 'true': 0.9}
+    LINE_WID = {'TabPFN': 0.5, 'true': 0.8}
+    ALPHA = {'TabPFN': 0.7, 'true': 0.8}
 
     targets = list(all_results.keys())
     n_targets = len(targets)
@@ -439,97 +439,174 @@ def plot_line_comparison(all_results, output_dir, n_cols=5):
 
 
 def plot_radar_chart(all_results, output_dir):
-    """生成雷达图（五维图），对比算法在5个关键冶金目标上的 R²。"""
-    # ── 中文字体设置（独立设置，不受之前函数影响） ──
+    """生成雷达图，对比算法在5个平均指标上的表现（29目标平均，归一化至[0,1]）。"""
+    # ── 中文字体设置 ──
     plt.rcParams['font.family'] = 'sans-serif'
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
     plt.rcParams['axes.unicode_minus'] = False
 
-    # ── 5 个关键冶金目标 ──
-    KEY_TARGETS = [
-        'matte_Cu_pct',    # 冰铜品位
-        'slag_Cu_pct',     # 渣含铜
-        'slag_FeO_pct',    # 渣中 FeO
-        'slag_SiO2_pct',   # 渣中 SiO2
-        'gas_SO2_mol',     # 气相 SO2
-    ]
-    TARGET_LABELS = [
-        'matte_Cu', 'slag_Cu', 'slag_FeO', 'slag_SiO2', 'gas_SO2'
-    ]
+    # ── 5 个综合指标（避免特殊Unicode字符，全部用纯文本/ASCII） ──
+    METRIC_NAMES = ['Mean R2', 'Median R2', '1/MAE', '1/RMSE', 'Consistency']
+    METRIC_KEYS = ['mean_R2', 'median_R2', 'inv_MAE', 'inv_RMSE', 'consistency']
 
     METHOD_COLORS = {
-        'TabPFN':            '#484878',
-        'RandomForest':      '#7884B4',
-        'XGBoost':           '#B4C0E4',
-        'LightGBM':          '#8DBD8D',
-        'CatBoost':          '#D4A976',
-        'GradientBoosting':  '#E4CCD8',
+        'TabPFN':            '#484878', 'RandomForest': '#7884B4',
+        'XGBoost':           '#B4C0E4', 'LightGBM':     '#8DBD8D',
+        'CatBoost':          '#D4A976', 'GradientBoosting': '#E4CCD8',
     }
     DISPLAY_NAMES = {
-        'TabPFN':           'TabPFN',
-        'RandomForest':     'Random Forest',
-        'XGBoost':          'XGBoost',
-        'LightGBM':         'LightGBM',
-        'CatBoost':         'CatBoost',
-        'GradientBoosting': 'Gradient Boosting',
+        'TabPFN': 'TabPFN', 'RandomForest': 'Random Forest',
+        'XGBoost': 'XGBoost', 'LightGBM': 'LightGBM',
+        'CatBoost': 'CatBoost', 'GradientBoosting': 'Gradient Boosting',
     }
 
-    # 只保留数据中存在的关键目标
-    available = [t for t in KEY_TARGETS if t in all_results]
-    if len(available) < 3:
-        print("  [雷达图] 关键目标不足 3 个，跳过")
-        return
-
     algorithms = [a for a in next(iter(all_results.values())).keys() if a != 'y_test']
-
-    # 收集数据：algo × target R² 矩阵
     n_algos = len(algorithms)
-    n_targets = len(available)
-    data = np.zeros((n_algos, n_targets))
+
+    # 1. 计算每个算法在29个目标上的平均指标
+    raw = {}
+    for algo in algorithms:
+        r2_vals = [all_results[t][algo]['R2'] for t in all_results]
+        mae_vals = [all_results[t][algo]['MAE'] for t in all_results]
+        rmse_vals = [all_results[t][algo]['RMSE'] for t in all_results]
+        raw[algo] = {
+            'mean_R2': np.mean(r2_vals),
+            'median_R2': np.median(r2_vals),
+            'mean_MAE': np.mean(mae_vals),
+            'mean_RMSE': np.mean(rmse_vals),
+            'std_R2': np.std(r2_vals, ddof=1),
+        }
+
+    # 2. 归一化每个指标到 [0, 1]（越高越好）
+    norm_data = {k: [] for k in METRIC_KEYS}
+    for key in METRIC_KEYS:
+        if key in ('mean_R2', 'median_R2'):
+            # 越高越好：min-max
+            vals = [raw[a][key] for a in algorithms]
+            lo, hi = min(vals), max(vals)
+            norm_data[key] = [(v - lo) / (hi - lo) if hi > lo else 0.5 for v in vals]
+        elif key == 'inv_MAE':
+            vals = [raw[a]['mean_MAE'] for a in algorithms]
+            lo, hi = min(vals), max(vals)
+            norm_data[key] = [(hi - v) / (hi - lo) if hi > lo else 0.5 for v in vals]
+        elif key == 'inv_RMSE':
+            vals = [raw[a]['mean_RMSE'] for a in algorithms]
+            lo, hi = min(vals), max(vals)
+            norm_data[key] = [(hi - v) / (hi - lo) if hi > lo else 0.5 for v in vals]
+        else:  # consistency (std_R2 越低越好)
+            vals = [raw[a]['std_R2'] for a in algorithms]
+            lo, hi = min(vals), max(vals)
+            norm_data[key] = [(hi - v) / (hi - lo) if hi > lo else 0.5 for v in vals]
+
+    # 3. 构建绘图矩阵
+    n_metrics = len(METRIC_KEYS)
+    data_matrix = np.zeros((n_algos, n_metrics))
     for i, algo in enumerate(algorithms):
-        for j, target in enumerate(available):
-            data[i, j] = all_results[target][algo]['R2']
+        for j, key in enumerate(METRIC_KEYS):
+            data_matrix[i, j] = norm_data[key][i]
 
     # 角度
-    angles = np.linspace(0, 2 * np.pi, n_targets, endpoint=False).tolist()
-    angles += angles[:1]  # 闭合
+    angles = np.linspace(0, 2 * np.pi, n_metrics, endpoint=False).tolist()
+    angles += angles[:1]
 
     fig, ax = plt.subplots(figsize=(2.8, 2.8), subplot_kw=dict(polar=True))
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
 
-    # 画刻度线和标签
     ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(TARGET_LABELS[:n_targets], fontsize=8)
+    ax.set_xticklabels(METRIC_NAMES, fontsize=7.5)
 
-    # R² 从 0 到 1.0，间隔 0.2
     ax.set_ylim(0, 1.05)
     ax.set_yticks([0.2, 0.4, 0.6, 0.8, 1.0])
     ax.set_yticklabels(['0.2', '0.4', '0.6', '0.8', '1.0'], fontsize=6, color='gray')
     ax.set_rlabel_position(0)
 
-    # ── 网格线（浅灰色，不抢眼） ──
     ax.set_facecolor('white')
     ax.yaxis.grid(True, color='#E8E8E8', linewidth=0.4)
     ax.xaxis.grid(True, color='#E8E8E8', linewidth=0.4)
     ax.spines['polar'].set_color('#E8E8E8')
 
-    # 绘制各算法多边形（不带填充，避免灰色遮挡）
     for i, algo in enumerate(algorithms):
-        values = data[i].tolist()
-        values += values[:1]  # 闭合
+        values = data_matrix[i].tolist()
+        values += values[:1]
         color = METHOD_COLORS.get(algo, '#999999')
         display = DISPLAY_NAMES.get(algo, algo)
         ax.plot(angles, values, 'o-', color=color, linewidth=1.2,
                 markersize=3, label=display, alpha=0.85)
 
-    ax.set_title('关键冶金目标 R² 雷达图', fontsize=10, pad=15)
+    ax.set_title('29目标平均指标雷达图', fontsize=10, pad=15)
     ax.legend(loc='upper right', bbox_to_anchor=(1.35, 1.1),
               fontsize=6.5, frameon=False, handlelength=1.2)
 
     fig.savefig(output_dir / 'radar_r2_comparison.png', dpi=300, bbox_inches='tight')
     plt.close(fig)
-    print("  - radar_r2_comparison.png (关键目标 R2 雷达图)")
+    print("  - radar_r2_comparison.png (29目标平均指标雷达图)")
+
+
+def plot_error_distribution(all_results, output_dir, n_cols=6):
+    """生成预测误差分布图：残差直方图 + 正态分布拟合（TabPFN，逐目标）。"""
+    from scipy import stats
+
+    # ── 中文字体设置 ──
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DengXian', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
+    TABPFN_COLOR = '#484878'
+    NORM_COLOR = '#D9534F'
+
+    targets = list(all_results.keys())
+    n_targets = len(targets)
+    n_rows = (n_targets + n_cols - 1) // n_cols
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(4 * n_cols, 3 * n_rows))
+    axes = axes.flatten()
+
+    for idx, target in enumerate(targets):
+        ax = axes[idx]
+
+        # 取 TabPFN 的预测误差
+        if 'TabPFN' not in all_results[target]:
+            ax.set_visible(False)
+            continue
+        y_test = all_results[target]['y_test']
+        y_pred = all_results[target]['TabPFN']['predictions']
+        errors = y_test - y_pred
+
+        # 直方图（密度归一化）
+        ax.hist(errors, bins=20, color=TABPFN_COLOR, edgecolor='black',
+                alpha=0.65, density=True, label='误差分布')
+
+        # 正态分布拟合
+        mu, std = stats.norm.fit(errors)
+        x = np.linspace(errors.min(), errors.max(), 200)
+        y = stats.norm.pdf(x, mu, std)
+        ax.plot(x, y, '-', color=NORM_COLOR, linewidth=1.5, label='正态拟合')
+
+        # 零误差线
+        ax.axvline(x=0, color='gray', linestyle='--', linewidth=0.6)
+
+        # 标注
+        ax.text(0.05, 0.95, f'mean={mu:.4f}\nstd={std:.4f}',
+                transform=ax.transAxes, fontsize=6.5, verticalalignment='top',
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='white',
+                          alpha=0.8, edgecolor='none'))
+
+        ax.set_xlabel('预测误差', fontsize=6.5)
+        ax.set_ylabel('概率密度', fontsize=6.5)
+        ax.set_title(target, fontsize=7.5)
+        ax.tick_params(labelsize=5.5)
+        ax.grid(alpha=0.15)
+
+    # 隐藏多余子图
+    for idx in range(n_targets, len(axes)):
+        axes[idx].set_visible(False)
+
+    plt.suptitle('TabPFN 预测误差分布（残差直方图 + 正态分布拟合）', fontsize=13, y=1.01)
+    plt.tight_layout()
+    plt.savefig(output_dir / 'error_distribution.png', dpi=150, bbox_inches='tight')
+    plt.close(fig)
+    print("  - error_distribution.png (TabPFN预测误差分布图)")
 
 
 def load_tabpfn_results(tabpfn_dir, X_test, Y_test, output_cols=None):
@@ -675,13 +752,15 @@ def main():
     print("\n生成可视化图表...")
     plot_comparison_bar(all_results, exp_dir)
     plot_radar_chart(all_results, exp_dir)
+    plot_error_distribution(all_results, exp_dir)
     plot_scatter_grid(all_results, exp_dir)
     plot_line_comparison(all_results, exp_dir)
 
     print(f"\n结果已保存至: {exp_dir}/")
     print("  - baseline_comparison.csv (详细指标)")
     print("  - algorithm_comparison_bar.png (算法对比柱状图，300dpi)")
-    print("  - radar_r2_comparison.png (关键目标 R2 雷达图，300dpi)")
+    print("  - radar_r2_comparison.png (29目标平均指标雷达图，300dpi)")
+    print("  - error_distribution.png (TabPFN预测误差分布图，150dpi)")
     print("  - scatter_true_vs_pred_grid.png (真实值vs预测值散点图)")
     print("  - line_true_vs_pred.png (真实值vs预测值折线对比图，300dpi)")
 
